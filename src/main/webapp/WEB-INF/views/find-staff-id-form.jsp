@@ -1,18 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+    <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Add Staff</title>
+<title>Get Staff By Id</title>
 </head>
 <body>
-  <div id="root">
+    <div id="root">
         <div id="form">
-            <form:form action="add" method="post"
-                modelAttribute="addstaff">
+            <form:form action="" method="post"
+                modelAttribute="getstaff">
                 <div>
                     <label for="staff_id">Staff Id</label>
                     <div>
@@ -79,9 +79,8 @@
                         <form:input path="email" />
                     </div>
                 </div>
-               
         <div>
-            <form:button>Add Staff</form:button>
+            <form:button>Find Staff By Id</form:button>
         </div>
         </form:form>
     </div>

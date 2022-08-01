@@ -1,14 +1,23 @@
 package com.chainsys.sportsclub.pojo;
 
 import java.sql.Time;
+import java.time.LocalTime;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+@Entity
+@Table(name = "Sports")
 public class Sports {
+	@Id
  private int sports_id;
  private String sports_name;
+ @Column(name = "fees")
  private int fees;
- private Time in_time;
- private Time out_time;
- private int duration;
+ private LocalTime in_time;
+ private LocalTime out_time;
+ private int durations;
  public int getSports_id() {
 	return sports_id;
 }
@@ -27,23 +36,23 @@ public int getFees() {
 public void setFees(int fees) {
 	this.fees = fees;
 }
-public Time getIn_time() {
+public LocalTime getIn_time() {
 	return in_time;
 }
-public void setIn_time(Time in_time) {
+public void setIn_time(LocalTime in_time) {
 	this.in_time = in_time;
 }
-public Time getOut_time() {
+public LocalTime getOut_time() {
 	return out_time;
 }
-public void setOut_time(Time out_time) {
+public void setOut_time(LocalTime out_time) {
 	this.out_time = out_time;
 }
-public int getDuration() {
-	return duration;
+public int getDurations() {
+	return durations;
 }
-public void setDuration(int duration) {
-	this.duration = duration;
+public void setDurations(int durations) {
+	this.durations = durations;
 }
 
  

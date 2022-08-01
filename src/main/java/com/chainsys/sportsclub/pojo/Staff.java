@@ -1,14 +1,22 @@
 package com.chainsys.sportsclub.pojo;
 
-import java.sql.Date;
+import java.util.Date;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+@Entity
+@Table(name = "Staff")
 public class Staff {
+	@Id
 private int staff_id;
 private String staff_name;
+@Column(name = "salary")
 private float salary;
 private Date joining_date;
 private Date date_of_birth;
-private int contact;
+private long contact;
 private String address;
 private String staff_role;
 private String coaching_sports;
@@ -45,10 +53,10 @@ public Date getDate_of_birth() {
 public void setDate_of_birth(Date date_of_birth) {
 	this.date_of_birth = date_of_birth;
 }
-public int getContact() {
+public long getContact() {
 	return contact;
 }
-public void setContact(int contact) {
+public void setContact(long contact) {
 	this.contact = contact;
 }
 public String getAddress() {
