@@ -14,15 +14,15 @@
             <form:form action="add" method="post"
                 modelAttribute="addsports">
                 <div>
-                    <label for="sports_id">Sports Id</label>
+                    <label for="sportsId">Sports Id</label>
                     <div>
-                        <form:input path="sports_id" />
+                        <form:input path="sportsId" />
                     </div>
                 </div>
                 <div>
-                    <label for="sports_name">Sports Name</label>
+                    <label for="sportsName">Sports Name</label>
                     <div>
-                        <form:input path="sports_name" />
+                        <form:input path="sportsName" />
                     </div>
                 </div>
                 <div>
@@ -32,15 +32,15 @@
                     </div>
                 </div>
                 <div>
-                    <label for="in_time">In Time</label>
+                    <label for="inTime">In Time</label>
                     <div>
-                        <form:input path="in_time" />
+                        <form:input path="inTime" />
                     </div>
                 </div>
                 <div>
-                    <label for="out_time">Out Time</label>
+                    <label for="outTime">Out Time</label>
                     <div>
-                        <form:input path="out_time" />
+                        <form:input path="outTime" />
                     </div>
                 </div>
                 <div>

@@ -1,85 +1,102 @@
 package com.chainsys.sportsclub.pojo;
 
-import java.sql.Date;
+import java.util.Date;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+@Entity
+@Table(name = "Players")
 public class Players {
-private int player_id;
-private String player_name;
-private int sports_id;
+	@Id
+	@Column(name = "PLAYER_ID")
+private int playerId;
+	@Column(name = "PLAYER_NAME")
+private String playerName;
+	@Column(name = "SPORTS_ID")
+private int sportsId;
+	@Column(name = "GENDER")
 private String gender;
+	@Column(name = "ADDRESS")
 private String address;
-private int contact;
-private String player_status;
-private Date date_of_birth;
-private Date joining_date;
-private int subscription_due;
-private int subscription_paid;
-public int getPlayer_id() {
-	return player_id;
-}
-public void setPlayer_id(int player_id) {
-	this.player_id = player_id;
-}
-public String getPlayer_name() {
-	return player_name;
-}
-public void setPlayer_name(String player_name) {
-	this.player_name = player_name;
-}
-public int getSports_id() {
-	return sports_id;
-}
-public void setSports_id(int sports_id) {
-	this.sports_id = sports_id;
-}
-public String getGender() {
-	return gender;
-}
-public void setGender(String gender) {
-	this.gender = gender;
-}
-public String getAddress() {
-	return address;
-}
-public void setAddress(String address) {
-	this.address = address;
-}
-public int getContact() {
-	return contact;
-}
-public void setContact(int contact) {
-	this.contact = contact;
-}
-public String getPlayer_status() {
-	return player_status;
-}
-public void setPlayer_status(String player_status) {
-	this.player_status = player_status;
-}
-public Date getDate_of_birth() {
-	return date_of_birth;
-}
-public void setDate_of_birth(Date date_of_birth) {
-	this.date_of_birth = date_of_birth;
-}
-public Date getJoining_date() {
-	return joining_date;
-}
-public void setJoining_date(Date joining_date) {
-	this.joining_date = joining_date;
-}
-public int getSubscription_due() {
-	return subscription_due;
-}
-public void setSubscription_due(int subscription_due) {
-	this.subscription_due = subscription_due;
-}
-public int getSubscription_paid() {
-	return subscription_paid;
-}
-public void setSubscription_paid(int subscription_paid) {
-	this.subscription_paid = subscription_paid;
-}
-
+	@Column(name = "CONTACT")
+private long contact;
+	@Column(name = "PLAYER_STATUS")
+private String playerStatus;
+	@Column(name = "DATE_OF_BIRTH")
+private Date dateOfBirth;
+	@Column(name = "JOINING_DATE")
+private Date joiningDate;
+	@Column(name = "SUBSCRIPTION_DUE")
+private int subscriptionDue;
+	@Column(name = "SUBSCRIPTION_PAID")
+private int subscriptionPaid;
+	public int getPlayerId() {
+		return playerId;
+	}
+	public void setPlayerId(int playerId) {
+		this.playerId = playerId;
+	}
+	public String getPlayerName() {
+		return playerName;
+	}
+	public void setPlayerName(String playerName) {
+		this.playerName = playerName;
+	}
+	public int getSportsId() {
+		return sportsId;
+	}
+	public void setSportsId(int sportsId) {
+		this.sportsId = sportsId;
+	}
+	public String getGender() {
+		return gender;
+	}
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	public long getContact() {
+		return contact;
+	}
+	public void setContact(long contact) {
+		this.contact = contact;
+	}
+	public String getPlayerStatus() {
+		return playerStatus;
+	}
+	public void setPlayerStatus(String playerStatus) {
+		this.playerStatus = playerStatus;
+	}
+	public Date getDateOfBirth() {
+		return dateOfBirth;
+	}
+	public void setDateOfBirth(Date dateOfBirth) {
+		this.dateOfBirth = dateOfBirth;
+	}
+	public Date getJoiningDate() {
+		return joiningDate;
+	}
+	public void setJoiningDate(Date joiningDate) {
+		this.joiningDate = joiningDate;
+	}
+	public int getSubscriptionDue() {
+		return subscriptionDue;
+	}
+	public void setSubscriptionDue(int subscriptionDue) {
+		this.subscriptionDue = subscriptionDue;
+	}
+	public int getSubscriptionPaid() {
+		return subscriptionPaid;
+	}
+	public void setSubscriptionPaid(int subscriptionPaid) {
+		this.subscriptionPaid = subscriptionPaid;
+	}
 
 }

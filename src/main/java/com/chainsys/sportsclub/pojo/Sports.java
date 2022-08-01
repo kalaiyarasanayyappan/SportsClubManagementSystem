@@ -11,24 +11,23 @@ import javax.persistence.Table;
 @Table(name = "Sports")
 public class Sports {
 	@Id
- private int sports_id;
- private String sports_name;
- @Column(name = "fees")
+	@Column(name = "SPORTS_ID")
+ private int sportsId;
+	@Column(name = "SPORTS_NAME")
+ private String sportsName;
+ @Column(name = "FEES")
  private int fees;
- private LocalTime in_time;
- private LocalTime out_time;
- private int durations;
- public int getSports_id() {
-	return sports_id;
+ public int getSportsId() {
+	return sportsId;
 }
-public void setSports_id(int sports_id) {
-	this.sports_id = sports_id;
+public void setSportsId(int sportsId) {
+	this.sportsId = sportsId;
 }
-public String getSports_name() {
-	return sports_name;
+public String getSportsName() {
+	return sportsName;
 }
-public void setSports_name(String sports_name) {
-	this.sports_name = sports_name;
+public void setSportsName(String sportsName) {
+	this.sportsName = sportsName;
 }
 public int getFees() {
 	return fees;
@@ -36,17 +35,17 @@ public int getFees() {
 public void setFees(int fees) {
 	this.fees = fees;
 }
-public LocalTime getIn_time() {
-	return in_time;
+public LocalTime getInTime() {
+	return inTime;
 }
-public void setIn_time(LocalTime in_time) {
-	this.in_time = in_time;
+public void setInTime(LocalTime inTime) {
+	this.inTime = inTime;
 }
-public LocalTime getOut_time() {
-	return out_time;
+public LocalTime getOutTime() {
+	return outTime;
 }
-public void setOut_time(LocalTime out_time) {
-	this.out_time = out_time;
+public void setOutTime(LocalTime outTime) {
+	this.outTime = outTime;
 }
 public int getDurations() {
 	return durations;
@@ -54,7 +53,12 @@ public int getDurations() {
 public void setDurations(int durations) {
 	this.durations = durations;
 }
-
+@Column(name = "IN_TIME")
+ private LocalTime inTime;
+ @Column(name = "OUT_TIME")
+ private LocalTime outTime;
+ @Column(name = "DURATIONS")
+ private int durations;
  
  
 }

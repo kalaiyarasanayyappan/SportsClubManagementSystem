@@ -9,57 +9,57 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.chainsys.sportsclub.pojo.Staff;
-import com.chainsys.sportsclub.service.StaffService;
+import com.chainsys.sportsclub.pojo.Players;
+import com.chainsys.sportsclub.service.PlayersService;
 
 @Controller
-@RequestMapping("/Staff")
+@RequestMapping("/Players")
 public class PlayersController {
     
     @Autowired
-    StaffService stService;
+    PlayersService plService;
     
-    @GetMapping("/getstaff")
-    public String getStaff(@RequestParam("id")int id,Model model) {
-       Staff st =stService.findById(id);
-        model.addAttribute("getstaff",st);
-        return "find-staff-id-form";
+    @GetMapping("/getplayers")
+    public String getPlayers(@RequestParam("id")int id,Model model) {
+       Players pl =plService.findById(id);
+        model.addAttribute("getplayers",pl);
+        return "find-players-id-form";
     }
-    @GetMapping("/deletestaff")
-    public String deleteStaff(@RequestParam("id")int id) {
-        stService.deleteById(id);
-         return "redirect:/Staff/getallstaff";
+    @GetMapping("/deleteplayers")
+    public String deletePlayers(@RequestParam("id")int id) {
+        plService.deleteById(id);
+         return "redirect:/Players/getallplayers";
     }
     @GetMapping("/addform")
     public String showAddForm(Model model) {
-        Staff st = new Staff();
-        model.addAttribute("addstaff",st);
-        return "add-staff-form";
+        Players pl = new Players();
+        model.addAttribute("addplayers",pl);
+        return "add-players-form";
     }
     @PostMapping("/add")
-    public String addStaff(@ModelAttribute("addstaff")Staff st)
+    public String addPlayers(@ModelAttribute("addplayers")Players pl)
     {
-     stService.save(st);
-     return "redirect:/Staff/getallstaff";
+     plService.save(pl);
+     return "redirect:/Players/getallplayers";
     }
     @GetMapping("/updateform")
     public String showUpdateForm(@RequestParam("id")int id,Model model) {
-        Staff st = stService.findById(id);
-        model.addAttribute("updatestaff",st);
-        return "update-staff-form";
+        Players pl = plService.findById(id);
+        model.addAttribute("updateplayers",pl);
+        return "update-players-form";
     }
     @PostMapping("/update")
-    public String modifyStaff(@ModelAttribute("updatestaff") Staff st)
+    public String modifyPlayers(@ModelAttribute("updateplayers") Players pl)
     {
-        stService.save(st);
-     return "redirect:/Staff/getallstaff";
+        plService.save(pl);
+     return "redirect:/Players/getallPlayers";
      
     }
-    @GetMapping("/getallstaff")
-    public String getAllStaff(Model model){
-        List<Staff> stList= stService.findAllStaff();
-        model.addAttribute("allstaff",stList);
-        return "list-staff";
+    @GetMapping("/getallplayers")
+    public String getAllPlayers(Model model){
+        List<Players> plList= plService.findAllPlayers();
+        model.addAttribute("allplayers",plList);
+        return "list-players";
     }
 }
 

@@ -4,7 +4,6 @@ import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.chainsys.sportsclub.pojo.Sports;
 import com.chainsys.sportsclub.pojo.Staff;
 
 public interface StaffRepository extends CrudRepository<Staff,Integer>{

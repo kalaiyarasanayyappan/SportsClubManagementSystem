@@ -6,41 +6,41 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Get Staff By Id</title>
+<title>Get Players By Id</title>
 </head>
 <body>
     <div id="root">
         <div id="form">
             <form:form action="" method="post"
-                modelAttribute="getstaff">
-                <div>
-                    <label for="staffId">Staff Id</label>
+                modelAttribute="getplayers">
+                 <div>
+                    <label for="playerId">Player Id</label>
                     <div>
-                        <form:input path="staffId" />
+                        <form:input path="playerId" />
                     </div>
                 </div>
                 <div>
-                    <label for="staffName">Staff Name</label>
+                    <label for="playerName">Player Name</label>
                     <div>
-                        <form:input path="staffName" />
+                        <form:input path="playerName" />
                     </div>
                 </div>
                 <div>
-                    <label for="salary">Salary</label>
+                    <label for="sportsId">Sports Id</label>
                     <div>
-                        <form:input path="salary" />
+                        <form:input path="sportsId" />
                     </div>
                 </div>
                 <div>
-                    <label for="joiningDate">Joining Date</label>
+                    <label for="gender">Gender</label>
                     <div>
-                        <form:input path="joiningDate" />
+                        <form:input path="gender" />
                     </div>
                 </div>
                 <div>
-                    <label for="dateOfBirth">Date of Birth</label>
+                    <label for="address">Address</label>
                     <div>
-                        <form:input path="dateOfBirth" />
+                        <form:input path="address" />
                     </div>
                 </div>
                 <div>
@@ -50,37 +50,38 @@
                     </div>
                 </div>
                  <div>
-                    <label for="address">Address</label>
+                    <label for="playerStatus">Player Status</label>
                     <div>
-                        <form:input path="address" />
+                        <form:input path="playerStatus" />
                     </div>
                 </div>
                  <div>
-                    <label for="staffRole">Staff Role</label>
+                    <label for="dateOfBirth">Date of Birth</label>
                     <div>
-                        <form:input path="staffRole" />
+                        <form:input path="dateOfBirth" />
                     </div>
                 </div>
                  <div>
-                    <label for="coachingSports">Coaching Sports</label>
+                    <label for="joiningDate">Joining Date</label>
                     <div>
-                        <form:input path="coachingSports" />
+                        <form:input path="joiningDate" />
                     </div>
                 </div>
                  <div>
-                    <label for="managerId">Manager Id</label>
+                    <label for="subscriptionDue">Subscription Due</label>
                     <div>
-                        <form:input path="managerId" />
+                        <form:input path="subscriptionDue" />
                     </div>
                 </div>
                  <div>
-                    <label for="email">Email</label>
+                    <label for="subscriptionPaid">Subscription Paid</label>
                     <div>
-                        <form:input path="email" />
+                        <form:input path="subscriptionPaid" />
                     </div>
                 </div>
+               
         <div>
-            <form:button>Find Staff By Id</form:button>
+            <form:button>Find Players By Id</form:button>
         </div>
         </form:form>
     </div>

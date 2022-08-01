@@ -13,15 +13,15 @@
         <div id="form">
             <form:form action="update" method="post" modelAttribute="updatestaff">
                 <div>
-                    <label for="staff_id">Staff Id</label>
+                    <label for="staffId">Staff Id</label>
                     <div>
-                        <form:input path="staff_id" />
+                        <form:input path="staffId" />
                     </div>
                 </div>
                 <div>
-                    <label for="staff_name">Staff Name</label>
+                    <label for="staffName">Staff Name</label>
                     <div>
-                        <form:input path="staff_name" />
+                        <form:input path="staffName" />
                     </div>
                 </div>
                 <div>
@@ -31,15 +31,15 @@
                     </div>
                 </div>
                 <div>
-                    <label for="joining_date">Joining Date</label>
+                    <label for="joiningDate">Joining Date</label>
                     <div>
-                        <form:input path="joining_date" />
+                        <form:input path="joiningDate" />
                     </div>
                 </div>
                 <div>
-                    <label for="date_of_birth">Date of Birth</label>
+                    <label for="dateOfBirth">Date of Birth</label>
                     <div>
-                        <form:input path="date_of_birth" />
+                        <form:input path="dateOfBirth" />
                     </div>
                 </div>
                 <div>
@@ -55,21 +55,21 @@
                     </div>
                 </div>
                  <div>
-                    <label for="staff_role">Staff Role</label>
+                    <label for="staffRole">Staff Role</label>
                     <div>
-                        <form:input path="staff_role" />
+                        <form:input path="staffRole" />
                     </div>
                 </div>
                  <div>
-                    <label for="coaching_sports">Coaching Sports</label>
+                    <label for="coachingSports">Coaching Sports</label>
                     <div>
-                        <form:input path="coaching_sports" />
+                        <form:input path="coachingSports" />
                     </div>
                 </div>
                  <div>
-                    <label for="manager_id">Manager Id</label>
+                    <label for="managerId">Manager Id</label>
                     <div>
-                        <form:input path="manager_id" />
+                        <form:input path="managerId" />
                     </div>
                 </div>
                  <div>

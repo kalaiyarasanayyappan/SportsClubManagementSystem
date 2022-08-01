@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Sports List</title>
+<title>Sponser List</title>
 </head>
 <body>
 	   
@@ -17,12 +17,11 @@
 				           
 				<tr>
 					           
-					<th>Sports Id</th>            
-					<th>Sports Name</th>            
-					<th>Fees</th>            
-					<th>In_time</th>            
-					<th>Out_time</th>            
-					<th>Durations</th>            
+					<th>Sponser Id</th>            
+					<th>Sponser Name</th>            
+					<th>Contact</th>            
+					<th>Email</th>            
+					            
 	            
 				</tr>
 				       
@@ -30,15 +29,14 @@
 			       
 			<tbody>
 				           
-				<c:forEach var="Sports" items="${allSports}">
+				<c:forEach var="Sponsers" items="${allSponsers}">
             <tr>
 						           
-						<td>${Sports.sportsId}</td>            
-						<td>${Sports.sportsName}</td>            
-						<td>${Sports.fees}</td>            
-						<td>${Sports.inTime}</td>            
-						<td>${Sports.outTime}</td>            
-						<td>${Sports.durations}</td>            
+						<td>${Sponsers.sponserId}</td>            
+						<td>${Sponsers.sponserName}</td>            
+						<td>${Sponsers.contact}</td>            
+						<td>${Sponsers.email}</td>            
+						         
 						            
 					</tr>
             </c:forEach>
