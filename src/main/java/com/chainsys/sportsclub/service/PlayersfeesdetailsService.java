@@ -5,27 +5,29 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.chainsys.sportsclub.dao.PlayersRepository;
+import com.chainsys.sportsclub.dao.PlayersfeesdetailsRepository;
 import com.chainsys.sportsclub.dao.StaffRepository;
 import com.chainsys.sportsclub.model.Players;
+import com.chainsys.sportsclub.model.Players_Fees_Details;
 import com.chainsys.sportsclub.model.Staff;
 
 
 @Service
-public class PlayersService {
+public class PlayersfeesdetailsService {
     
     @Autowired
-    private PlayersRepository repo;
+    private PlayersfeesdetailsRepository repo;
    
-    public List<Players> findAllPlayers(){
-        List<Players> plList= repo.findAll();
+    public List<Players_Fees_Details> findAllPlayersfeesdetails(){
+        List<Players_Fees_Details> plList= repo.findAll();
         return plList;
     }
    
-    public Players save(Players pl) {
+    public Players_Fees_Details save(Players_Fees_Details pl) {
         return repo.save(pl);
         
     }
-    public Players findById(int id) {
+    public Players_Fees_Details findById(int id) {
         return repo.findById(id);
     }
   
@@ -33,5 +35,6 @@ public class PlayersService {
         repo.deleteById(id);
     }
 }
+
 
 

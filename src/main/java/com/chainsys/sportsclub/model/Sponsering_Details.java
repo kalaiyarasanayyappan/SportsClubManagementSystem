@@ -1,6 +1,6 @@
-package com.chainsys.sportsclub.pojo;
+package com.chainsys.sportsclub.model;
 
-import java.sql.Date;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -21,11 +21,11 @@ private int sportsId;
 	public void setSponserId(int sponserId) {
 		this.sponserId = sponserId;
 	}
-	public int getSports_id() {
+	public int getSportsId() {
 		return sportsId;
 	}
-	public void setSports_id(int sports_id) {
-		this.sportsId = sports_id;
+	public void setSportsId(int sportsId) {
+		this.sportsId = sportsId;
 	}
 	public int getAmount() {
 		return amount;

@@ -1,4 +1,4 @@
-package com.chainsys.sportsclub.pojo;
+package com.chainsys.sportsclub.model;
 
 import java.sql.Time;
 import java.time.LocalTime;

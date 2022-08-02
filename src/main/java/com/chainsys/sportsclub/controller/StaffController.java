@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.chainsys.sportsclub.pojo.Staff;
+import com.chainsys.sportsclub.model.Staff;
 import com.chainsys.sportsclub.service.StaffService;
 
 @Controller

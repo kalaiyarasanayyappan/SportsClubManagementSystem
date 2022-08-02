@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Staff List</title>
+<title>Players List</title>
 </head>
 <body>
 	   
@@ -17,17 +17,17 @@
 				           
 				<tr>
 					           
-					<th>Staff Id</th>            
-					<th>Staff Name</th>            
-					<th>Salary</th>            
-					<th>Joining Date</th>            
-					<th>Date of Birth</th>            
+					<th>Player Id</th>            
+					<th>Player Name</th>            
+					<th>Sports Id</th>            
+					<th>Gender</th>            
+					<th>Address</th>            
 					<th>Contact</th>
-					<th>Address</th> 
-					<th>Staff Role</th> 
-					<th>Coaching Sports</th> 
-					<th>Manager Id</th> 
-					<th>Email</th>             
+					<th>Player Status</th> 
+					<th>Date of Birth</th> 
+					<th>Joining Date</th> 
+					<th>Subscription Due</th> 
+					<th>Subscription Paid</th>             
 	            
 				</tr>
 				       
@@ -35,20 +35,20 @@
 			       
 			<tbody>
 				           
-				<c:forEach var="Staff" items="${allStaff}">
+				<c:forEach var="Players" items="${allPlayers}">
             <tr>
 						           
-						<td>${Staff.staffId}</td>            
-						<td>${Staff.staffName}</td>            
-						<td>${Staff.salary}</td>            
-						<td>${Staff.joiningDate}</td>            
-						<td>${Staff.dateOfBirth}</td>            
-						<td>${Staff.contact}</td> 
-						<td>${Staff.address}</td>
-						<td>${Staff.staffRole}</td>
-						<td>${Staff.coachingSports}</td>
-						<td>${Staff.managerId}</td>
-						<td>${Staff.email}</td>           
+						<td>${Players.playerId}</td>            
+						<td>${Players.playerName}</td>            
+						<td>${Players.sportsId}</td>            
+						<td>${Players.gender}</td>            
+						<td>${Players.address}</td>            
+						<td>${Players.contact}</td> 
+						<td>${Players.playerStatus}</td>
+						<td>${Players.dateOfBirth}</td>
+						<td>${Players.joiningDate}</td>
+						<td>${Players.subscriptionDue}</td>
+						<td>${Players.subscriptionPaid}</td>           
 						            
 					</tr>
             </c:forEach>

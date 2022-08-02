@@ -9,9 +9,9 @@ import org.springframework.transaction.annotation.Transactional;
 import com.chainsys.sportsclub.dao.SponseringdetailsRepository;
 import com.chainsys.sportsclub.dao.SponsersRepository;
 import com.chainsys.sportsclub.dao.StaffRepository;
-import com.chainsys.sportsclub.pojo.Sponsering_Details;
-import com.chainsys.sportsclub.pojo.Sponsers;
-import com.chainsys.sportsclub.pojo.Staff;
+import com.chainsys.sportsclub.model.Sponsering_Details;
+import com.chainsys.sportsclub.model.Sponsers;
+import com.chainsys.sportsclub.model.Staff;
 
 
 @Service

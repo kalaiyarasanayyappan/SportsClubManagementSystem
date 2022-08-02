@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.chainsys.sportsclub.pojo.Sponsering_Details;
+import com.chainsys.sportsclub.model.Sponsering_Details;
 
 
 public interface SponseringdetailsRepository extends CrudRepository<Sponsering_Details,Integer>{

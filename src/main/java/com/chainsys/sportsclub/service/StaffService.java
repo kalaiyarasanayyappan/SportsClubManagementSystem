@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.chainsys.sportsclub.dao.StaffRepository;
-import com.chainsys.sportsclub.pojo.Staff;
+import com.chainsys.sportsclub.model.Staff;
 
 
 @Service

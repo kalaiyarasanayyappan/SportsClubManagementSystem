@@ -1,33 +1,33 @@
 package com.chainsys.sportsclub.service;
-
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.chainsys.sportsclub.dao.SponsersRepository;
+import com.chainsys.sportsclub.dao.PlayersRepository;
+import com.chainsys.sportsclub.dao.PrizesRepository;
 import com.chainsys.sportsclub.dao.StaffRepository;
-import com.chainsys.sportsclub.model.Sponsers;
+import com.chainsys.sportsclub.model.Players;
+import com.chainsys.sportsclub.model.Prizes;
 import com.chainsys.sportsclub.model.Staff;
 
 
 @Service
-public class SponsersService {
+public class PrizesService {
     
     @Autowired
-    private SponsersRepository repo;
+    private PrizesRepository repo;
    
-    public List<Sponsers> findAllSponsers(){
-        List<Sponsers> spList= repo.findAll();
-        return spList;
+    public List<Prizes> findAllPrizes(){
+        List<Prizes> prList= repo.findAll();
+        return prList;
     }
    
-    public Sponsers save(Sponsers st) {
-        return repo.save(st);
+    public Prizes save(Prizes pr) {
+        return repo.save(pr);
         
     }
-    public Sponsers findById(int id) {
+    public Prizes findById(int id) {
         return repo.findById(id);
     }
   
@@ -35,5 +35,6 @@ public class SponsersService {
         repo.deleteById(id);
     }
 }
+
 
 

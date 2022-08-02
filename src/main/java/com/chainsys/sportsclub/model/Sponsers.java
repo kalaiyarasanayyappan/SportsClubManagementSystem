@@ -1,4 +1,4 @@
-package com.chainsys.sportsclub.pojo;
+package com.chainsys.sportsclub.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

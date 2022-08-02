@@ -10,8 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.chainsys.sportsclub.pojo.Sponsers;
-
+import com.chainsys.sportsclub.model.Sponsers;
 import com.chainsys.sportsclub.service.SponsersService;
 
 @Controller

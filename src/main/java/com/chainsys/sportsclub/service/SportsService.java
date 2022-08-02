@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import com.chainsys.sportsclub.dao.SportsRepository;
-import com.chainsys.sportsclub.pojo.Sports;
+import com.chainsys.sportsclub.model.Sports;
 
 @Service
 public class SportsService {

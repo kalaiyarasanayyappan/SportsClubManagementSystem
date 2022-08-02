@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.chainsys.sportsclub.pojo.Sports;
+import com.chainsys.sportsclub.model.Sports;
 
 public interface SportsRepository extends CrudRepository<Sports,Integer>{
 	Sports findById(int id);
