@@ -14,6 +14,12 @@
             <form:form action="add" method="post"
                 modelAttribute="addprizes">
                 <div>
+                    <label for="PrizeId">PrizeId</label>
+                    <div>
+                        <form:input path="PrizeId" />
+                    </div>
+                </div>
+                <div>
                     <label for="dateOfPrize">Date of Price</label>
                     <div>
                         <form:input path="dateOfPrize" />
@@ -38,9 +44,9 @@
                     </div>
                 </div>
                 <div>
-                    <label for="position">Position</label>
+                    <label for="positionNumber">Position Number</label>
                     <div>
-                        <form:input path="position" />
+                        <form:input path="positionNumber" />
                     </div>
                 </div>
                 <div>

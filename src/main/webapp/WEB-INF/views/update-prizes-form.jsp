@@ -12,6 +12,12 @@
     <div id="root">
         <div id="form">
             <form:form action="update" method="post" modelAttribute="updateplayersfeesdetails">
+             <div>
+                    <label for="PrizeId">PrizeId</label>
+                    <div>
+                        <form:input path="PrizeId" />
+                    </div>
+                </div>
                  <div>
                     <label for="dateOfPrize">Date of Price</label>
                     <div>
@@ -37,9 +43,9 @@
                     </div>
                 </div>
                 <div>
-                    <label for="position">Position</label>
+                    <label for="positionNumber">Position Number</label>
                     <div>
-                        <form:input path="position" />
+                        <form:input path="positionNumber" />
                     </div>
                 </div>
                 <div>

@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Prizes List</title>
+<title>Players fees details</title>
 </head>
 <body>
 	   
@@ -30,7 +30,7 @@
 			       
 			<tbody>
 				           
-				<c:forEach var="Playersfeesdetails" items="${allPlayersfeesdetails}">
+				<c:forEach var="Playersfeesdetails" items="${allplayersfeesdetails}">
             <tr>
 						           
 						<td>${Playersfeesdetails.paidDate}</td>            

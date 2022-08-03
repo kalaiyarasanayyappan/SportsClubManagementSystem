@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.chainsys.sportsclub.model.Sponsering_Details;
+import com.chainsys.sportsclub.model.SponseringDetails;
 import com.chainsys.sportsclub.model.Staff;
 import com.chainsys.sportsclub.service.SponseringdetailsService;
 import com.chainsys.sportsclub.service.StaffService;
@@ -24,7 +24,7 @@ public class SponseringdetailsController {
     
     @GetMapping("/getsponseringdetails")
     public String getsponseringdetails(@RequestParam("id")int id,Model model) {
-       Sponsering_Details sd =sdService.findById(id);
+       SponseringDetails sd =sdService.findById(id);
         model.addAttribute("getsponseringdetails",sd);
         return "find-sponseringdetails-id-form";
     }
@@ -35,24 +35,24 @@ public class SponseringdetailsController {
     }
     @GetMapping("/addform")
     public String showAddForm(Model model) {
-        Sponsering_Details sd = new Sponsering_Details();
+        SponseringDetails sd = new SponseringDetails();
         model.addAttribute("addsponseringdetails",sd);
         return "add-sponseringdetails-form";
     }
     @PostMapping("/add")
-    public String addSponseringdetails(@ModelAttribute("addsponseringdetails")Sponsering_Details sd)
+    public String addSponseringdetails(@ModelAttribute("addsponseringdetails")SponseringDetails sd)
     {
      sdService.save(sd);
      return "redirect:/Sponsering_Details/getallsponseringdetails";
     }
     @GetMapping("/updateform")
     public String showUpdateForm(@RequestParam("id")int id,Model model) {
-        Sponsering_Details sd = sdService.findById(id);
+        SponseringDetails sd = sdService.findById(id);
         model.addAttribute("updatesponseringdetails",sd);
         return "update-sponseringdetails-form";
     }
     @PostMapping("/update")
-    public String modifySponseringdetails(@ModelAttribute("updatesponseringdetails") Sponsering_Details sd)
+    public String modifySponseringdetails(@ModelAttribute("updatesponseringdetails") SponseringDetails sd)
     {
         sdService.save(sd);
      return "redirect:/Sponsering_Details/getallsponseringdetails";
@@ -60,7 +60,7 @@ public class SponseringdetailsController {
     }
     @GetMapping("/getallsponseringdetails")
     public String getAllSponseringdetails(Model model){
-        List<Sponsering_Details> sdList= sdService.findAllSponseringdetails();
+        List<SponseringDetails> sdList= sdService.findAllSponseringdetails();
         model.addAttribute("allsponseringdetails",sdList);
         return "list-sponseringdetails";
     }

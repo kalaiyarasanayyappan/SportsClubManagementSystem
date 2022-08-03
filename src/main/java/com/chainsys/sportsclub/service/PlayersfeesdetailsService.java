@@ -8,7 +8,7 @@ import com.chainsys.sportsclub.dao.PlayersRepository;
 import com.chainsys.sportsclub.dao.PlayersfeesdetailsRepository;
 import com.chainsys.sportsclub.dao.StaffRepository;
 import com.chainsys.sportsclub.model.Players;
-import com.chainsys.sportsclub.model.Players_Fees_Details;
+import com.chainsys.sportsclub.model.PlayersFeesDetails;
 import com.chainsys.sportsclub.model.Staff;
 
 
@@ -18,16 +18,16 @@ public class PlayersfeesdetailsService {
     @Autowired
     private PlayersfeesdetailsRepository repo;
    
-    public List<Players_Fees_Details> findAllPlayersfeesdetails(){
-        List<Players_Fees_Details> plList= repo.findAll();
+    public List<PlayersFeesDetails> findAllPlayersfeesdetails(){
+        List<PlayersFeesDetails> plList= repo.findAll();
         return plList;
     }
    
-    public Players_Fees_Details save(Players_Fees_Details pl) {
+    public PlayersFeesDetails save(PlayersFeesDetails pl) {
         return repo.save(pl);
         
     }
-    public Players_Fees_Details findById(int id) {
+    public PlayersFeesDetails findById(int id) {
         return repo.findById(id);
     }
   

@@ -1,10 +1,13 @@
 package com.chainsys.sportsclub.model;
 
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 @Entity
 @Table(name = "Players")
@@ -12,8 +15,16 @@ public class Players {
 	@Id
 	@Column(name = "PLAYER_ID")
 private int playerId;
+	@OneToMany(mappedBy ="player",fetch=FetchType.LAZY)
+	private List<PlayersFeesDetails> FeesDetails; // fk class
 	@Column(name = "PLAYER_NAME")
 private String playerName;
+	public List<PlayersFeesDetails> getFeesDetails() {
+		return FeesDetails;
+	}
+	public void setFeesDetails(List<PlayersFeesDetails> feesDetails) {
+		FeesDetails = feesDetails;
+	}
 	@Column(name = "SPORTS_ID")
 private int sportsId;
 	@Column(name = "GENDER")

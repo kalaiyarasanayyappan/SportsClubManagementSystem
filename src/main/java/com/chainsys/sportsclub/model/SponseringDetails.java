@@ -9,8 +9,11 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "Sponsering_Details")
 
-public class Sponsering_Details {
+public class SponseringDetails {
 	@Id
+	@Column(name = "SPONSERING_DETAILS_ID")
+	private int sponseringDetailsId;
+	
 	@Column(name = "SPONSER_ID")
 private int sponserId;
 	@Column(name = "SPORTS_ID")
@@ -50,6 +53,12 @@ private int sportsId;
 	}
 	public void setRecieptNumber(int recieptNumber) {
 		this.recieptNumber = recieptNumber;
+	}
+	public int getSponseringDetailsId() {
+		return sponseringDetailsId;
+	}
+	public void setSponseringDetailsId(int sponseringDetailsId) {
+		this.sponseringDetailsId = sponseringDetailsId;
 	}
 	@Column(name = "AMOUNT")
 private int amount;

@@ -35,7 +35,7 @@
 			       
 			<tbody>
 				           
-				<c:forEach var="Players" items="${allPlayers}">
+				<c:forEach var="Players" items="${allplayers}">
             <tr>
 						           
 						<td>${Players.playerId}</td>            

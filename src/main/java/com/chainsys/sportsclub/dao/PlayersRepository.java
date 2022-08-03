@@ -13,5 +13,6 @@ public interface PlayersRepository extends CrudRepository<Players,Integer>{
 	// Used for both adding new players and Modifying new players
 	void deleteById(int pl_id);
 	List <Players> findAll();
+	
 }
 

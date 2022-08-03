@@ -16,13 +16,13 @@
 			<thead>
 				           
 				<tr>
-					           
+					  <th>prize Id</th>         
 					<th>Date of Prize</th>            
 					<th>Title</th>            
 					<th>Player Id</th>            
 					<th>Sports Id</th>            
-					<th>Position</th>            
-					<th>Team Individual</th>
+					<th>Position Number</th>            
+					<th>Team Or Individual</th>
 					<th>Competetion Name</th> 
 					<th>Prize Amount</th> 
 					
@@ -32,15 +32,15 @@
 			       
 			<tbody>
 				           
-				<c:forEach var="Prizes" items="${allPrizes}">
+				<c:forEach var="Prizes" items="${allprizes}">
             <tr>
-						           
+						  <td>${Prizes.prizeId}</td>          
 						<td>${Prizes.dateOfPrize}</td>            
 						<td>${Prizes.title}</td>            
 						<td>${Prizes.playerId}</td>            
 						<td>${Prizes.sportsId}</td>            
-						<td>${Prizes.position}</td>            
-						<td>${Prizes.teamIndividual}</td> 
+						<td>${Prizes.positionNumber}</td>            
+						<td>${Prizes.teamOrIndividual}</td> 
 						<td>${Prizes.competetionName}</td>
 						<td>${Prizes.prizeAmount}</td>
 						

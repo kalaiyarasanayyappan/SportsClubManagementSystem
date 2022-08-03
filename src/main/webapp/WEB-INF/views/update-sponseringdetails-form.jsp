@@ -12,6 +12,12 @@
     <div id="root">
         <div id="form">
             <form:form action="update" method="post" modelAttribute="updatesponseringdetails">
+             <div>
+                    <label for="sponseringDetailsId">sponsering Details Id</label>
+                    <div>
+                        <form:input path="sponseringDetailsId" />
+                    </div>
+                </div>
                  <div>
                     <label for="sponserId">Sponser Id</label>
                     <div>

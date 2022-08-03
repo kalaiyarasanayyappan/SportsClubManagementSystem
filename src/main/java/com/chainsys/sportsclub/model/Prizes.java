@@ -11,8 +11,26 @@ import javax.persistence.Table;
 
 public class Prizes {
 	@Id
+	@Column(name = "PRIZE_ID")
+	private String prizeId;
+	
 	@Column(name = "date_of_prize")
 private Date dateOfPrize;
+	@Column(name = "title")
+	private String title;
+		@Column(name = "player_id")
+	private int playerId;
+		@Column(name = "sports_id")
+	private int sportsId;
+		@Column(name = "position_number")
+	private int positionNumber;
+		@Column(name = "team_or_individual")
+	private String teamOrIndividual;
+		@Column(name = "competetion_name")
+	private String competetionName;
+		@Column(name = "prize_amount")
+	private int prizeAmount;
+
 	public Date getDateOfPrize() {
 		return dateOfPrize;
 	}
@@ -37,11 +55,11 @@ private Date dateOfPrize;
 	public void setSportsId(int sportsId) {
 		this.sportsId = sportsId;
 	}
-	public int getPosition() {
-		return position;
+	public int getPositionNumber() {
+		return positionNumber;
 	}
-	public void setPosition(int position) {
-		this.position = position;
+	public void setPositionNumber(int positionNumber) {
+		this.positionNumber = positionNumber;
 	}
 	public String getTeamOrIndividual() {
 		return teamOrIndividual;
@@ -61,19 +79,11 @@ private Date dateOfPrize;
 	public void setPrizeAmount(int prizeAmount) {
 		this.prizeAmount = prizeAmount;
 	}
-	@Column(name = "title")
-private String title;
-	@Column(name = "player_id")
-private int playerId;
-	@Column(name = "sports_id")
-private int sportsId;
-	@Column(name = "position")
-private int position;
-	@Column(name = "team_or_individual")
-private String teamOrIndividual;
-	@Column(name = "competetion_name")
-private String competetionName;
-	@Column(name = "prize_amount")
-private int prizeAmount;
-
+	public String getPrizeId() {
+		return prizeId;
+	}
+	public void setPrizeId(String prizeId) {
+		this.prizeId = prizeId;
+	}
+	
 }

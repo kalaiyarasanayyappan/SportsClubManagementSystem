@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.chainsys.sportsclub.dto.PlayersAndPlayersFeesDetailsDTO;
 import com.chainsys.sportsclub.model.Players;
 import com.chainsys.sportsclub.service.PlayersService;
 
@@ -60,6 +61,13 @@ public class PlayersController {
         List<Players> plList= plService.findAllPlayers();
         model.addAttribute("allplayers",plList);
         return "list-players";
+    }
+    @GetMapping("/getplayersbyfeesdetails")
+    public String getPlayersfessdetails(@RequestParam("id") int id,Model model) {
+    	PlayersAndPlayersFeesDetailsDTO dto =plService.getAllPlayersfeesdetails(id);
+        model.addAttribute("getplayers" ,dto.getPlayer());
+        model.addAttribute("feesdetails",dto.getFeesdetails());
+        return "list-players-playersfeesdetails";
     }
 }
 

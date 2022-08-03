@@ -4,15 +4,15 @@ import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.chainsys.sportsclub.model.Sponsering_Details;
+import com.chainsys.sportsclub.model.SponseringDetails;
 
 
-public interface SponseringdetailsRepository extends CrudRepository<Sponsering_Details,Integer>{
-	Sponsering_Details findById(int id);
-	Sponsering_Details save(Sponsering_Details sd);
+public interface SponseringdetailsRepository extends CrudRepository<SponseringDetails,Integer>{
+	SponseringDetails findById(int id);
+	SponseringDetails save(SponseringDetails sd);
 	// Used for both adding new Staff and Modifying new Staff
 	void deleteById(int sd_id);
-	List <Sponsering_Details> findAll();
+	List <SponseringDetails> findAll();
 }
 
 

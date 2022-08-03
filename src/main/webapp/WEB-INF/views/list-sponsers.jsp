@@ -29,7 +29,7 @@
 			       
 			<tbody>
 				           
-				<c:forEach var="Sponsers" items="${allSponsers}">
+				<c:forEach var="Sponsers" items="${allsponsers}">
             <tr>
 						           
 						<td>${Sponsers.sponserId}</td>            

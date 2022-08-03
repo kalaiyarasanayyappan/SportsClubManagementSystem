@@ -32,7 +32,7 @@
 			       
 			<tbody>
 				           
-				<c:forEach var="Sponsersingdetails" items="${allSponsersingdetails}">
+				<c:forEach var="Sponsersingdetails" items="${allsponseringdetails}">
             <tr>
 						           
 						<td>${Sponsersingdetails.sponserId}</td>            

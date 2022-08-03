@@ -4,18 +4,36 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 @Entity
-@Table(name = "Players_Fees_Details")
-public class Players_Fees_Details {
-	@Id
+@Table(name = "PlayersFeesDetails")
+public class PlayersFeesDetails {
+	
 	@Column(name = "paid_date")
-private Date paidDate;
+    private Date paidDate;
 	@Column(name = "player_id")
-private int playerId;
+    private int playerId;
 	@Column(name = "amount")
-private int amount;
+    private int amount;
+	@ManyToOne(fetch=FetchType.LAZY)
+	@JoinColumn(name="player_id",nullable =false,insertable =false,updatable =false)
+	private Players player; // pk class
+	@Column(name = "remarks")
+	private String remarks;
+	public Players getPlayer() {
+		return player;
+	}
+	public void setPlayer(Players player) {
+		this.player = player;
+	}
+	@Id
+	@Column(name = "reciept_number")
+	private int recieptNumber;
+	
 	public Date getPaidDate() {
 		return paidDate;
 	}
@@ -46,9 +64,6 @@ private int amount;
 	public void setRecieptNumber(int recieptNumber) {
 		this.recieptNumber = recieptNumber;
 	}
-	@Column(name = "remarks")
-private String remarks;
-	@Column(name = "reciept_number")
-private int recieptNumber;
+	
 
 }

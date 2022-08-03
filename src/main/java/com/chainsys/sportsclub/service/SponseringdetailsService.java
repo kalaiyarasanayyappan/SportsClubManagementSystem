@@ -9,7 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.chainsys.sportsclub.dao.SponseringdetailsRepository;
 import com.chainsys.sportsclub.dao.SponsersRepository;
 import com.chainsys.sportsclub.dao.StaffRepository;
-import com.chainsys.sportsclub.model.Sponsering_Details;
+import com.chainsys.sportsclub.model.SponseringDetails;
 import com.chainsys.sportsclub.model.Sponsers;
 import com.chainsys.sportsclub.model.Staff;
 
@@ -20,16 +20,16 @@ public class SponseringdetailsService {
     @Autowired
     private SponseringdetailsRepository repo;
    
-    public List<Sponsering_Details> findAllSponseringdetails(){
-        List<Sponsering_Details> sdList= repo.findAll();
+    public List<SponseringDetails> findAllSponseringdetails(){
+        List<SponseringDetails> sdList= repo.findAll();
         return sdList;
     }
    
-    public Sponsering_Details save(Sponsering_Details sd) {
+    public SponseringDetails save(SponseringDetails sd) {
         return repo.save(sd);
         
     }
-    public Sponsering_Details findById(int id) {
+    public SponseringDetails findById(int id) {
         return repo.findById(id);
     }
   

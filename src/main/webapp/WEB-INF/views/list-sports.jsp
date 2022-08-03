@@ -30,7 +30,7 @@
 			       
 			<tbody>
 				           
-				<c:forEach var="Sports" items="${allSports}">
+				<c:forEach var="Sports" items="${allsports}">
             <tr>
 						           
 						<td>${Sports.sportsId}</td>            
