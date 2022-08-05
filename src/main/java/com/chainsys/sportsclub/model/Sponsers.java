@@ -1,8 +1,12 @@
 package com.chainsys.sportsclub.model;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -11,6 +15,14 @@ public class Sponsers {
 	@Id
 	@Column(name = "SPONSER_ID")
 private int sponserId;
+	@OneToMany(mappedBy = "spons", fetch = FetchType.LAZY)
+	private List<SponseringDetails> sponserDetails; // fk class
+	public List<SponseringDetails> getSponserDetails() {
+		return sponserDetails;
+	}
+	public void setSponserDetails(List<SponseringDetails> sponserDetails) {
+		this.sponserDetails = sponserDetails;
+	}
 	@Column(name = "SPONSER_NAME")
 private String sponserName;
 	@Column(name = "CONTACT")

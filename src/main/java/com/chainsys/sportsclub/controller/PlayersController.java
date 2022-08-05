@@ -10,8 +10,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.chainsys.sportsclub.dto.PlayersAndPlayersFeesDetailsDTO;
+import com.chainsys.sportsclub.dto.PlayersAndPlayersPrizeDetailsDTO;
 import com.chainsys.sportsclub.model.Players;
 import com.chainsys.sportsclub.service.PlayersService;
+import com.chainsys.sportsclub.service.PlayersfeesdetailsService;
+import com.chainsys.sportsclub.service.PrizesService;
+import com.chainsys.sportsclub.service.SportsService;
 
 @Controller
 @RequestMapping("/Players")
@@ -19,7 +23,12 @@ public class PlayersController {
     
     @Autowired
     PlayersService plService;
-    
+    @Autowired
+    PrizesService prService;
+    @Autowired
+    PlayersfeesdetailsService repo; 
+    @Autowired
+    SportsService sp;
     @GetMapping("/getplayers")
     public String getPlayers(@RequestParam("id")int id,Model model) {
        Players pl =plService.findById(id);
@@ -68,6 +77,13 @@ public class PlayersController {
         model.addAttribute("getplayers" ,dto.getPlayer());
         model.addAttribute("feesdetails",dto.getFeesdetails());
         return "list-players-playersfeesdetails";
+    }
+    @GetMapping("/getplayersbyprizedetails")
+    public String getPlayersprizedetails(@RequestParam("id") int id,Model model) {
+    	PlayersAndPlayersPrizeDetailsDTO dtp =plService.getAllPlayersPrizedetails(id);
+        model.addAttribute("getplay" ,dtp.getPlay());
+        model.addAttribute("prizedetails",dtp.getPrizedetails());
+        return "list-players-playersprizedetails";
     }
 }
 

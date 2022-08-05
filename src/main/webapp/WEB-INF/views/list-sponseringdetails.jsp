@@ -16,7 +16,7 @@
 			<thead>
 				           
 				<tr>
-					           
+					 <th>Sponsering Details Id</th>          
 					<th>Sponser Id</th>            
 					<th>Sports Id</th>            
 					<th>Amount</th>            
@@ -32,15 +32,15 @@
 			       
 			<tbody>
 				           
-				<c:forEach var="Sponsersingdetails" items="${allsponseringdetails}">
+				<c:forEach var="Sponseringdetails" items="${allsponseringdetails}">
             <tr>
-						           
-						<td>${Sponsersingdetails.sponserId}</td>            
-						<td>${Sponsersingdetails.sportsId}</td>            
-						<td>${Sponsersingdetails.amount}</td>            
-						<td>${Sponsersingdetails.dateOfSponsering}</td>  
-						<td>${Sponsersingdetails.modeOfPayment}</td>  
-						<td>${Sponsersingdetails.recieptNumber}</td>            
+						<td>${Sponseringdetails.sponseringDetailsId}</td>           
+						<td>${Sponseringdetails.sponserId}</td>            
+						<td>${Sponseringdetails.sportsId}</td>            
+						<td>${Sponseringdetails.amount}</td>            
+						<td>${Sponseringdetails.dateOfSponsering}</td>  
+						<td>${Sponseringdetails.modeOfPayment}</td>  
+						<td>${Sponseringdetails.recieptNumber}</td>            
 						         
 						            
 					</tr>

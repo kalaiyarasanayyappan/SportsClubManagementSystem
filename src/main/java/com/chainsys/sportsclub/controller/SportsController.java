@@ -11,15 +11,23 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.chainsys.sportsclub.dto.PlayersAndPlayersPrizeDetailsDTO;
+import com.chainsys.sportsclub.dto.SportsAndSponseringDetailsDTO;
+import com.chainsys.sportsclub.model.SponseringDetails;
 import com.chainsys.sportsclub.model.Sports;
+import com.chainsys.sportsclub.service.PlayersService;
+import com.chainsys.sportsclub.service.SponseringdetailsService;
 import com.chainsys.sportsclub.service.SportsService;
 
 @Controller
 @RequestMapping("/Sports")
 public class SportsController {
-    
+   
     @Autowired
     SportsService spService;
+   
+   @Autowired
+   SponseringdetailsService sdService;
     
     @GetMapping("/getsports")
     public String getSports(@RequestParam("id")int id,Model model) {
@@ -63,4 +71,12 @@ public class SportsController {
         model.addAttribute("allsports",spList);
         return "list-sports";
     }
+    @GetMapping("/getsportsbysponserdetails")
+    public String getSportssponserdetails(@RequestParam("id") int id,Model model) {
+    	SportsAndSponseringDetailsDTO dts =spService.getSportsSponsersDetails(id);
+        model.addAttribute("getsport" ,dts.getSport());
+        model.addAttribute("sponserdetails",dts.getSponserdetail());
+        return "list-sports-sportssponserdetails";
+    }
+    
 }

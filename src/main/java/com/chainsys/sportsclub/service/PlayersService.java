@@ -7,10 +7,13 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.chainsys.sportsclub.dao.PlayersRepository;
 import com.chainsys.sportsclub.dao.PlayersfeesdetailsRepository;
+import com.chainsys.sportsclub.dao.PrizesRepository;
 import com.chainsys.sportsclub.dao.StaffRepository;
 import com.chainsys.sportsclub.dto.PlayersAndPlayersFeesDetailsDTO;
+import com.chainsys.sportsclub.dto.PlayersAndPlayersPrizeDetailsDTO;
 import com.chainsys.sportsclub.model.Players;
 import com.chainsys.sportsclub.model.PlayersFeesDetails;
+import com.chainsys.sportsclub.model.Prizes;
 import com.chainsys.sportsclub.model.Staff;
 
 
@@ -23,6 +26,8 @@ public class PlayersService {
     private PlayersRepository repo;
     @Autowired
     private PlayersfeesdetailsRepository prList;
+    @Autowired
+    private PrizesRepository pri;
    
     public List<Players> findAllPlayers(){
         List<Players> plList= repo.findAll();
@@ -45,16 +50,29 @@ public class PlayersService {
 		Players player=findById(id);
 		PlayersAndPlayersFeesDetailsDTO dto= new PlayersAndPlayersFeesDetailsDTO();
 		dto.setPlayer(player);
-		List<PlayersFeesDetails> feesdetails = prList.getPlayers(id); // method created in repo
+		List<PlayersFeesDetails> feesdetails = prList.findByPlayerPlayerId(id); // method created in repo
 		Iterator<PlayersFeesDetails> itr = feesdetails.iterator();
 		while(itr.hasNext())
 		{
-			dto.addPlayersandPlayersfeesdetails((PlayersFeesDetails )itr.next());
+			dto.addPlayersandPlayersfeesdetails((PlayersFeesDetails)itr.next());
 			
 		}
-		return dto;
-		
+		return dto;	
 	}
+    public PlayersAndPlayersPrizeDetailsDTO getAllPlayersPrizedetails(int id)
+   	{
+   		Players play=findById(id);
+   		PlayersAndPlayersPrizeDetailsDTO dtp= new PlayersAndPlayersPrizeDetailsDTO();
+   		dtp.setPlayer(play);
+   		List<Prizes> prizedetails = pri.findByPlayPlayerId(id); // method created in repo
+   		Iterator<Prizes> itr = prizedetails.iterator();
+   		while(itr.hasNext())
+   		{
+   			dtp.addPlayersandPrizedetails((Prizes)itr.next());
+   			
+   		}
+   		return dtp;	
+   	}
 }
 
 

@@ -10,8 +10,8 @@
 </head>
 <body>
 <div id="root">
-		<div id="getplayersbyfeesdetails">
-			<form:form action="" method="post" modelAttribute="getplayers">
+		<div id="getplayersbyprizedetails">
+			<form:form action="" method="post" modelAttribute="getplay">
 				 <div>
                     <label for="playerId">Player Id</label>
                     <div>
@@ -82,27 +82,34 @@
 			 </form:form>
 		</div>
 	</div>
-	<div id="getallplayersfeesdetails">
+	<div id="getallplayersprizedetails">
 		<table>
 		<thead>
 				<tr>
-					<th>paid Date</th>            
+					 <th>prize Id</th>         
+					<th>Date of Prize</th>            
+					<th>Title</th>            
 					<th>Player Id</th>            
-					<th>Amount</th>            
-					<th>Remarks</th>            
-					<th>Reciept Number</th>            
+					<th>Sports Id</th>            
+					<th>Position Number</th>            
+					<th>Team Or Individual</th>
+					<th>Competetion Name</th> 
+					<th>Prize Amount</th>        
 					
 				</tr>
 			</thead>
 			<tbody>
-				<c:forEach var="feesDetails" items="${feesdetails}">
+				<c:forEach var="prizeDetails" items="${prizedetails}">
 					<tr>
-						<td>${feesDetails.paidDate}</td>
-						<td>${feesDetails.playerId}</td>
-						<td>${feesDetails.amount}</td>
-						<td>${feesDetails.remarks}</td>
-						<td>${feesDetails.recieptNumber}</td>
-						
+						 <td>${prizeDetails.prizeId}</td>          
+						<td>${prizeDetails.dateOfPrize}</td>            
+						<td>${prizeDetails.title}</td>            
+						<td>${prizeDetails.playerId}</td>            
+						<td>${prizeDetails.sportsId}</td>            
+						<td>${prizeDetails.positionNumber}</td>            
+						<td>${prizeDetails.teamOrIndividual}</td> 
+						<td>${prizeDetails.competetionName}</td>
+						<td>${prizeDetails.prizeAmount}</td>
 					</tr>
 				</c:forEach>
 			</tbody>

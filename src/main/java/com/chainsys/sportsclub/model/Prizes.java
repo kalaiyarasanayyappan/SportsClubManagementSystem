@@ -4,7 +4,10 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 @Entity
 @Table(name = "Prizes")
@@ -13,7 +16,15 @@ public class Prizes {
 	@Id
 	@Column(name = "PRIZE_ID")
 	private String prizeId;
-	
+	@ManyToOne(fetch=FetchType.LAZY)
+	@JoinColumn(name="player_id",nullable =false,insertable =false,updatable =false)
+	private Players play;
+	public Players getPlay() {
+		return play;
+	}
+	public void setPlay(Players play) {
+		this.play = play;
+	}
 	@Column(name = "date_of_prize")
 private Date dateOfPrize;
 	@Column(name = "title")
