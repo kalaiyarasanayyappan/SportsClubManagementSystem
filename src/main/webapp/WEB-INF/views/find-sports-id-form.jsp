@@ -7,9 +7,14 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Get Sports By Id</title>
+<style type="text/css">
+.c3{
+background-color:red;
+}
+</style>
 </head>
 <body>
-    <div id="root">
+    <div class="c3"id="root">
         <div id="form">
             <form:form action="" method="post"
                 modelAttribute="getsports">

@@ -7,9 +7,18 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Add Players</title>
+<style type="text/css">
+.b2{
+background-color:red;
+border:1px green;
+border-radius: 15px;
+list-style:square
+}
+</style>
+
 </head>
 <body>
-  <div id="root">
+  <div class="b2" id="root">
         <div id="form">
             <form:form action="add" method="post"
                 modelAttribute="addplayers">
@@ -33,8 +42,10 @@
                 </div>
                 <div>
                     <label for="gender">Gender</label>
+                    
                     <div>
                         <form:input path="gender" />
+                         
                     </div>
                 </div>
                 <div>

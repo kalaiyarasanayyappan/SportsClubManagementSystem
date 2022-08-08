@@ -7,9 +7,14 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Get Staff By Id</title>
+<style type="text/css">
+.a4{
+background-color:red;
+}
+</style>
 </head>
 <body>
-    <div id="root">
+    <div  class="a4"id="root">
         <div id="form">
             <form:form action="" method="post"
                 modelAttribute="getstaff">

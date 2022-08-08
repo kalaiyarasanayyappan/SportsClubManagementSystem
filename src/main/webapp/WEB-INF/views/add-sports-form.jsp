@@ -7,9 +7,16 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Add Sports</title>
+<style type="text/css">
+.c1{
+background-color:red;
+border:green 5px solid;
+padding:20px;
+}
+</style>
 </head>
 <body>
-  <div id="root">
+  <div class="c1" id="root">
         <div id="form">
             <form:form action="add" method="post"
                 modelAttribute="addsports">

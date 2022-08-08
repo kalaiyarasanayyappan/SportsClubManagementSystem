@@ -6,10 +6,16 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Staff List</title>
+<style type="text/css">
+.a6{
+background-color:red;
+}
+</style>
 </head>
 <body>
 	   
-	<div id="table root">
+	<div class="a6"id="table root">
+	
 		   
 		<table>
 			       

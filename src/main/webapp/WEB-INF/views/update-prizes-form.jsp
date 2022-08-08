@@ -7,9 +7,17 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Update Prizes</title>
+<style type="text/css">
+.e2{
+background-color:red;
+border:1px green;
+border-radius: 15px;
+list-style:square
+}
+</style>
 </head>
 <body>
-    <div id="root">
+    <div class="e2"id="root">
         <div id="form">
             <form:form action="update" method="post" modelAttribute="updateplayersfeesdetails">
              <div>

@@ -6,10 +6,15 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Sponser List</title>
+<style type="text/css">
+.d6{
+background-color:red;
+}
+</style>
 </head>
 <body>
 	   
-	<div id="table root">
+	<div class="d6"id="table root">
 		   
 		<table>
 			       

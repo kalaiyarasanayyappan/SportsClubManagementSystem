@@ -7,9 +7,16 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Players Details</title>
+<style type="text/css">
+.b7{
+background-color:red;
+text-transform:uppercase;
+word-spacing:1em;
+}
+</style>
 </head>
 <body>
-<div id="root">
+<div class="b7" id="root">
 		<div id="getplayersbyfeesdetails">
 			<form:form action="" method="post" modelAttribute="getplayers">
 				 <div>

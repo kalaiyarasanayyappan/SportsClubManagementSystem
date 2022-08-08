@@ -7,9 +7,17 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Add Staff</title>
+<style type="text/css">
+.a2{
+background-color:red;
+border:1px green;
+border-radius: 15px;
+list-style:square
+}
+</style>
 </head>
 <body>
-  <div id="root">
+  <div class="a2"id="root">
         <div id="form">
             <form:form action="add" method="post"
                 modelAttribute="addstaff">

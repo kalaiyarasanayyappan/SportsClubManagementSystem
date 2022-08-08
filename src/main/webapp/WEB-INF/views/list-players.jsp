@@ -6,10 +6,15 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Players List</title>
+<style type="text/css">
+.b6{
+background-color:red;
+}
+</style>
 </head>
 <body>
 	   
-	<div id="table root">
+	<div class="b6"id="table root">
 		   
 		<table>
 			       

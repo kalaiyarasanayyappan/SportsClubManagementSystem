@@ -5,17 +5,18 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
-import com.chainsys.sportsclub.dao.PlayersRepository;
-import com.chainsys.sportsclub.dao.SponseringdetailsRepository;
-import com.chainsys.sportsclub.dao.SportsRepository;
-import com.chainsys.sportsclub.dto.PlayersAndPlayersPrizeDetailsDTO;
+import com.chainsys.sportsclub.dto.SponsersAndSponseringDetailsDTO;
+import com.chainsys.sportsclub.dto.SportsAndPlayersDTO;
 import com.chainsys.sportsclub.dto.SportsAndSponseringDetailsDTO;
 import com.chainsys.sportsclub.model.Players;
 import com.chainsys.sportsclub.model.Prizes;
 import com.chainsys.sportsclub.model.SponseringDetails;
+import com.chainsys.sportsclub.model.Sponsers;
 import com.chainsys.sportsclub.model.Sports;
+import com.chainsys.sportsclub.repository.PlayersRepository;
+import com.chainsys.sportsclub.repository.SponseringdetailsRepository;
+import com.chainsys.sportsclub.repository.SportsRepository;
 
 @Service
 public class SportsService {
@@ -24,6 +25,8 @@ public class SportsService {
     private SportsRepository spo;
     @Autowired
     private SponseringdetailsRepository sdr;
+    @Autowired
+    private PlayersRepository sr;
    
    
     public List<Sports> findAllSports(){
@@ -45,9 +48,9 @@ public class SportsService {
     public SportsAndSponseringDetailsDTO getSportsSponsersDetails(int id)
    	{
    		Sports sport=findById(id);
-   		SportsAndSponseringDetailsDTO dts= new SportsAndSponseringDetailsDTO();
+    	SportsAndSponseringDetailsDTO dts= new SportsAndSponseringDetailsDTO();
    		dts.setSport(sport);
-   		List<SponseringDetails> sponserdetails =sdr.findBySponserId(id) ; // method created in repo
+   		List<SponseringDetails> sponserdetails =sdr.findAll(); // method created in repo
    		Iterator<SponseringDetails> itr = sponserdetails.iterator();
    		while(itr.hasNext())
    		{
@@ -56,5 +59,18 @@ public class SportsService {
    		}
    		return dts;	
    	}
-    
+    public SportsAndPlayersDTO getAllSportsplayersdetails(int id)
+   	{
+   		Sports sport=findById(id);
+   		SportsAndPlayersDTO dtp= new SportsAndPlayersDTO();
+   		dtp.setSport(sport);
+   		List<Players> playerdetails = sr.findAll(); // method created in repo
+   		Iterator<Players> itr = playerdetails.iterator();
+   		while(itr.hasNext())
+   		{
+   			dtp.addPlayersDetails((Players)itr.next());
+   			
+   		}
+   		return dtp;	
+   	}
 }

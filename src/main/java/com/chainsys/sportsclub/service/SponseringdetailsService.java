@@ -6,35 +6,35 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.chainsys.sportsclub.dao.SponseringdetailsRepository;
-import com.chainsys.sportsclub.dao.SponsersRepository;
-import com.chainsys.sportsclub.dao.StaffRepository;
 import com.chainsys.sportsclub.model.SponseringDetails;
 import com.chainsys.sportsclub.model.Sponsers;
 import com.chainsys.sportsclub.model.Staff;
+import com.chainsys.sportsclub.repository.SponseringdetailsRepository;
+import com.chainsys.sportsclub.repository.SponsersRepository;
+import com.chainsys.sportsclub.repository.StaffRepository;
 
 
 @Service
 public class SponseringdetailsService {
     
     @Autowired
-    private SponseringdetailsRepository repo;
+    private SponseringdetailsRepository sr;
    
     public List<SponseringDetails> findAllSponseringdetails(){
-        List<SponseringDetails> sdList= repo.findAll();
+        List<SponseringDetails> sdList= sr.findAll();
         return sdList;
     }
    
     public SponseringDetails save(SponseringDetails sd) {
-        return repo.save(sd);
+        return sr.save(sd);
         
     }
     public SponseringDetails findById(int id) {
-        return repo.findById(id);
+        return sr.findById(id);
     }
   
     public void deleteById(int id) {
-        repo.deleteById(id);
+        sr.deleteById(id);
     }
 }
 

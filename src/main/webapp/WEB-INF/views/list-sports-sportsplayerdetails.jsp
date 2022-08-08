@@ -8,14 +8,17 @@
 <meta charset="ISO-8859-1">
 <title>sports</title>
 <style type="text/css">
-.c6{
+.c7{
 background-color:red;
+text-transform:uppercase;
+word-spacing:1em;
 }
 </style>
+
 </head>
 <body>
-	<div class="c6"id="root">
-		<div id="getsportsbysponserdetails">
+	<div class="c7"id="root">
+		<div id="getsportsbyplayerdetails">
 			<form:form action="" method="post" modelAttribute="getsport">
 				<div>
 					<label for="sportsId">Sports Id</label>
@@ -56,29 +59,39 @@ background-color:red;
 			</form:form>
 		</div>
 	</div>
-	<div id="getsportsbysponserdetails">
+	<div id="getsportsbyplayerdetails">
 		<table>
 			<thead>
 				<tr>
-					<th>Sponsering_Details_Id</th>
-					<th>Sponser_Id</th>
-					<th>Sports Id</th>
-					<th>Amount</th>
-					<th>Date_of_Sponser</th>
-					<th>Mode of Payment</th>
-					<th>Reciept_Number</th>
+					<th>Player Id</th>            
+					<th>Player Name</th>            
+					<th>Sports Id</th>            
+					<th>Gender</th>            
+					<th>Address</th>            
+					<th>Contact</th>
+					<th>Player Status</th> 
+					<th>Date of Birth</th> 
+					<th>Joining Date</th> 
+					<th>Subscription Due</th> 
+					<th>Subscription Paid</th>             
+	            
 				</tr>
 			</thead>
 			<tbody>
-				<c:forEach var="Sponseringdetails" items="${sponserdetails}">
+				<c:forEach var="playersdetails" items="${playerdetails}">
 					<tr>
-						<td>${Sponseringdetails.sponseringDetailsId}</td>
-						<td>${Sponseringdetails.sponserId}</td>
-						<td>${Sponseringdetails.sportsId}</td>
-						<td>${Sponseringdetails.amount}</td>
-						<td>${Sponseringdetails.dateOfSponsering}</td>
-						<td>${Sponseringdetails.modeOfPayment}</td>
-						<td>${Sponseringdetails.recieptNumber}</td>
+						<td>${playersdetails.playerId}</td>            
+						<td>${playersdetails.playerName}</td>            
+						<td>${playersdetails.sportsId}</td>            
+						<td>${playersdetails.gender}</td>            
+						<td>${playersdetails.address}</td>            
+						<td>${playersdetails.contact}</td> 
+						<td>${playersdetails.playerStatus}</td>
+						<td>${playersdetails.dateOfBirth}</td>
+						<td>${playersdetails.joiningDate}</td>
+						<td>${playersdetails.subscriptionDue}</td>
+						<td>${playersdetails.subscriptionPaid}</td>           
+						            
 					</tr>
 				</c:forEach>
 			</tbody>

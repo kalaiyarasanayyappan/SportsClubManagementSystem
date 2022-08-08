@@ -22,10 +22,16 @@ public class Players {
 	private List<PlayersFeesDetails> FeesDetails; // fk class
 	@OneToMany(mappedBy = "play", fetch = FetchType.LAZY)
 	private List<Prizes> prizedetails; // fk class
+	@ManyToOne(fetch=FetchType.LAZY)
+	@JoinColumn(name="SPORTS_ID",nullable =false,insertable =false,updatable =false)
+	private Sports sport;
+	public Sports getSport() {
+		return sport;
+	}
 
-	
-
-	
+	public void setSport(Sports sport) {
+		this.sport = sport;
+	}
 
 	public List<Prizes> getPrizedetails() {
 		return prizedetails;

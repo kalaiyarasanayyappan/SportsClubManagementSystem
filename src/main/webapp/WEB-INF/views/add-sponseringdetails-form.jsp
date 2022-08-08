@@ -7,9 +7,16 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Add Sponsersingdetails</title>
+<style type="text/css">
+.f1{
+background-color:red;
+border:green 5px solid;
+padding:20px;
+}
+</style>
 </head>
 <body>
-  <div id="root">
+  <div class="f1"id="root">
         <div id="form">
             <form:form action="add" method="post"
                 modelAttribute="addsponseringdetails">

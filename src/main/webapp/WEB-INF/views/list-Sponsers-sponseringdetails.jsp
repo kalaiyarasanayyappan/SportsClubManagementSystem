@@ -7,9 +7,15 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Sponsers</title>
+<style type="text/css">
+.d7{
+background-color:red;
+text-transform:uppercase;
+word-spacing:1em;
+}</style>
 </head>
 <body>
-<div id="root">
+<div class="d7"id="root">
 		<div id="getsponsersponseringdetails">
 			<form:form action="" method="post" modelAttribute="spons">
 				  <div>

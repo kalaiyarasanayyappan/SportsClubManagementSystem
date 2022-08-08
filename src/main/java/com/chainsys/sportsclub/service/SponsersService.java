@@ -7,9 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.chainsys.sportsclub.dao.SponseringdetailsRepository;
-import com.chainsys.sportsclub.dao.SponsersRepository;
-import com.chainsys.sportsclub.dao.StaffRepository;
 import com.chainsys.sportsclub.dto.PlayersAndPlayersPrizeDetailsDTO;
 import com.chainsys.sportsclub.dto.SponsersAndSponseringDetailsDTO;
 import com.chainsys.sportsclub.model.Players;
@@ -17,6 +14,9 @@ import com.chainsys.sportsclub.model.Prizes;
 import com.chainsys.sportsclub.model.SponseringDetails;
 import com.chainsys.sportsclub.model.Sponsers;
 import com.chainsys.sportsclub.model.Staff;
+import com.chainsys.sportsclub.repository.SponseringdetailsRepository;
+import com.chainsys.sportsclub.repository.SponsersRepository;
+import com.chainsys.sportsclub.repository.StaffRepository;
 
 
 @Service
@@ -48,7 +48,7 @@ public class SponsersService {
    		Sponsers spons=findById(id);
    		SponsersAndSponseringDetailsDTO dts= new SponsersAndSponseringDetailsDTO();
    		dts.setSpons(spons);
-   		List<SponseringDetails> sponserdetails = sp.findBySponserId(id); // method created in repo
+   		List<SponseringDetails> sponserdetails = sp.findAll(); // method created in repo
    		Iterator<SponseringDetails> itr = sponserdetails.iterator();
    		while(itr.hasNext())
    		{

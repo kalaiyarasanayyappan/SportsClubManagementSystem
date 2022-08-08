@@ -6,10 +6,17 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Prizes List</title>
+<style type="text/css">
+.e5{
+background-color:red;
+text-transform:uppercase;
+word-spacing:1em;
+}
+</style>
 </head>
 <body>
 	   
-	<div id="table root">
+	<div class="e5"id="table root">
 		   
 		<table>
 			       

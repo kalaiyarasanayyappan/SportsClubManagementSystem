@@ -1,4 +1,4 @@
-package com.chainsys.sportsclub.dao;
+package com.chainsys.sportsclub.repository;
 
 
 import java.util.List;

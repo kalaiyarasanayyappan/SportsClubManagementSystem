@@ -7,9 +7,14 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Players Details</title>
+<style type="text/css">
+.b8{
+background-color:red;
+}
+</style>
 </head>
 <body>
-<div id="root">
+<div class="b8" id="root">
 		<div id="getplayersbyprizedetails">
 			<form:form action="" method="post" modelAttribute="getplay">
 				 <div>

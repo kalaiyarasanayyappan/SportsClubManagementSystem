@@ -6,10 +6,17 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Players fees details</title>
+<style type="text/css">
+.g5{
+background-color:red;
+text-transform:uppercase;
+word-spacing:1em;
+}
+</style>
 </head>
 <body>
 	   
-	<div id="table root">
+	<div class="g5"id="table root">
 		   
 		<table>
 			       

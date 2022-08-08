@@ -7,9 +7,14 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Get Players By Id</title>
+<style type="text/css">
+.b4{
+background-color:red;
+}
+</style>
 </head>
 <body>
-    <div id="root">
+    <div class="b4"id="root">
         <div id="form">
             <form:form action="" method="post"
                 modelAttribute="getplayers">

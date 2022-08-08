@@ -1,6 +1,5 @@
 package com.chainsys.sportsclub.model;
 
-import java.time.LocalTime;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -30,7 +29,25 @@ public class Sports {
 
 	@OneToMany(mappedBy = "sport", fetch = FetchType.LAZY)
 	private List<SponseringDetails> sponserdetails; // fk class
+	@OneToMany(mappedBy = "sport", fetch = FetchType.LAZY)
+	private List<Players> playerdetails; // fk class
+	public List<Players> getPlayerdetails() {
+		return playerdetails;
+	}
 
+	public void setPlayerdetails(List<Players> playerdetails) {
+		this.playerdetails = playerdetails;
+	}
+
+	public List<SponseringDetails> getSponserdetails() {
+		return sponserdetails;
+	}
+
+	public void setSponserdetails(List<SponseringDetails> sponserdetails) {
+		this.sponserdetails = sponserdetails;
+	}
+
+	
 	public int getSportsId() {
 		return sportsId;
 	}
@@ -79,15 +96,4 @@ public class Sports {
 		this.durations = durations;
 	}
 
-	public List<SponseringDetails> getSponserdetails() {
-		return sponserdetails;
-	}
-
-	public void setSponserdetails(List<SponseringDetails> sponserdetails) {
-		this.sponserdetails = sponserdetails;
-	}
-
-	
-
-	
 }

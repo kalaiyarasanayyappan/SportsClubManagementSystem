@@ -7,9 +7,14 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Get Sponseringdetails By Id</title>
+<style type="text/css">
+.f3{
+background-color:red;
+}
+</style>
 </head>
 <body>
-    <div id="root">
+    <div class="f3"id="root">
         <div id="form">
             <form:form action="" method="post"
                 modelAttribute="getsponseringdetails">

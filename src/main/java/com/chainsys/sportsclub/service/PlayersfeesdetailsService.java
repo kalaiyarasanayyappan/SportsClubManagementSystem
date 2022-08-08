@@ -4,12 +4,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.chainsys.sportsclub.dao.PlayersRepository;
-import com.chainsys.sportsclub.dao.PlayersfeesdetailsRepository;
-import com.chainsys.sportsclub.dao.StaffRepository;
 import com.chainsys.sportsclub.model.Players;
 import com.chainsys.sportsclub.model.PlayersFeesDetails;
 import com.chainsys.sportsclub.model.Staff;
+import com.chainsys.sportsclub.repository.PlayersRepository;
+import com.chainsys.sportsclub.repository.PlayersfeesdetailsRepository;
+import com.chainsys.sportsclub.repository.StaffRepository;
 
 
 @Service

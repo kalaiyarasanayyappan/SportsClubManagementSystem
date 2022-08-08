@@ -1,4 +1,4 @@
-package com.chainsys.sportsclub.dao;
+package com.chainsys.sportsclub.repository;
 
 import java.util.List;
 
@@ -14,7 +14,8 @@ public interface SponseringdetailsRepository extends CrudRepository<SponseringDe
 	// Used for both adding new Staff and Modifying new Staff
 	void deleteById(int sd_id);
 	List <SponseringDetails> findAll();
-	List<SponseringDetails> findBySponserId(int id);
+//	List<SponseringDetails> findAllSponseringdetails(int id);
+	
 }
 
 

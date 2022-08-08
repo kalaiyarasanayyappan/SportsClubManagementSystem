@@ -7,9 +7,14 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Update Players</title>
+<style type="text/css">
+.b3{
+background-color:red;
+}
+</style>
 </head>
 <body>
-    <div id="root">
+    <div class="b3"id="root">
         <div id="form">
             <form:form action="update" method="post" modelAttribute="updateplayers">
                <div>

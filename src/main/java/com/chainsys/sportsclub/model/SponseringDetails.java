@@ -20,9 +20,18 @@ public class SponseringDetails {
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "SPONSER_ID", nullable = false, insertable = false, updatable = false)
 	private Sponsers spons;
+	
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "SPORTS_ID", nullable = false, insertable = false, updatable = false)
 	private Sports sport;
+	public Sports getSport() {
+		return sport;
+	}
+
+	public void setSport(Sports sport) {
+		this.sport = sport;
+	}
+
 	@Column(name = "AMOUNT")
 	private int amount;
 	@Column(name = "DATE_OF_SPONSERING")
@@ -36,14 +45,6 @@ public class SponseringDetails {
 	@Column(name = "SPORTS_ID")
 	private int sportsId;
 
-	public Sports getSport() {
-		return sport;
-	}
-
-	public void setSport(Sports sport) {
-		this.sport = sport;
-	}
-
 	public Sponsers getSpons() {
 		return spons;
 	}
@@ -51,8 +52,6 @@ public class SponseringDetails {
 	public void setSpons(Sponsers spons) {
 		this.spons = spons;
 	}
-
-
 
 	public int getSponserId() {
 		return sponserId;
@@ -109,6 +108,5 @@ public class SponseringDetails {
 	public void setSponseringDetailsId(int sponseringDetailsId) {
 		this.sponseringDetailsId = sponseringDetailsId;
 	}
-
 
 }
