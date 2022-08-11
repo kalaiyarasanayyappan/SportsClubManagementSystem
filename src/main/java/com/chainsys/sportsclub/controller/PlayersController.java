@@ -1,8 +1,12 @@
 package com.chainsys.sportsclub.controller;
 import java.util.List;
+
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -29,17 +33,18 @@ public class PlayersController {
     PlayersfeesdetailsService repo; 
     @Autowired
     SportsService sp;
-    @GetMapping("/getplayers")
-    public String getPlayers(@RequestParam("id")int id,Model model) {
-       Players pl =plService.findById(id);
-        model.addAttribute("getplayers",pl);
-        return "find-players-id-form";
-    }
-    @GetMapping("/deleteplayers")
-    public String deletePlayers(@RequestParam("id")int id) {
-        plService.deleteById(id);
-         return "redirect:/Players/getallplayers";
-    }
+	
+	 @GetMapping("/getplayers") public String
+	  getPlayers(@RequestParam("playerId")int id,Model model) { Players pl
+	  =plService.findById(id); model.addAttribute("getplayers",pl); return
+	  "find-players-id-form"; }
+	 
+
+	/*
+	 * @GetMapping("/deleteplayers") public String
+	 * deletePlayers(@RequestParam("id")int id) { plService.deleteById(id); return
+	 * "redirect:/Players/getallplayers"; }
+	 */
     @GetMapping("/addform")
     public String showAddForm(Model model) {
         Players pl = new Players();
@@ -47,22 +52,30 @@ public class PlayersController {
         return "add-players-form";
     }
     @PostMapping("/add")
-    public String addPlayers(@ModelAttribute("addplayers")Players pl)
+    public String addPlayers(@Valid @ModelAttribute("addplayers")Players pl,Errors errors)
     {
+    	if(errors.hasErrors()) {
+			return "add-players-form";
+		}
+ 
      plService.save(pl);
      return "redirect:/Players/getallplayers";
     }
-    @GetMapping("/updateform")
-    public String showUpdateForm(@RequestParam("id")int id,Model model) {
+    @GetMapping("/updateplayers")
+    public String showUpdateForm(@RequestParam("playerId")int id,Model model) {
         Players pl = plService.findById(id);
         model.addAttribute("updateplayers",pl);
         return "update-players-form";
     }
     @PostMapping("/update")
-    public String modifyPlayers(@ModelAttribute("updateplayers") Players pl)
+    public String modifyPlayers(@Valid @ModelAttribute("updateplayers") Players pl,Errors errors)
     {
+    	if(errors.hasErrors()) {
+			return "update-staff-form";
+		}
+ 
         plService.save(pl);
-     return "redirect:/Players/getallPlayers";
+     return "redirect:/Players/getallplayers";
      
     }
     @GetMapping("/getallplayers")
@@ -85,6 +98,45 @@ public class PlayersController {
         model.addAttribute("prizedetails",dtp.getPrizedetails());
         return "list-players-playersprizedetails";
     }
+    @RequestMapping("/deleteplayersform")
+    public String deletePlayersForm() {
+        return "delete-players";
+    }
+
+    @RequestMapping("/deleteplayers")
+    public String deletePlayers(@RequestParam("playerId") int id) {
+        plService.deleteById(id);
+        return "redirect:/Players/getallplayers";
+    }
+    @RequestMapping("/updateplayersform")
+    public String updatePlayersForm() {
+        return "update-players";
+    }
+
+    @RequestMapping("/updateplayers")
+    public String updatePlayers(@RequestParam("playerId") int id) {
+        plService.findById(id);
+        return "redirect:/Players/getallplayers";
+    }
+    @RequestMapping("/getplayersform")
+    public String getPlayersForm() {
+        return "get-players";
+    }
+
+    @RequestMapping("/getplayers")
+    public String getPlayers(@RequestParam("playerId") int id) {
+        plService.findById(id);
+        return "redirect:/Players/getallplayers";
+    }
+	/*
+	 * @RequestMapping("/getplayersfeesdetail") public String getFeesByPlayers() {
+	 * return "get-feesbyplayers"; }
+	 * 
+	 * @RequestMapping("/getplayersprizedetail") public String getPrizeByPlayers() {
+	 * return "get-prizebyplayers"; }
+	 */
+    
+    
 }
 
 

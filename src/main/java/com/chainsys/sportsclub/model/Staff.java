@@ -1,29 +1,58 @@
 package com.chainsys.sportsclub.model;
 
-import java.util.Date;
+
+
+import java.sql.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+import javax.validation.constraints.Digits;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 @Entity
 @Table(name = "Staff")
 public class Staff {
 	@Id
+	@SequenceGenerator(name="staff_id", sequenceName="staff_id", allocationSize=1)
+    @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="staff_id")
 	@Column(name = "STAFF_ID")
+//	@NotEmpty(message = "*Please enter value")
 private int staffId;
-	@Column(name = "STAFF_NAME")
+/*
+ * @Column(name = "STAFF_NAME")
+ * 
+ * @Size(max = 20, min = 3, message = "*Name length should be 3 to 20")
+ * 
+ * @NotBlank(message = "*Name can't be Empty")
+ * 
+ * @Pattern(regexp = "^[A-Za-z]\\w{3,20}$", message = "*Enter valid name ")
+ */
 private String staffName;
 
-	@Column(name = "SALARY")
+/*
+ * @Column(name = "SALARY")
+ * 
+ * @Min(value = 0, message="*Salary should be in positive numbers")
+ */
 private float salary;
 	@Column(name = "JOINING_DATE")
 private Date joiningDate;
 	@Column(name = "DATE_OF_BIRTH")
 private Date dateOfBirth;
 	@Column(name = "CONTACT")
+	/* @Digits(message = "*Invalid number.", integer = 10, fraction = 0) */
 private long contact;
 	@Column(name = "ADDRESS")
+	/* @NotEmpty(message = "*Please enter Address") */
 private String address;
 	@Column(name = "STAFF_ROLE")
 private String staffRole;
@@ -81,12 +110,7 @@ private String staffRole;
 	public void setCoachingSports(String coachingSports) {
 		this.coachingSports = coachingSports;
 	}
-	public int getManagerId() {
-		return managerId;
-	}
-	public void setManagerId(int managerId) {
-		this.managerId = managerId;
-	}
+	
 	public String getEmail() {
 		return email;
 	}
@@ -95,9 +119,13 @@ private String staffRole;
 	}
 	@Column(name = "COACHING_SPORTS")
 private String coachingSports;
-	@Column(name = "MANAGER_ID")
-private int managerId;
+	
 	@Column(name = "EMAIL")
+	/*
+	 * @Email(message = "*Email is not valid")
+	 * 
+	 * @NotEmpty(message = "*Please enter email")
+	 */
 private String email;
 
 }

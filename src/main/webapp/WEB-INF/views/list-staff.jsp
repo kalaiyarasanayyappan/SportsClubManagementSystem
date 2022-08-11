@@ -15,6 +15,11 @@ background-color:red;
 <body>
 	   
 	<div class="a6"id="table root">
+	<div ><a href="/Staff/addform">Add</a></div>
+<div ><a href="/Staff/updatestaffform">Update</a></div>
+<div ><a href="/Staff/getstaffform">Find</a></div>
+
+
 	
 		   
 		<table>
@@ -32,7 +37,7 @@ background-color:red;
 					<th>Address</th> 
 					<th>Staff Role</th> 
 					<th>Coaching Sports</th> 
-					<th>Manager Id</th> 
+					
 					<th>Email</th>             
 	            
 				</tr>
@@ -53,9 +58,10 @@ background-color:red;
 						<td>${Staff.address}</td>
 						<td>${Staff.staffRole}</td>
 						<td>${Staff.coachingSports}</td>
-						<td>${Staff.managerId}</td>
+						
 						<td>${Staff.email}</td>           
-						            
+						  <%-- <td><a  href="/Staff/getstaffform?id=${Staff.staffId}">Find</a></td> --%>
+						  <td><a  href="/Staff/deletestaffform?id=${Staff.staffId}">Delete</a></td>           
 					</tr>
             </c:forEach>
 				       

@@ -16,7 +16,7 @@ word-spacing:1em;
 </head>
 <body>
 <div class="d7"id="root">
-		<div id="getsponsersponseringdetails">
+		<div id="getsponserssponseringdetails">
 			<form:form action="" method="post" modelAttribute="spons">
 				  <div>
                     <label for="sponserId">Sponser Id</label>

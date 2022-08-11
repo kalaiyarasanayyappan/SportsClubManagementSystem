@@ -8,8 +8,12 @@
 <meta charset="ISO-8859-1">
 <title>Update Players</title>
 <style type="text/css">
+.text-danger {
+    color: #e80c4d;
+    font-size: 0.9em;
+}
 .b3{
-background-color:red;
+background-color:blue;
 }
 </style>
 </head>
@@ -29,30 +33,35 @@ background-color:red;
                         <form:input path="playerName" />
                     </div>
                 </div>
+                      <form:errors path="playerName" cssClass="text-danger" />
                 <div>
                     <label for="sportsId">Sports Id</label>
                     <div>
                         <form:input path="sportsId" />
                     </div>
                 </div>
+                 
                 <div>
                     <label for="gender">Gender</label>
                     <div>
                         <form:input path="gender" />
                     </div>
                 </div>
+                 <form:errors path="gender" cssClass="text-danger" />
                 <div>
                     <label for="address">Address</label>
                     <div>
                         <form:input path="address" />
                     </div>
                 </div>
+                 <form:errors path="address" cssClass="text-danger" />
                 <div>
                     <label for="contact">Contact</label>
                     <div>
                         <form:input path="contact" />
                     </div>
                 </div>
+                 <form:errors path="contact" cssClass="text-danger" />
                  <div>
                     <label for="playerStatus">Player Status</label>
                     <div>
@@ -62,28 +71,31 @@ background-color:red;
                  <div>
                     <label for="dateOfBirth">Date of Birth</label>
                     <div>
-                        <form:input path="dateOfBirth" />
+                        <form:input path="dateOfBirth"  type="date"/>
                     </div>
                 </div>
+                 
                  <div>
                     <label for="joiningDate">Joining Date</label>
                     <div>
-                        <form:input path="joiningDate" />
+                        <form:input path="joiningDate"  type="date"/>
                     </div>
                 </div>
+                 
                  <div>
                     <label for="subscriptionDue">Subscription Due</label>
                     <div>
                         <form:input path="subscriptionDue" />
                     </div>
                 </div>
+                
                  <div>
                     <label for="subscriptionPaid">Subscription Paid</label>
                     <div>
                         <form:input path="subscriptionPaid" />
                     </div>
                 </div>
-               
+               <form:errors path="subscriptionPaid" cssClass="text-danger" />
         <div>
             <form:button>Update Players</form:button>
         </div>

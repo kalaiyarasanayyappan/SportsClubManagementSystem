@@ -19,7 +19,7 @@ list-style:square
 <body>
     <div class="e2"id="root">
         <div id="form">
-            <form:form action="update" method="post" modelAttribute="updateplayersfeesdetails">
+            <form:form action="update" method="post" modelAttribute="updateprizes">
              <div>
                     <label for="PrizeId">PrizeId</label>
                     <div>

@@ -9,7 +9,7 @@
 <title>Add Players</title>
 <style type="text/css">
 .b2{
-background-color:red;
+background-color:blue;
 border:1px green;
 border-radius: 15px;
 list-style:square
@@ -22,24 +22,26 @@ list-style:square
         <div id="form">
             <form:form action="add" method="post"
                 modelAttribute="addplayers">
-                <div>
+                <%-- <div>
                     <label for="playerId">Player Id</label>
                     <div>
                         <form:input path="playerId" />
                     </div>
-                </div>
+                </div> --%>
                 <div>
                     <label for="playerName">Player Name</label>
                     <div>
                         <form:input path="playerName" />
                     </div>
                 </div>
+                <form:errors path="playerName" cssClass="text-danger" />
                 <div>
                     <label for="sportsId">Sports Id</label>
                     <div>
                         <form:input path="sportsId" />
                     </div>
                 </div>
+               
                 <div>
                     <label for="gender">Gender</label>
                     
@@ -48,18 +50,21 @@ list-style:square
                          
                     </div>
                 </div>
+                <form:errors path="gender" cssClass="text-danger" />
                 <div>
                     <label for="address">Address</label>
                     <div>
                         <form:input path="address" />
                     </div>
                 </div>
+                <form:errors path="address" cssClass="text-danger" />
                 <div>
                     <label for="contact">Contact</label>
                     <div>
                         <form:input path="contact" />
                     </div>
                 </div>
+                <form:errors path="contact" cssClass="text-danger" />
                  <div>
                     <label for="playerStatus">Player Status</label>
                     <div>
@@ -69,13 +74,13 @@ list-style:square
                  <div>
                     <label for="dateOfBirth">Date of Birth</label>
                     <div>
-                        <form:input path="dateOfBirth" />
+                        <form:input path="dateOfBirth"  type="date"/>
                     </div>
                 </div>
                  <div>
                     <label for="joiningDate">Joining Date</label>
                     <div>
-                        <form:input path="joiningDate" />
+                        <form:input path="joiningDate"  type="date"/>
                     </div>
                 </div>
                  <div>
@@ -90,6 +95,7 @@ list-style:square
                         <form:input path="subscriptionPaid" />
                     </div>
                 </div>
+                <form:errors path="subscriptionPaid" cssClass="text-danger" />
                
         <div>
             <form:button>Add Players</form:button>

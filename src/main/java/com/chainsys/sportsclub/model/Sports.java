@@ -5,17 +5,32 @@ import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 
 @Entity
 @Table(name = "Sports")
 public class Sports {
 	@Id
+	@SequenceGenerator(name="sports_id", sequenceName="sports_id", allocationSize=1)
+    @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="sports_id")
 	@Column(name = "SPORTS_ID")
 	private int sportsId;
 	@Column(name = "SPORTS_NAME")
+	/*
+	 * @Size(max = 20, min = 3, message = "*Name length should be 3 to 20")
+	 * 
+	 * @NotBlank(message = "*Name can't be Empty")
+	 * 
+	 * @Pattern(regexp = "^[A-Za-z]\\w{3,20}$", message = "*Enter valid name ")
+	 */
 	private String sportsName;
 	@Column(name = "FEES")
 	private int fees;

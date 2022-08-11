@@ -9,12 +9,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.chainsys.sportsclub.model.Players;
+
 import com.chainsys.sportsclub.model.PlayersFeesDetails;
-import com.chainsys.sportsclub.model.Prizes;
-import com.chainsys.sportsclub.service.PlayersService;
+
+
 import com.chainsys.sportsclub.service.PlayersfeesdetailsService;
-import com.chainsys.sportsclub.service.PrizesService;
+
 
 @Controller
 @RequestMapping("/Players_Fees_Details")
@@ -24,16 +24,18 @@ public class PlayersfeesdetailsController {
     PlayersfeesdetailsService prService;
     
     @GetMapping("/getplayersfeesdetails")
-    public String getPlayersfeesdetails(@RequestParam("id")int id,Model model) {
+    public String getPlayersfeesdetails(@RequestParam("recieptNumber")int id,Model model) {
        PlayersFeesDetails pr =prService.findById(id);
         model.addAttribute("getplayersfeesdetails",pr);
         return "find-playersfeesdetails-id-form";
     }
-    @GetMapping("/deleteplayersfeesdetails")
-    public String deletePlayersfeesdetails(@RequestParam("id")int id) {
-        prService.deleteById(id);
-         return "redirect:/Players_Fees_Details/getallplayersfeesdetails";
-    }
+
+	/*
+	 * @GetMapping("/deleteplayersfeesdetails") public String
+	 * deletePlayersfeesdetails(@RequestParam("id")int id) {
+	 * prService.deleteById(id); return
+	 * "redirect:/Players_Fees_Details/getallplayersfeesdetails"; }
+	 */
     @GetMapping("/addform")
     public String showAddForm(Model model) {
         PlayersFeesDetails pr = new PlayersFeesDetails();
@@ -46,8 +48,8 @@ public class PlayersfeesdetailsController {
      prService.save(pr);
      return "redirect:/Players_Fees_Details/getallplayersfeesdetails";
     }
-    @GetMapping("/updateform")
-    public String showUpdateForm(@RequestParam("id")int id,Model model) {
+    @GetMapping("/updateplayersfeesdetails")
+    public String showUpdateForm(@RequestParam("recieptNumber")int id,Model model) {
         PlayersFeesDetails pr = prService.findById(id);
         model.addAttribute("updateplayersfeesdetails",pr);
         return "update-playersfeesdetails-form";
@@ -64,6 +66,23 @@ public class PlayersfeesdetailsController {
         List<PlayersFeesDetails> prList= prService.findAllPlayersfeesdetails();
         model.addAttribute("allplayersfeesdetails",prList);
         return "list-playersfeesdetails";
+    }
+    @RequestMapping("/getplayersfeesdetailsform")
+    public String getPlayersForm() {
+        return "get-playersfees";
+    }
+    @RequestMapping("/updateplayersfeesform")
+    public String updatePlayersfeesForm() {
+        return "update-playersfees";
+    }
+    @RequestMapping("/deleteplayersfees")
+    public String deletePlayersFees(@RequestParam("recieptNumber") int id) {
+        prService.deleteById(id);
+        return "redirect:/Players_Fees_Details/getallPlayersfeesdetails";
+    }
+    @RequestMapping("/deleteplayersfeesdetailsform")
+    public String deletePlayersFeesForm() {
+        return "delete-playersfees";
     }
 }
 

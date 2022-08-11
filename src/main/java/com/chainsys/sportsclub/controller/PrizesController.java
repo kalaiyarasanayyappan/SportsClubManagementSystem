@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.chainsys.sportsclub.model.Players;
+
 import com.chainsys.sportsclub.model.Prizes;
-import com.chainsys.sportsclub.service.PlayersService;
+
 import com.chainsys.sportsclub.service.PrizesService;
 
 @Controller
@@ -22,13 +22,13 @@ public class PrizesController {
     PrizesService prService;
     
     @GetMapping("/getprizes")
-    public String getPrizes(@RequestParam("id")int id,Model model) {
+    public String getPrizes(@RequestParam("prizeId")int id,Model model) {
        Prizes pr =prService.findById(id);
         model.addAttribute("getprizes",pr);
         return "find-prizes-id-form";
     }
     @GetMapping("/deleteprizes")
-    public String deletePrizes(@RequestParam("id")int id) {
+    public String deletePrizes(@RequestParam("prizeId")int id) {
         prService.deleteById(id);
          return "redirect:/Prizes/getallprizes";
     }
@@ -44,8 +44,8 @@ public class PrizesController {
      prService.save(pr);
      return "redirect:/Prizes/getallprizes";
     }
-    @GetMapping("/updateform")
-    public String showUpdateForm(@RequestParam("id")int id,Model model) {
+    @GetMapping("/updateprizes")
+    public String showUpdateForm(@RequestParam("prizeId")int id,Model model) {
         Prizes pr = prService.findById(id);
         model.addAttribute("updateprizes",pr);
         return "update-prizes-form";
@@ -62,6 +62,18 @@ public class PrizesController {
         List<Prizes> prList= prService.findAllPrizes();
         model.addAttribute("allprizes",prList);
         return "list-prizes";
+    }
+    @RequestMapping("/updateprizesform")
+    public String updateStaffForm() {
+        return "update-prizes";
+    }
+    @RequestMapping("/getprizesform")
+    public String getPrizesForm() {
+        return "get-prizes";
+    }
+    @RequestMapping("/deleteprizesform")
+    public String deletePrizesForm() {
+        return "delete-prizes";
     }
 }
 

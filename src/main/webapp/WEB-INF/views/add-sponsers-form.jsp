@@ -21,28 +21,33 @@ list-style:square
         <div id="form">
             <form:form action="add" method="post"
                 modelAttribute="addsponsers">
-                <div>
+              <%--   <div>
                     <label for="sponserId">Sponser Id</label>
                     <div>
                         <form:input path="sponserId" />
-                    </div>
+                    </div> --%>
                 </div>
                 <div>
                     <label for="sponserName">Sponser Name</label>
                     <div>
-                        <form:input path="sponserName" />
+                       <form:input path="sponserName" title="Name can't be empty or must contain only alphabets"
+pattern="^[a-zA-Z]+$" required="true" />
                     </div>
                 </div>
                 <div>
                     <label for="contact">Contact</label>
                     <div>
-                        <form:input path="contact" />
+                         <form:input path="contact" 
+                        pattern="[1-9]{1}[0-9]{9}"
+title="Phone number should have atleast 10 digits"
+required="true"  />
                     </div>
                 </div>
                 <div>
                     <label for="email">Email</label>
                     <div>
-                        <form:input path="email" />
+                       <form:input path="email" pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}$"
+title="Invalid email ex: sports@gmail.com" required="true"  />
                     </div>
                 </div>
                 

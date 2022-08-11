@@ -17,6 +17,11 @@ word-spacing:1em;
 <body>
 	   
 	<div class="e5"id="table root">
+	<div ><a href="/Prizes/addform">Add</a></div>
+<div ><a href="/Prizes/updateprizesform">Update</a></div>
+<div ><a href="/Prizes/getprizesform">Find</a></div>
+<div ><a href="/Prizes/deleteprizesform">Delete</a></div>
+
 		   
 		<table>
 			       

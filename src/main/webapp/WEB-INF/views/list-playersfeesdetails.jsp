@@ -17,6 +17,10 @@ word-spacing:1em;
 <body>
 	   
 	<div class="g5"id="table root">
+	<div ><a href="/Players_Fees_Details/addform">Add</a></div>
+<div ><a href="/Players_Fees_Details/updateplayersfeesform">Update</a></div>
+<div ><a href="/Players_Fees_Details/getplayersfeesdetailsform">Find</a></div>
+<div ><a href="/Players_Fees_Details/deleteplayersfeesdetailsform">Delete</a></div>
 		   
 		<table>
 			       

@@ -72,12 +72,7 @@ background-color:red;
                         <form:input path="coachingSports" />
                     </div>
                 </div>
-                 <div>
-                    <label for="managerId">Manager Id</label>
-                    <div>
-                        <form:input path="managerId" />
-                    </div>
-                </div>
+                 
                  <div>
                     <label for="email">Email</label>
                     <div>

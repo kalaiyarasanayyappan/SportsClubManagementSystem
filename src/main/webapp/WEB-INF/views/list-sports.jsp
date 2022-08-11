@@ -17,6 +17,13 @@ word-spacing:1em;
 <body>
 	   
 	<div class="c5"id="table root">
+	<div ><a href="/Sports/addform">Add</a></div>
+<div ><a href="/Sports/updatesportsform">Update</a></div>
+<div ><a href="/Sports/getsportsform">Find</a></div>
+<!-- <div ><a href="/Sports/deletesportsform">Delete</a></div> -->
+<!-- <div ><a href="/Sports/getallsports">Get All sports</a></div> -->
+<!-- <div ><a href="/Sports/getsportsbysponserdetails">sponsersDetails</a></div>
+<div ><a href="/Sports/getsportsbyplayerdetails">playersDetails</a></div> -->
 		   
 		<table>
 			       
@@ -24,8 +31,8 @@ word-spacing:1em;
 				           
 				<tr>
 					           
-					<th>Sports Id</th>            
-					<th>Sports Name</th>            
+					<th>SportsId</th>            
+					<th>SportsName</th>            
 					<th>Fees</th>            
 					<th>In_time</th>            
 					<th>Out_time</th>            
@@ -46,7 +53,9 @@ word-spacing:1em;
 						<td>${Sports.inTime}</td>            
 						<td>${Sports.outTime}</td>            
 						<td>${Sports.durations}</td>            
-						            
+						<td><a  href="/Sports/getsportsbysponserdetails?id=${Sports.sportsId}">SponseringDetails</a></td> 
+						<td><a  href="/Sports/getsportsbyplayerdetails?id=${Sports.sportsId}">PlayerDetails</a></td>
+						<td><a  href="/Sports/deletesportsform?id=${Sports.sportsId}">Delete</a></td>    
 					</tr>
             </c:forEach>
 				       

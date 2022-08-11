@@ -1,9 +1,12 @@
 package com.chainsys.sportsclub.controller;
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -26,13 +29,13 @@ public class SponsersController {
     SponseringdetailsService sp;
     
     @GetMapping("/getsponsers")
-    public String getSponsers(@RequestParam("id")int id,Model model) {
+    public String getSponsers(@RequestParam("sponserId")int id,Model model) {
        Sponsers sp =spService.findById(id);
         model.addAttribute("getsponsers",sp);
         return "find-sponsers-id-form";
     }
     @GetMapping("/deletesponsers")
-    public String deletesponsers(@RequestParam("id")int id) {
+    public String deletesponsers(@RequestParam("sponserId")int id) {
         spService.deleteById(id);
          return "redirect:/Sponsers/getallsponsers";
     }
@@ -43,20 +46,26 @@ public class SponsersController {
         return "add-sponsers-form";
     }
     @PostMapping("/add")
-    public String addSponsers(@ModelAttribute("addsponsers")Sponsers sp)
+    public String addSponsers(@Valid @ModelAttribute("addsponsers")Sponsers sp,Errors errors)
     {
+    	if(errors.hasErrors()) {
+			return "add-sponsers-form";
+		}
      spService.save(sp);
      return "redirect:/Sponsers/getallsponsers";
     }
-    @GetMapping("/updateform")
-    public String showUpdateForm(@RequestParam("id")int id,Model model) {
+    @GetMapping("/updatesponsers")
+    public String showUpdateForm(@RequestParam("sponserId")int id,Model model) {
         Sponsers st = spService.findById(id);
         model.addAttribute("updatesponsers",st);
         return "update-sponsers-form";
     }
     @PostMapping("/update")
-    public String modifysponsers(@ModelAttribute("updatesponsers") Sponsers sp)
+    public String modifysponsers(@Valid @ModelAttribute("updatesponsers") Sponsers sp,Errors errors)
     {
+    	if(errors.hasErrors()) {
+		return "update-sponsers-form";
+	}
         spService.save(sp);
      return "redirect:/Sponsers/getallsponsers";
      
@@ -67,13 +76,31 @@ public class SponsersController {
         model.addAttribute("allsponsers",spList);
         return "list-sponsers";
     }
-    @GetMapping("/getsponsersponseringdetails")
-    public String getsponseringdetails(@RequestParam("id") int id,Model model) {
+    @GetMapping("/getsponserssponseringdetails")
+    public String getsponseringdetails(@RequestParam("sponserId") int id,Model model) {
     	SponsersAndSponseringDetailsDTO dts =spService.getAllSponsersponseringdetails( id);
         model.addAttribute("spons" ,dts.getSpons());
         model.addAttribute("sponserdetails",dts.getSponserdetail());
         return "list-Sponsers-sponseringdetails";
     }
+    @RequestMapping("/updatesponsersform")
+    public String UpdateSponserForm() {
+        return "update-sponsers";
+    }
+
+    @RequestMapping("/getsponsersform")
+    public String getsponsersForm() {
+        return "get-sponsers";
+    }
+    @RequestMapping("/deletesponserform")
+    public String deletesponsersForm() {
+        return "delete-sponsers";
+    }
+    @RequestMapping("/getsponserssponseringdetails")
+    public String getsponserssponseringForm() {
+        return "get-sponserssponseringdetails";
+    }
+    
 }
 
 

@@ -8,8 +8,12 @@
 <meta charset="ISO-8859-1">
 <title>Add Staff</title>
 <style type="text/css">
+.text-danger {
+    color: #e80c4d;
+    font-size: 0.9em;
+}
 .a2{
-background-color:red;
+background-color:blue;
 border:1px green;
 border-radius: 15px;
 list-style:square
@@ -21,48 +25,59 @@ list-style:square
         <div id="form">
             <form:form action="add" method="post"
                 modelAttribute="addstaff">
-                <div>
+               <%--  <div>
                     <label for="staffId">Staff Id</label>
                     <div>
-                        <form:input path="staffId" />
+                        <form:input path="staffId" title="Id will be between 1 to 15" min="1" max="15"
+required="true" />
                     </div>
-                </div>
+                </div> --%>
                 <div>
                     <label for="staffName">Staff Name</label>
                     <div>
-                        <form:input path="staffName" />
+                        <form:input path="staffName" title="Name can't be empty or must contain only alphabets"
+pattern="^[a-zA-Z]+$" required="true" />
                     </div>
                 </div>
+                	<form:errors path="staffName" cssClass="text-danger" />
                 <div>
                     <label for="salary">Salary</label>
                     <div>
-                        <form:input path="salary" />
+                        <form:input path="salary" title="enter valid number" 
+                        pattern="^\d{1,6}(?:\.\d{0,2})?$" required="true"/>
+                        
                     </div>
                 </div>
+                <form:errors path="salary" cssClass="text-danger" />
                 <div>
                     <label for="joiningDate">Joining Date</label>
                     <div>
-                        <form:input path="joiningDate" />
+                        <form:input path="joiningDate" type="date" />
                     </div>
                 </div>
                 <div>
                     <label for="dateOfBirth">Date of Birth</label>
                     <div>
-                        <form:input path="dateOfBirth" />
+                        <form:input path="dateOfBirth" type="date" />
                     </div>
                 </div>
                 <div>
                     <label for="contact">Contact</label>
                     <div>
-                        <form:input path="contact" />
+                        <form:input path="contact" 
+                        pattern="[1-9]{1}[0-9]{9}"
+title="Phone number should have atleast 10 digits"
+required="true"  />
                     </div>
                 </div>
+                <form:errors path="contact" cssClass="text-danger" />
                  <div>
                     <label for="address">Address</label>
                     <div>
                         <form:input path="address" />
                     </div>
                 </div>
+                 <form:errors path="address" cssClass="text-danger" />
                  <div>
                     <label for="staffRole">Staff Role</label>
                     <div>
@@ -75,18 +90,15 @@ list-style:square
                         <form:input path="coachingSports" />
                     </div>
                 </div>
-                 <div>
-                    <label for="managerId">Manager Id</label>
-                    <div>
-                        <form:input path="managerId" />
-                    </div>
-                </div>
+                
                  <div>
                     <label for="email">Email</label>
                     <div>
-                        <form:input path="email" />
+                        <form:input path="email" pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}$"
+title="Invalid email ex: sports@gmail.com" required="true"  />
                     </div>
                 </div>
+                 <form:errors path="email" cssClass="text-danger" />
                
         <div>
             <form:button>Add Staff</form:button>

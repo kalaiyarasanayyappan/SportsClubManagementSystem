@@ -23,16 +23,18 @@ public class SponseringdetailsController {
     SponseringdetailsService sdService;
     
     @GetMapping("/getsponseringdetails")
-    public String getsponseringdetails(@RequestParam("id")int id,Model model) {
+    public String getsponseringdetails(@RequestParam("sponseringDetailsId")int id,Model model) {
        SponseringDetails sd =sdService.findById(id);
         model.addAttribute("getsponseringdetails",sd);
         return "find-sponseringdetails-id-form";
     }
-    @GetMapping("/deletesponseringdetails")
-    public String deleteSponseringdetails(@RequestParam("id")int id) {
-        sdService.deleteById(id);
-         return "redirect:/Sponsering_Details/getallsponseringdetails";
-    }
+
+	/*
+	 * @GetMapping("/deletesponseringdetails") public String
+	 * deleteSponseringdetails(@RequestParam("sponseringDetailsId")int id) {
+	 * sdService.deleteById(id); return
+	 * "redirect:/Sponsering_Details/getallsponseringdetails"; }
+	 */
     @GetMapping("/addform")
     public String showAddForm(Model model) {
         SponseringDetails sd = new SponseringDetails();
@@ -45,8 +47,8 @@ public class SponseringdetailsController {
      sdService.save(sd);
      return "redirect:/Sponsering_Details/getallsponseringdetails";
     }
-    @GetMapping("/updateform")
-    public String showUpdateForm(@RequestParam("id")int id,Model model) {
+    @GetMapping("/updatesponseringdetails")
+    public String showUpdateForm(@RequestParam("sponseringDetailsId")int id,Model model) {
         SponseringDetails sd = sdService.findById(id);
         model.addAttribute("updatesponseringdetails",sd);
         return "update-sponseringdetails-form";
@@ -63,6 +65,28 @@ public class SponseringdetailsController {
         List<SponseringDetails> sdList= sdService.findAllSponseringdetails();
         model.addAttribute("allsponseringdetails",sdList);
         return "list-sponseringdetails";
+    }
+    @RequestMapping("/getsponseringdetailsform")
+    public String getsponseringForm() {
+        return "get-sponseringdetails";
+    }
+    @RequestMapping("/updatesponseringform")
+    public String updatesponseringdetailsForm() {
+        return "update-sponseringdetails";
+    }
+    @RequestMapping("/deletesponseringform")
+    public String deletesponseringdetailsForm() {
+        return "delete-sponseringdetails";
+    }
+    @RequestMapping("/deletesponseringdetailsform")
+    public String deleteSponseringdetailsForm() {
+        return "delete-sponseringdetails";
+    }
+
+    @RequestMapping("/deletesponseringdetails")
+    public String deleteSponseringdetailsid(@RequestParam("sponseringDetailsId") int id) {
+        sdService.deleteById(id);
+        return "redirect:/Sponsering_Details/getallsponseringdetails";
     }
 }
 

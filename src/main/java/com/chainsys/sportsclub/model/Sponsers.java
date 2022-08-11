@@ -5,14 +5,19 @@ import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "Sponsers")
 public class Sponsers {
 	@Id
+	@SequenceGenerator(name="sponser_id", sequenceName="sponser_id", allocationSize=1)
+    @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="sponser_id")
 	@Column(name = "SPONSER_ID")
 private int sponserId;
 	@OneToMany(mappedBy = "spons", fetch = FetchType.LAZY)

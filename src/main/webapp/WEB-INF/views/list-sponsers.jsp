@@ -15,6 +15,11 @@ background-color:red;
 <body>
 	   
 	<div class="d6"id="table root">
+	<div ><a href="/Sponsers/addform">Add</a></div>
+<div ><a href="/Sponsers/updatesponsersform">Update</a></div>
+<div ><a href="/Sponsers/getsponsersform">Find</a></div>
+<div ><!-- <a href="/Sponsers/deletesponsersform">Delete</a></div>
+<div ><a href="/Sponsers/getsponserssponseringdetails">Sponsering Details</a></div> -->
 		   
 		<table>
 			       
@@ -41,7 +46,8 @@ background-color:red;
 						<td>${Sponsers.sponserName}</td>            
 						<td>${Sponsers.contact}</td>            
 						<td>${Sponsers.email}</td>            
-						         
+						<td><a  href="/Sponsers/deletesponsersform?id=${Sponsers.sponserId}">Delete</a></td>
+						<td><a  href="/Sponsers/getsponserssponseringdetails?id=${Sponsers.sponserId}">SponseringDetails</a></td>             
 						            
 					</tr>
             </c:forEach>

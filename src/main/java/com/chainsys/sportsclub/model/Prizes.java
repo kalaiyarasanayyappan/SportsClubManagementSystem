@@ -9,13 +9,15 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 @Entity
 @Table(name = "Prizes")
 
 public class Prizes {
 	@Id
 	@Column(name = "PRIZE_ID")
-	private String prizeId;
+	private int prizeId;
 	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="player_id",nullable =false,insertable =false,updatable =false)
 	private Players play;
@@ -40,6 +42,8 @@ private Date dateOfPrize;
 		@Column(name = "competetion_name")
 	private String competetionName;
 		@Column(name = "prize_amount")
+		@Min(value = 0 , message="*Price is not valid")
+	    @Max(value = 5000000, message="*Price is not valid")
 	private int prizeAmount;
 
 	public Date getDateOfPrize() {
@@ -90,10 +94,10 @@ private Date dateOfPrize;
 	public void setPrizeAmount(int prizeAmount) {
 		this.prizeAmount = prizeAmount;
 	}
-	public String getPrizeId() {
+	public int getPrizeId() {
 		return prizeId;
 	}
-	public void setPrizeId(String prizeId) {
+	public void setPrizeId(int prizeId) {
 		this.prizeId = prizeId;
 	}
 	
