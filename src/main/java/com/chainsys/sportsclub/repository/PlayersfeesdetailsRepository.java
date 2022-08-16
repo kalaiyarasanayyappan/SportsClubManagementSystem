@@ -14,6 +14,6 @@ public interface PlayersfeesdetailsRepository extends CrudRepository<PlayersFees
 	// Used for both adding new playersfeesdetails and Modifying new playersfeesdetails
 	void deleteById(int pl_id);
 	List <PlayersFeesDetails> findAll();
-	List<PlayersFeesDetails> findByPlayerPlayerId(int id);
+	List<PlayersFeesDetails> findByPlayerId(int id);
 }
 

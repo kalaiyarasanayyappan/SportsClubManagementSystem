@@ -9,7 +9,7 @@
 <title>Add Playersfeesdetails</title>
 <style type="text/css">
 .g1{
-background-color:red;
+background-color:#A1E2E8;
 border:green 5px solid;
 padding:20px;
 }
@@ -23,7 +23,7 @@ padding:20px;
                 <div>
                     <label for="paidDate">Paid Date</label>
                     <div>
-                        <form:input path="paidDate" />
+                        <form:input path="paidDate" type="date"/>
                     </div>
                 </div>
                 <div>

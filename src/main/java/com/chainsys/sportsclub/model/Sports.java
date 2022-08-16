@@ -1,5 +1,7 @@
 package com.chainsys.sportsclub.model;
 
+
+import java.nio.file.attribute.FileTime;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -110,5 +112,6 @@ public class Sports {
 	public void setDurations(int durations) {
 		this.durations = durations;
 	}
+
 
 }

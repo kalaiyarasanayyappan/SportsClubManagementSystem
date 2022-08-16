@@ -116,11 +116,10 @@ public class SportsController {
 		return "redirect:/Sports/getallsports";
 	}
 
-	@RequestMapping("/getsportsform")
-	public String getSportsForm() {
-		return "get-sports";
-	}
-
+	/*
+	 * @RequestMapping("/getsportsform") public String getSportsForm() { return
+	 * "get-sports"; }
+	 */
 	/*
 	 * @RequestMapping("/getsports") public String
 	 * getSportsid(@RequestParam("sportsId") int id) { spService.findById(id);
@@ -136,9 +135,9 @@ public class SportsController {
 		spService.findById(id);
 		return "redirect:/Sports/getallsports";
 	}
-	@RequestMapping("/getsportsbysponserdetails")
-	public String getSportssponseringForm() {
-		return "get-sports-sponserdetails";
-	}
+	/*
+	 * @RequestMapping("/getsportsbysponserdetails") public String
+	 * getSportssponseringForm() { return "get-sports-sponserdetails"; }
+	 */
 
 }

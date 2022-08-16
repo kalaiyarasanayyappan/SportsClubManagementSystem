@@ -7,25 +7,76 @@
 <meta charset="ISO-8859-1">
 <title>Sports List</title>
 <style type="text/css">
-.c5{
-background-color:red;
+/* .c5{
+color: yellow;
 text-transform:uppercase;
 word-spacing:1em;
+} */
+body{
+background-image:
+ url("https://cdn.wallpapersafari.com/11/50/EU4RxW.jpg");
+ height: 768px;
+width: 1366px;
+/*  background-position: center; */
+ background-size: cover;
+ background-repeat: no-repeat;
+ color: yellow;
 }
+
+
 </style>
+
 </head>
 <body>
 	   
-	<div class="c5"id="table root">
-	<div ><a href="/Sports/addform">Add</a></div>
-<div ><a href="/Sports/updatesportsform">Update</a></div>
-<div ><a href="/Sports/getsportsform">Find</a></div>
+	<div  align="center" id="table root">
+	<div ><a href="/Sports/addform"><h2>Add</h2></a></div>
+<!-- <div ><a href="/Sports/updatesports">Update</a></div> -->
+<!--  <div ><a href="/Sports/getsports?sportsId=">Find</a></div>  -->
+<div  align="center"><a href="/home/index"><h2>Home</h2></a></div>
 <!-- <div ><a href="/Sports/deletesportsform">Delete</a></div> -->
 <!-- <div ><a href="/Sports/getallsports">Get All sports</a></div> -->
-<!-- <div ><a href="/Sports/getsportsbysponserdetails">sponsersDetails</a></div>
-<div ><a href="/Sports/getsportsbyplayerdetails">playersDetails</a></div> -->
+ <!-- <div ><a href="/Sports/getsportsbysponserdetails">sponsers</a></div>
+<div ><a href="/Sports/getsportsbyplayerdetails">players</a></div>  -->
+ <form action="getsports" >
+   
+                <div align="center">
+                  
+                    Id : <input type="text" name="sportsId" />
+                    <div>
+                    
+                    </div>
+                  
+                </div>
+              
+                <input type="submit" value="get" />
+               
+            </form>
+             
+            <form action="updatesports" >
+                <div align="center">
+                   update: <input type="text" name="sportsId" />
+                </div>
+               
+                <input type="submit" value="update" />
+            </form>
+              <form action="getsportsbysponserdetails" >
+                <div align="center">
+                    sponsers : <input type="text" name="id" />
+                </div>
+               
+                <input type="submit" value="get" />
+            </form>
+              <form action="getsportsbyplayerdetails" >
+                <div align="center">
+                    players : <input type="text" name="id" />
+                </div>
+               
+                <input type="submit" value="get" />
+            </form>
+            
 		   
-		<table>
+		<table  align= "center" border=1>
 			       
 			<thead>
 				           
@@ -53,15 +104,16 @@ word-spacing:1em;
 						<td>${Sports.inTime}</td>            
 						<td>${Sports.outTime}</td>            
 						<td>${Sports.durations}</td>            
-						<td><a  href="/Sports/getsportsbysponserdetails?id=${Sports.sportsId}">SponseringDetails</a></td> 
-						<td><a  href="/Sports/getsportsbyplayerdetails?id=${Sports.sportsId}">PlayerDetails</a></td>
-						<td><a  href="/Sports/deletesportsform?id=${Sports.sportsId}">Delete</a></td>    
+						 <%-- <td><a  href="/Sports/getsportsbysponserdetails?id=${Sports.sportsId}">SponseringDetails</a></td> 
+						<td><a  href="/Sports/getsportsbyplayerdetails?id=${Sports.sportsId}">PlayerDetails</a></td> --%>
+						<td><a  href="/Sports/deletesportsform?id=${Sports.sportsId}">Delete</a></td> 
+						<%-- <td><a  href="/Sports/getsports?sportsId=${Sports.sportsId}">Find</a></td>        --%>
 					</tr>
             </c:forEach>
 				       
-			</tbody>
-			       
-		</table>
+</tbody>
+
+</table>
 		       
 	</div>
 </body>

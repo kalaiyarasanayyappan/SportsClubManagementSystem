@@ -12,8 +12,8 @@ import com.chainsys.sportsclub.model.SponseringDetails;
 import com.chainsys.sportsclub.model.Sponsers;
 
 public class SponsersAndSponseringDetailsDTO {
-	@Autowired
 	private Sponsers spons;
+	private List<SponseringDetails> sponserdetail = new ArrayList<SponseringDetails>();
 	public Sponsers getSpons() {
 		return spons;
 	}
@@ -23,12 +23,11 @@ public class SponsersAndSponseringDetailsDTO {
 	public List<SponseringDetails> getSponserdetail() {
 		return sponserdetail;
 	}
-	
-	private List<SponseringDetails> sponserdetail = new ArrayList<SponseringDetails>();
-	public void addSponseringDetails(SponseringDetails sd)
-	{
-		sponserdetail.add(sd);
+	public void addSponsersandSponseringdetails( SponseringDetails spd) {
+		sponserdetail.add(spd);
 	}
+
+	
 	
 }
 

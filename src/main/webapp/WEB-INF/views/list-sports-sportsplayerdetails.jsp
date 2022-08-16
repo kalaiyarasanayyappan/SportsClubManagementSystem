@@ -9,7 +9,7 @@
 <title>sports</title>
 <style type="text/css">
 .c7{
-background-color:red;
+background-color:#C18A7E;
 text-transform:uppercase;
 word-spacing:1em;
 }
@@ -60,7 +60,7 @@ word-spacing:1em;
 		</div>
 	</div>
 	<div id="getsportsbyplayerdetails">
-		<table>
+		<table border=1>
 			<thead>
 				<tr>
 					<th>Player Id</th>            

@@ -7,34 +7,46 @@
 <meta charset="ISO-8859-1">
 <title>Sponseringdetails List</title>
 <style type="text/css">
-.f5{
-background-color:red;
+/* .f5{
+background-color:#C18A7E;
 text-transform:uppercase;
 word-spacing:1em;
+} */
+body{
+background-image:
+ url("https://www.socialtables.com/wp-content/uploads/2016/09/iStock_84793351_LARGE-copy-1.jpg");
+ height: 768px;
+width: 1366px;
+ /* background-position: center; */
+ background-size: cover;
+ background-repeat: no-repeat;
+ color: blue;
+
 }
 </style>
 </head>
 <body>
 	   
-	<div class="f5"id="table root">
+	<div id="table root">
 	<div ><a href="/Sponsering_Details/addform">Add</a></div>
 <div ><a href="/Sponsering_Details/updatesponseringform">Update</a></div>
 <div ><a href="/Sponsering_Details/getsponseringdetailsform">Find</a></div>
-<div ><a href="/Sponsering_Details/deletesponseringdetailsform">Delete</a></div>
+<div ><a href="/home/index">Home</a></div>
+<!-- <div ><a href="/Sponsering_Details/deletesponseringdetailsform">Delete</a></div> -->
 
 		   
-		<table>
+		<table align= "center" border=1>
 			       
 			<thead>
 				           
 				<tr>
-					 <th>Sponsering Details Id</th>          
-					<th>Sponser Id</th>            
-					<th>Sports Id</th>            
+					 <th>SponseringDetailsId</th>          
+					<th>SponserId</th>            
+					<th>SportsId</th>            
 					<th>Amount</th>            
 					<th>Date of Sponsering</th>   
 						<th>Mode of Payment</th> 
-							<th>Reciept Number</th> 
+							<th>RecieptNumber</th> 
 								         
 					            
 	            
@@ -53,7 +65,7 @@ word-spacing:1em;
 						<td>${Sponseringdetails.dateOfSponsering}</td>  
 						<td>${Sponseringdetails.modeOfPayment}</td>  
 						<td>${Sponseringdetails.recieptNumber}</td>            
-						         
+						  <td><a  href="/Sponsering_Details/deletesponseringdetailsform?id=${Sponseringdetails.sponseringDetailsId}">Delete</a></td>       
 						            
 					</tr>
             </c:forEach>

@@ -9,7 +9,7 @@
 <title>sports</title>
 <style type="text/css">
 .c6{
-background-color:red;
+background-color:#C18A7E;
 }
 </style>
 </head>
@@ -57,7 +57,7 @@ background-color:red;
 		</div>
 	</div>
 	<div id="getsportsbysponserdetails">
-		<table>
+		<table border=1>
 			<thead>
 				<tr>
 					<th>Sponsering_Details_Id</th>

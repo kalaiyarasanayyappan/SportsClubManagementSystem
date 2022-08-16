@@ -9,7 +9,7 @@
 <title>Update Sponseringdetails</title>
 <style type="text/css">
 .f2{
-background-color:red;
+background-color:#A1E2E8;
 border:1px green;
 border-radius: 15px;
 list-style:square
@@ -20,11 +20,11 @@ list-style:square
     <div class="f2"id="root">
         <div id="form">
             <form:form action="update" method="post" modelAttribute="updatesponseringdetails">
-             <div>
+             <%-- <div>
                     <label for="sponseringDetailsId">sponsering Details Id</label>
                     <div>
                         <form:input path="sponseringDetailsId" />
-                    </div>
+                    </div> --%>
                 </div>
                  <div>
                     <label for="sponserId">Sponser Id</label>
@@ -47,7 +47,7 @@ list-style:square
                 <div>
                     <label for="dateOfSponsering">Date of Sponsering</label>
                     <div>
-                        <form:input path="dateOfSponsering" />
+                        <form:input path="dateOfSponsering" type="date"/>
                     </div>
                 </div>
                 <div>

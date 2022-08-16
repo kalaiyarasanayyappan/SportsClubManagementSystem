@@ -9,13 +9,14 @@ import com.chainsys.sportsclub.model.SponseringDetails;
 
 
 public interface SponseringdetailsRepository extends CrudRepository<SponseringDetails,Integer>{
-	SponseringDetails findById(int id);
+	SponseringDetails findById(int sponserdetails);
 	SponseringDetails save(SponseringDetails sd);
 	// Used for both adding new Staff and Modifying new Staff
 	void deleteById(int sd_id);
 	List <SponseringDetails> findAll();
-//	List<SponseringDetails> findAllSponseringdetails(int id);
-	
+	/* SponseringDetails findAllSponserdetails(int id); */
+	List<SponseringDetails> findBySponserId(int id);
+	List<SponseringDetails> findBySportsId(int id);
 }
 
 

@@ -13,7 +13,7 @@
     font-size: 0.9em;
 }
 .b3{
-background-color:blue;
+background-color:#A1E2E8;
 }
 </style>
 </head>

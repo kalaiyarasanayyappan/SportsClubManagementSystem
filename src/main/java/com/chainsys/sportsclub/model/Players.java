@@ -59,9 +59,13 @@ public class Players {
 	}
 
 	@Column(name = "PLAYER_NAME")
-	@Size(max = 20, min = 3, message = "*Name length should be 3 to 20")
-	@NotBlank(message = "*Name can't be Empty")
-	@Pattern(regexp = "^[A-Za-z]\\w{3,20}$", message = "*Enter valid name ")
+	/*
+	 * @Size(max = 20, min = 3, message = "*Name length should be 3 to 20")
+	 * 
+	 * @NotBlank(message = "*Name can't be Empty")
+	 * 
+	 * @Pattern(regexp = "^[A-Za-z]\\w{3,20}$", message = "*Enter valid name ")
+	 */
 	private String playerName;
 
 	public List<PlayersFeesDetails> getFeesDetails() {
@@ -80,13 +84,15 @@ public class Players {
 	 */
 	private int sportsId;
 	@Column(name = "GENDER") 
-	@Pattern(regexp = "^M(ale)?$|^F(emale)?$", message = "*Enter valid gender ")
+	/*
+	 * @Pattern(regexp = "^M(ale)?$|^F(emale)?$", message = "*Enter valid gender ")
+	 */
 	private String gender;
 	@Column(name = "ADDRESS")
-	@NotEmpty(message = "*Please enter Address")
+	/* @NotEmpty(message = "*Please enter Address") */
 	private String address;
 	@Column(name = "CONTACT")
-	@Digits(message = "*Invalid number.", integer = 10, fraction = 0)
+	/* @Digits(message = "*Invalid number.", integer = 10, fraction = 0) */
 	private long contact;
 	@Column(name = "PLAYER_STATUS")
 	private String playerStatus;
@@ -97,7 +103,7 @@ public class Players {
 	@Column(name = "SUBSCRIPTION_DUE")
 	private int subscriptionDue;
 	@Column(name = "SUBSCRIPTION_PAID")
-	@Min(value = 0, message="*Value should be in positive numbers")
+	/* @Min(value = 0, message="*Value should be in positive numbers") */
 	private int subscriptionPaid;
 
 	public int getPlayerId() {

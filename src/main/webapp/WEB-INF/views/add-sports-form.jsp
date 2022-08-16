@@ -12,16 +12,22 @@
     color: #e80c4d;
     font-size: 0.9em;
 }
-.c1{
-background-color:blue;
-border:green 5px solid;
-padding:20px;
+
+body{
+background-image:
+ url("https://t4.ftcdn.net/jpg/03/98/39/69/240_F_398396988_D1tA86QFM0XqDpVJdszF4SNN4txZCZwF.jpg");
+ height: 768px;
+width: 1366px;
+ background-position: center;
+ background-size: cover;
+color: #39EC1D
 }
+  
 </style>
 </head>
 <body>
-  <div class="c1" id="root">
-        <div id="form">
+  <div  id="root">
+        <div  align="center" id="form">
             <form:form action="add" method="post"
                 modelAttribute="addsports">
                 <%-- <div>
@@ -30,6 +36,8 @@ padding:20px;
                         <form:input path="sportsId" />
                     </div>
                 </div> --%>
+                <br><br>
+                <br><br>
                 <div>
                     <label for="sportsName">SportsName</label>
                     <div>
@@ -37,6 +45,7 @@ padding:20px;
 pattern="^[a-zA-Z]+$" required="true" />
                     </div>
                 </div>
+                <br><br>
                 <form:errors path="sportsName" cssClass="text-danger" />
                 <div>
                     <label for="fees">Fees</label>
@@ -45,24 +54,28 @@ pattern="^[a-zA-Z]+$" required="true" />
                         pattern="^\d{1,6}(?:\.\d{0,2})?$" required="true"/>
                     </div>
                 </div>
+                <br><br>
                 <div>
                     <label for="inTime">InTime</label>
                     <div>
                         <form:input path="inTime" />
                     </div>
                 </div>
+                <br><br>
                 <div>
                     <label for="outTime">OutTime</label>
                     <div>
                         <form:input path="outTime" />
                     </div>
                 </div>
+                <br><br>
                 <div>
                     <label for="durations">Duration</label>
                     <div>
                         <form:input path="durations" />
                     </div>
                 </div>
+                <br><br>
                
         <div>
             <form:button>Add Sports</form:button>

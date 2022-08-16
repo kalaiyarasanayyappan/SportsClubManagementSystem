@@ -8,17 +8,21 @@
 <meta charset="ISO-8859-1">
 <title>Add Players</title>
 <style type="text/css">
-.b2{
-background-color:blue;
+.text-danger {
+    color: #e80c4d;
+    font-size: 0.9em;
+}
+/* .b2{
+background-color:#A1E2E8;
 border:1px green;
 border-radius: 15px;
 list-style:square
-}
+} */
 </style>
 
 </head>
 <body>
-  <div class="b2" id="root">
+  <div  id="root">
         <div id="form">
             <form:form action="add" method="post"
                 modelAttribute="addplayers">
@@ -28,13 +32,14 @@ list-style:square
                         <form:input path="playerId" />
                     </div>
                 </div> --%>
-                <div>
+                 <div>
                     <label for="playerName">Player Name</label>
                     <div>
-                        <form:input path="playerName" />
+                        <form:input path="playerName" title="Name can't be empty or must contain only alphabets"
+pattern="^[a-zA-Z]+$" required="true" />
                     </div>
                 </div>
-                <form:errors path="playerName" cssClass="text-danger" />
+                	<form:errors path="playerName" cssClass="text-danger" />
                 <div>
                     <label for="sportsId">Sports Id</label>
                     <div>
@@ -42,35 +47,45 @@ list-style:square
                     </div>
                 </div>
                
-                <div>
+               <div>
                     <label for="gender">Gender</label>
-                    
                     <div>
-                        <form:input path="gender" />
-                         
+                        <form:input path="gender" title="Enter specific gender"
+pattern="^M(ale)?$|^F(emale)?$" required="true" />
                     </div>
                 </div>
+                	
                 <form:errors path="gender" cssClass="text-danger" />
                 <div>
                     <label for="address">Address</label>
                     <div>
-                        <form:input path="address" />
+                        <form:input path="address" title="Address should atleast contain 10 characters"
+required="true"/>
                     </div>
                 </div>
                 <form:errors path="address" cssClass="text-danger" />
                 <div>
                     <label for="contact">Contact</label>
                     <div>
-                        <form:input path="contact" />
+                        <form:input path="contact" 
+                        pattern="[1-9]{1}[0-9]{9}"
+title="Phone number should have atleast 10 digits"
+required="true"  />
                     </div>
                 </div>
                 <form:errors path="contact" cssClass="text-danger" />
-                 <div>
-                    <label for="playerStatus">Player Status</label>
-                    <div>
-                        <form:input path="playerStatus" />
+                <div>
+                    <label for="playerStatus">choose a status</label>
+                    <br>
+                        <select name="playerStatus" id="playerStatus">
+<option>--Choose a status--</option>
+  <option value="Excellent">Excellent</option>
+  <option value="Good">Good</option>
+  <option value="Average">Average</option>
+ 
+</select>
                     </div>
-                </div>
+                
                  <div>
                     <label for="dateOfBirth">Date of Birth</label>
                     <div>

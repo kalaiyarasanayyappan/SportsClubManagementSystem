@@ -9,7 +9,7 @@
 <title>Players Details</title>
 <style type="text/css">
 .b7{
-background-color:red;
+background-color:#C18A7E;
 text-transform:uppercase;
 word-spacing:1em;
 }
@@ -88,9 +88,8 @@ word-spacing:1em;
                
 			 </form:form>
 		</div>
-	</div>
 	<div id="getallplayersfeesdetails">
-		<table>
+		<table border=1>
 		<thead>
 				<tr>
 					<th>paid Date</th>            
@@ -114,6 +113,7 @@ word-spacing:1em;
 				</c:forEach>
 			</tbody>
 		</table>
+	</div>
 	</div>
 </body>
 </html>

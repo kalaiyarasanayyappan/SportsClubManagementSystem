@@ -8,16 +8,16 @@
 <meta charset="ISO-8859-1">
 <title>Add Sponsers</title>
 <style type="text/css">
-.d2{
-background-color:red;
+/* .d2{
+background-color:#A1E2E8;
 border:1px green;
 border-radius: 15px;
 list-style:square
-}
+} */
 </style>
 </head>
 <body>
-  <div class="d2"id="root">
+  <div id="root">
         <div id="form">
             <form:form action="add" method="post"
                 modelAttribute="addsponsers">

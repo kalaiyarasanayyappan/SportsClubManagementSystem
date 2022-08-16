@@ -1,13 +1,15 @@
 package com.chainsys.sportsclub.model;
-
-import java.util.Date;
+import java.sql.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
@@ -16,6 +18,8 @@ import javax.validation.constraints.Min;
 
 public class Prizes {
 	@Id
+	@SequenceGenerator(name="prize_id", sequenceName="prize_id", allocationSize=1)
+    @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="prize_id")
 	@Column(name = "PRIZE_ID")
 	private int prizeId;
 	@ManyToOne(fetch=FetchType.LAZY)
@@ -36,14 +40,17 @@ private Date dateOfPrize;
 		@Column(name = "sports_id")
 	private int sportsId;
 		@Column(name = "position_number")
-	private int positionNumber;
+	private String positionNumber;
 		@Column(name = "team_or_individual")
 	private String teamOrIndividual;
 		@Column(name = "competetion_name")
 	private String competetionName;
 		@Column(name = "prize_amount")
-		@Min(value = 0 , message="*Price is not valid")
-	    @Max(value = 5000000, message="*Price is not valid")
+		/*
+		 * @Min(value = 0 , message="*Price is not valid")
+		 * 
+		 * @Max(value = 5000000, message="*Price is not valid")
+		 */
 	private int prizeAmount;
 
 	public Date getDateOfPrize() {
@@ -70,10 +77,10 @@ private Date dateOfPrize;
 	public void setSportsId(int sportsId) {
 		this.sportsId = sportsId;
 	}
-	public int getPositionNumber() {
+	public String getPositionNumber() {
 		return positionNumber;
 	}
-	public void setPositionNumber(int positionNumber) {
+	public void setPositionNumber(String positionNumber) {
 		this.positionNumber = positionNumber;
 	}
 	public String getTeamOrIndividual() {

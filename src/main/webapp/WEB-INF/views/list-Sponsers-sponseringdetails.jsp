@@ -9,7 +9,7 @@
 <title>Sponsers</title>
 <style type="text/css">
 .d7{
-background-color:red;
+background-color:#C18A7E;
 text-transform:uppercase;
 word-spacing:1em;
 }</style>
@@ -47,9 +47,10 @@ word-spacing:1em;
 		</div>
 	</div>
 	<div id="getsponsersponseringdetails">
-		<table>
+		<table border=1>
 		<thead>
 				<tr>
+				<th>SponseringDetails Id</th> 
 					<th>Sponser Id</th>            
 					<th>Sports Id</th>            
 					<th>Amount</th>            
@@ -63,6 +64,7 @@ word-spacing:1em;
 			<tbody>
 				<c:forEach var="Sponseringdetails" items="${sponserdetails}">
 					<tr>
+					<td>${Sponseringdetails.sponseringDetailsId}</td> 
 						<td>${Sponseringdetails.sponserId}</td>            
 						<td>${Sponseringdetails.sportsId}</td>            
 						<td>${Sponseringdetails.amount}</td>            

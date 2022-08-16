@@ -8,70 +8,100 @@
 <meta charset="ISO-8859-1">
 <title>Add Prizes</title>
 <style type="text/css">
-.e1{
-background-color:red;
+/* .e1{
+background-color:#A1E2E8;
 border:green 5px solid;
 padding:20px;
-}
+} */
 </style>
 </head>
 <body>
-  <div class="e1" id="root">
+  <div id="root">
         <div id="form">
             <form:form action="add" method="post"
                 modelAttribute="addprizes">
-                <div>
+               <%--  <div>
                     <label for="PrizeId">PrizeId</label>
                     <div>
                         <form:input path="PrizeId" />
                     </div>
-                </div>
+                </div> --%>
                 <div>
                     <label for="dateOfPrize">Date of Price</label>
                     <div>
-                        <form:input path="dateOfPrize" />
+                        <form:input path="dateOfPrize"  type="date"  title="Enter Date" required="true"/>
                     </div>
                 </div>
                 <div>
-                    <label for="title">Title</label>
-                    <div>
-                        <form:input path="title" />
-                    </div>
+                    <label for="title">Choose a title:</label>
+<br>
+<select name="title" id="title">
+<option>--Choose a title--</option>
+  <option value="Man of match">Man of Match</option>
+  <option value="best performer">Best Performer</option>
+  <option value="game changer">game changer</option>
+ 
+</select>
                 </div>
                 <div>
-                    <label for="playerId">Player Id</label>
+                    <label for="playerId">PlayerId</label>
                     <div>
                         <form:input path="playerId" />
                     </div>
                 </div>
                 <div>
-                    <label for="sportsId">Sports Id</label>
-                    <div>
-                        <form:input path="sportsId" />
-                    </div>
+                    <label for="sportsId">Choose a sports:</label>
+<br>
+<select name="sportsId" id="sportsId">
+<option>--Choose a sports--</option>
+  <option value="1000">cricket</option>
+  <option value="1002">Tennis</option>
+  <option value="1001">FootBall</option>
+  <option value="1007">BaseketBall</option>
+  <option value="1008">HandBall</option>
+  <option value="1006">VolleyBall</option>
+ 
+</select>
                 </div>
                 <div>
-                    <label for="positionNumber">Position Number</label>
-                    <div>
-                        <form:input path="positionNumber" />
-                    </div>
+                    <label for="positionNumber" >Choose a position:</label>
+<br>
+<select name="positionNumber" id="positionNumber" >
+<option>--Choose a position--</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+ 
+</select>
+                        
+                </div>
+                
+                <div>
+                    <label for="teamOrIndividual">team/Individual</label>
+<br>
+<select name="teamOrIndividual" id="teamOrIndividual">
+<option>--Choose--</option>
+  <option value="Team">Team</option>
+  <option value="Individual">Individual</option>
+  
+ 
+</select>
                 </div>
                 <div>
-                    <label for="teamOrIndividual">Team  Or Individual</label>
-                    <div>
-                        <form:input path="teamOrIndividual" />
-                    </div>
+                    <label for="competetionName">competetionName</label>
+<br>
+<select name="competetionName" id="competetionName">
+<option>--Choose competetion--</option>
+  <option value="champion Trophy">champion Trophy</option>
+  <option value="Wonder League">Wonder League</option>
+  <option value="Best League">Best League</option>
+
+</select>
                 </div>
                  <div>
-                    <label for="competetionName">Competetion Name</label>
+                    <label for="prizeAmount">PriceAmount</label>
                     <div>
-                        <form:input path="competetionName" />
-                    </div>
-                </div>
-                 <div>
-                    <label for="prizeAmount">Price Amount</label>
-                    <div>
-                        <form:input path="prizeAmount" />
+                        <form:input path="prizeAmount" title="Enter Amount" required="true"/>
                     </div>
                 </div>
                  

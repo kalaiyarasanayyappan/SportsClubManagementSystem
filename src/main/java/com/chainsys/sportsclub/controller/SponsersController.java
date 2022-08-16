@@ -77,7 +77,7 @@ public class SponsersController {
         return "list-sponsers";
     }
     @GetMapping("/getsponserssponseringdetails")
-    public String getsponseringdetails(@RequestParam("sponserId") int id,Model model) {
+    public String getsponseringdetails(@RequestParam("id") int id,Model model) {
     	SponsersAndSponseringDetailsDTO dts =spService.getAllSponsersponseringdetails( id);
         model.addAttribute("spons" ,dts.getSpons());
         model.addAttribute("sponserdetails",dts.getSponserdetail());

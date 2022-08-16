@@ -9,7 +9,7 @@
 <title>Update PlayersFeesDetails</title>
 <style type="text/css">
 .g2{
-background-color:red;
+background-color:#A1E2E8;
 border:1px green;
 border-radius: 15px;
 list-style:square
@@ -23,7 +23,7 @@ list-style:square
                <div>
                     <label for="paidDate">Paid Date</label>
                     <div>
-                        <form:input path="paidDate" />
+                        <form:input path="paidDate" type="date"/>
                     </div>
                 </div>
                 <div>

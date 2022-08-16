@@ -9,7 +9,7 @@
 <title>Players Details</title>
 <style type="text/css">
 .b8{
-background-color:red;
+background-color:#C18A7E;
 }
 </style>
 </head>
@@ -88,7 +88,7 @@ background-color:red;
 		</div>
 	</div>
 	<div id="getallplayersprizedetails">
-		<table>
+		<table border=1>
 		<thead>
 				<tr>
 					 <th>prize Id</th>         

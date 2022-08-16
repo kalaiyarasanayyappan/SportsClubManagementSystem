@@ -7,22 +7,29 @@
 <meta charset="ISO-8859-1">
 <title>Players fees details</title>
 <style type="text/css">
-.g5{
-background-color:red;
-text-transform:uppercase;
-word-spacing:1em;
+
+body{
+background-image:
+ url("https://cdn.pixabay.com/photo/2017/09/07/08/54/money-2724241_960_720.jpg");
+ height: 768px;
+width: 1366px;
+/*  background-position: center; */
+ background-size: cover;
+ background-repeat: no-repeat;
+ color: yellow;
 }
 </style>
 </head>
 <body>
 	   
-	<div class="g5"id="table root">
+	<div id="table root">
 	<div ><a href="/Players_Fees_Details/addform">Add</a></div>
 <div ><a href="/Players_Fees_Details/updateplayersfeesform">Update</a></div>
 <div ><a href="/Players_Fees_Details/getplayersfeesdetailsform">Find</a></div>
-<div ><a href="/Players_Fees_Details/deleteplayersfeesdetailsform">Delete</a></div>
+<div ><a href="/home/index">Home</a></div>
+<!-- <div ><a href="/Players_Fees_Details/deleteplayersfeesdetailsform">Delete</a></div> -->
 		   
-		<table>
+		<table align= "center" border=1>
 			       
 			<thead>
 				           
@@ -49,7 +56,7 @@ word-spacing:1em;
 						<td>${Playersfeesdetails.amount}</td>            
 						<td>${Playersfeesdetails.remarks}</td>            
 						<td>${Playersfeesdetails.recieptNumber}</td>            
-						
+						<td><a  href="/Players_Fees_Details/deleteplayersfeesdetailsform?id=${Players.playerId}">Delete</a></td>
 						            
 					</tr>
             </c:forEach>

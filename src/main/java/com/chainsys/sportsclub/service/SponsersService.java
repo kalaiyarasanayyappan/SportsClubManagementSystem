@@ -48,15 +48,16 @@ public class SponsersService {
    		Sponsers spons=findById(id);
    		SponsersAndSponseringDetailsDTO dts= new SponsersAndSponseringDetailsDTO();
    		dts.setSpons(spons);
-   		List<SponseringDetails> sponserdetails = sp.findAll(); // method created in repo
+   		List<SponseringDetails> sponserdetails = sp.findBySponserId(id) ;// method created in repo
    		Iterator<SponseringDetails> itr = sponserdetails.iterator();
    		while(itr.hasNext())
    		{
-   			dts.addSponseringDetails((SponseringDetails)itr.next());
-   			
+   			dts.addSponsersandSponseringdetails((SponseringDetails)itr.next());
    		}
    		return dts;	
    	}
-}
+   		
+   	}
+
 
 

@@ -9,7 +9,7 @@
 <title>Update Prizes</title>
 <style type="text/css">
 .e2{
-background-color:red;
+background-color:#A1E2E8;
 border:1px green;
 border-radius: 15px;
 list-style:square
@@ -20,16 +20,16 @@ list-style:square
     <div class="e2"id="root">
         <div id="form">
             <form:form action="update" method="post" modelAttribute="updateprizes">
-             <div>
+             <%-- <div>
                     <label for="PrizeId">PrizeId</label>
                     <div>
                         <form:input path="PrizeId" />
                     </div>
-                </div>
+                </div> --%>
                  <div>
                     <label for="dateOfPrize">Date of Price</label>
                     <div>
-                        <form:input path="dateOfPrize" />
+                        <form:input path="dateOfPrize" type="date"/>
                     </div>
                 </div>
                 <div>
@@ -39,37 +39,37 @@ list-style:square
                     </div>
                 </div>
                 <div>
-                    <label for="playerId">Player Id</label>
+                    <label for="playerId">PlayerId</label>
                     <div>
                         <form:input path="playerId" />
                     </div>
                 </div>
                 <div>
-                    <label for="sportsId">Sports Id</label>
+                    <label for="sportsId">SportsId</label>
                     <div>
                         <form:input path="sportsId" />
                     </div>
                 </div>
                 <div>
-                    <label for="positionNumber">Position Number</label>
+                    <label for="positionNumber">PositionNumber</label>
                     <div>
                         <form:input path="positionNumber" />
                     </div>
                 </div>
                 <div>
-                    <label for="teamOrIndividual">Team  Or Individual</label>
+                    <label for="teamOrIndividual">Team/Individual</label>
                     <div>
                         <form:input path="teamOrIndividual" />
                     </div>
                 </div>
                  <div>
-                    <label for="competetionName">Competetion Name</label>
+                    <label for="competetionName">CompetetionName</label>
                     <div>
                         <form:input path="competetionName" />
                     </div>
                 </div>
                  <div>
-                    <label for="prizeAmount">Price Amount</label>
+                    <label for="prizeAmount">PriceAmount</label>
                     <div>
                         <form:input path="prizeAmount" />
                     </div>

@@ -7,23 +7,35 @@
 <meta charset="ISO-8859-1">
 <title>Players List</title>
 <style type="text/css">
-.b6{
-background-color:red;
+
+body{
+background-image:
+ url("https://wallpaperaccess.com/full/2493384.jpg");
+   background-repeat: no-repeat;
+ height: 768px;
+width: 1366px;
+/*  background-position: center; */
+ background-size: cover;
+   /* -webkit-background-size: cover;
+    -moz-background-size: cover;
+     -o-background-size: cover; */
+  color: yellow;
 }
 </style>
 </head>
 <body>
 	   
-	<div class="b6"id="table root">
+	<div id="table root">
 	<div ><a href="/Players/addform">Add</a></div>
 <div ><a href="/Players/updateplayersform">Update</a></div>
 <div ><a href="/Players/getplayersform">Find</a></div>
+<div ><a href="/home/index">Home</a></div>
 <!-- <div ><a href="/Players/deleteplayersform">Delete</a></div> -->
 
 <!-- <div ><a href="/Players/getplayersfeesdetail">FeesDetails</a></div>
 <div ><a href="/Players/getplayersprizedetail">PrizeDetails</a></div>
 		    -->
-		<table>
+		<table align="center" border=1>
 			       
 			<thead>
 				           
@@ -62,7 +74,7 @@ background-color:red;
 						<td>${Players.subscriptionDue}</td>
 						<td>${Players.subscriptionPaid}</td>           
 						<td><a  href="/Players/getplayersbyfeesdetails?id=${Players.playerId}">FeesDetails</a></td>
-						<td><a  href="/Players/getplayersbyfeesdetails?id=${Players.playerId}">PrizeDetails</a></td>
+						<td><a  href="/Players/getplayersbyprizedetails?id=${Players.playerId}">PrizeDetails</a></td>
 						<td><a  href="/Players/getplayersbyprizedetails?id=${Players.playerId}">Delete</a></td>             
 					</tr>
             </c:forEach>

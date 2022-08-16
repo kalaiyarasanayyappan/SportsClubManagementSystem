@@ -10,11 +10,11 @@ import com.chainsys.sportsclub.model.PlayersFeesDetails;
 import com.chainsys.sportsclub.model.Prizes;
 
 public interface PrizesRepository extends CrudRepository<Prizes,Integer>{
-	Prizes findById(int id);
+	Prizes findById(int prize);
 	Prizes save(Prizes pr);
 	// Used for both adding new prizes and Modifying new prizes
 	void deleteById(int pr_id);
 	List <Prizes> findAll();
-	List<Prizes> findByPlayPlayerId(int id);
+	List<Prizes> findByPlayerId(int id);
 }
 

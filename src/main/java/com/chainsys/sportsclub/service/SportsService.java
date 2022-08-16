@@ -50,7 +50,7 @@ public class SportsService {
    		Sports sport=findById(id);
     	SportsAndSponseringDetailsDTO dts= new SportsAndSponseringDetailsDTO();
    		dts.setSport(sport);
-   		List<SponseringDetails> sponserdetails =sdr.findAll(); // method created in repo
+   		List<SponseringDetails> sponserdetails =sdr.findBySportsId(id); // method created in repo
    		Iterator<SponseringDetails> itr = sponserdetails.iterator();
    		while(itr.hasNext())
    		{
@@ -64,7 +64,7 @@ public class SportsService {
    		Sports sport=findById(id);
    		SportsAndPlayersDTO dtp= new SportsAndPlayersDTO();
    		dtp.setSport(sport);
-   		List<Players> playerdetails = sr.findAll(); // method created in repo
+   		List<Players> playerdetails = sr.findBySportsId(id); // method created in repo
    		Iterator<Players> itr = playerdetails.iterator();
    		while(itr.hasNext())
    		{

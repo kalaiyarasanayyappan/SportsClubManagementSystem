@@ -7,36 +7,47 @@
 <meta charset="ISO-8859-1">
 <title>Prizes List</title>
 <style type="text/css">
-.e5{
-background-color:red;
+/* .e5{
+background-color:#C18A7E;
 text-transform:uppercase;
 word-spacing:1em;
+} */
+body{
+background-image:
+ url("https://media.istockphoto.com/photos/golden-trophy-cup-on-dark-background-copy-space-for-text-3d-rendering-picture-id1296652778?k=20&m=1296652778&s=612x612&w=0&h=is8apC7FwE1H3-f41UoGdxYvC01MvEpBrENq6CaeYX8=");
+ height: 768px;
+width: 1366px;
+/*  background-position: center; */
+ background-size: cover;
+ background-repeat: no-repeat;
+ color: yellow;
 }
 </style>
 </head>
 <body>
 	   
-	<div class="e5"id="table root">
+	<div id="table root">
 	<div ><a href="/Prizes/addform">Add</a></div>
 <div ><a href="/Prizes/updateprizesform">Update</a></div>
 <div ><a href="/Prizes/getprizesform">Find</a></div>
-<div ><a href="/Prizes/deleteprizesform">Delete</a></div>
+<div ><a href="/home/index">Home</a></div>
+<!-- <div ><a href="/Prizes/deleteprizesform">Delete</a></div> -->
 
 		   
-		<table>
+		<table align= "center" border=1>
 			       
 			<thead>
 				           
 				<tr>
-					  <th>prize Id</th>         
+					  <th>prizeId</th>         
 					<th>Date of Prize</th>            
 					<th>Title</th>            
-					<th>Player Id</th>            
-					<th>Sports Id</th>            
-					<th>Position Number</th>            
-					<th>Team Or Individual</th>
-					<th>Competetion Name</th> 
-					<th>Prize Amount</th> 
+					<th>PlayerId</th>            
+					<th>SportsId</th>            
+					<th>PositionNumber</th>            
+					<th>Team/Individual</th>
+					<th>CompetetionName</th> 
+					<th>PrizeAmount</th> 
 					
 				</tr>
 				       
@@ -55,7 +66,7 @@ word-spacing:1em;
 						<td>${Prizes.teamOrIndividual}</td> 
 						<td>${Prizes.competetionName}</td>
 						<td>${Prizes.prizeAmount}</td>
-						
+						<td><a  href="/Prizes/deleteprizesform?id=${Prizes.prizeId}">Delete</a></td>
 						            
 					</tr>
             </c:forEach>

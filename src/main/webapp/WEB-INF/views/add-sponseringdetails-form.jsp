@@ -9,7 +9,7 @@
 <title>Add Sponsersingdetails</title>
 <style type="text/css">
 .f1{
-background-color:red;
+background-color:#A1E2E8;
 border:green 5px solid;
 padding:20px;
 }
@@ -21,12 +21,12 @@ padding:20px;
             <form:form action="add" method="post"
                 modelAttribute="addsponseringdetails">
                 
-                 <div>
+               <%--   <div>
                     <label for="sponseringDetailsId">sponsering Details Id</label>
                     <div>
                         <form:input path="sponseringDetailsId" />
                     </div>
-                </div>
+                </div> --%>
                 <div>
                     <label for="sponserId">Sponser Id</label>
                     <div>
@@ -48,7 +48,7 @@ padding:20px;
                 <div>
                     <label for="dateOfSponsering">Date of Sponsering</label>
                     <div>
-                        <form:input path="dateOfSponsering" />
+                        <form:input path="dateOfSponsering" type="date" />
                     </div>
                 </div>
                 <div>

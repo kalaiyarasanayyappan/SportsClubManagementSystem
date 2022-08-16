@@ -7,96 +7,99 @@
 <meta charset="ISO-8859-1">
 <title>sportsclub Index</title>
 <style type="text/css">
+
 body {
-background-image:
- url("https://images.pexels.com/photos/46798/the-ball-stadion-football-the-pitch-46798.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+ background-image:
+ url("https://st.depositphotos.com/1063346/1362/i/950/depositphotos_13625743-stock-photo-assorted-sports-equipment-on-black.jpg");
  height: 768px;
 width: 1366px;
-background-position: center;
+ /* background-position: center; */
+ background-size: cover;
 background-repeat: no-repeat;
-background-size: cover;
-position: relative; 
+
+position: relative;   */
 
 }
-
+.my_text {
+	font-family: Times;
+	font-size: 25px;
+}
+*{
+	padding:0;
+	margin:0;	
+	box-sizing: border-box; 
+}
+.menu-bar{
+	/* background: rgb(0, 0, 194); /* 0,100,0 */ */
+	text-align:center;
+}
+.menu-bar ul{
+	display: inline-flex;
+	list-style:none;
+	color:#EE2111;
+}
+.menu-bar ul li{
+	width: 150px;
+	margin: 15px;
+	padding: 15px;
+}
+.menu-bar ul li a{
+	text-decoration: none;
+	color:#fff;
+}
+.active, .menu-bar ul li:hover{
+	background: #ff6600;
+	border-radius: 3px;
+}
+.menu-bar .fa{
+	margin-right: 8px;
+}
+.sub-menu-1{
+	display: none;
+}
+.menu-bar ul li:hover .sub-menu-1{
+	display: block;
+	position: absolute;
+	background:rgb(0, 153, 204);/*rgb(255, 0, 0)*/
+	margin-top: 15px;
+	margin-left: -15px;
+}
+.menu-bar ul li:hover .sub-menu-1 ul{
+	display: block;
+	margin: 10px;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li{
+	width: 150px;
+	padding: 10px;
+	border-bottom: 1px dotted #fff;
+	background: transparent;
+	border-radius: 0;
+	text-align: left;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li:last-child{
+	border-bottom:  none;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li a:hover {
+	color: #b2ff00;
+}
 h1{
-text-align:center;
-color: red;
-font-weight: bold;
-font-family:arial,heluetica;
+color:#b2ff00;
 }
-h2{
-color: blue;
-font size:25px;
-}
-
-
-
-a:hover
-{
-color:red;
-}
-a:active
-{
-color:green;
-}
-a:visited{
-color:yellow;
-}
-.f1 label{
-display:block;
-}
-.f1{
-padding:20px;
-}
-.fg{
-padding-bottom: 20px;
-}
-
-
-}
-p{
-line-height:1.9cm;
-}
-.container{
-width:80%;
-margin:auto;
-margin-top:100px;
-}
-.f1 input[type="text"]
-{
-padding: 10px;
-width:100%;
-}
-.f1 input[type="Home"]
-{
-background-color: #333;
-color:white;
-padding: 10px;
-border:none;
-}
-.button:hover{
-background: blue;
-color:white;
-}
-* {
-margin: 0;
-padding: 0;
-}
-
 </style>
 </head>
 <body>
 
-<h1>SPORTS CLUB MANAGEMENT </h1>
-
-<br><br>
-<div><a href="/Sports/getallsports"><h2>Sports</h2></div> 
-<div ><a href="/Staff/getallstaff"><h2>Staff</h2></div>
-<div ><a href="/Players/getallplayers"><h2>Players</h2></div>
-<div ><a href="/Sponsers/getallsponsers"><h2>Sponsers</h2></div>
-<div><a href="/Prizes/getallprizes"><h2>Prizes</h2></div>
-<div><a href="/Sponsering_Details/getallsponseringdetails"><h2>SponseringDetails</h2></div>
-<div><a href="/Players_Fees_Details/getallplayersfeesdetails"><h2>PlayersFeesDetails</h2></div>
+<h1 align="center">SPORTS CLUB MANAGEMENT </h1>
+<div class="menu-bar">
+<ul>
+<li class="active"><a href="/Sports/getallsports">Sports</a></li>
+<li class="active"><a href="/Staff/getallstaff">Staff</a></li>
+<li class="active"><a href="/Players/getallplayers">Players</a></li>
+<li class="active"><a href="/Sponsers/getallsponsers">Sponsers</a></li>
+<li class="active"><a href="/Prizes/getallprizes">Prizes</a></li>
+<li class="active"><a href="/Sponsering_Details/getallsponseringdetails">SponseringDetails</a></li>
+<li class="active"><a href="/Players_Fees_Details/getallplayersfeesdetails">PlayersFeesDetails</a></li>
+</ul>
+</div>
 </body>
 </html>

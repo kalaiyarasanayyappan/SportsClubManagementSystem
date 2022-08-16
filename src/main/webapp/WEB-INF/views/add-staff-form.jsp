@@ -13,7 +13,7 @@
     font-size: 0.9em;
 }
 .a2{
-background-color:blue;
+background-color:#A1E2E8;
 border:1px green;
 border-radius: 15px;
 list-style:square
@@ -74,21 +74,37 @@ required="true"  />
                  <div>
                     <label for="address">Address</label>
                     <div>
-                        <form:input path="address" />
+                        <form:input path="address" title="Address should atleast contain 10 characters"
+required="true"/>
                     </div>
                 </div>
                  <form:errors path="address" cssClass="text-danger" />
-                 <div>
-                    <label for="staffRole">Staff Role</label>
-                    <div>
-                        <form:input path="staffRole" />
+                <div>
+                    <label for="staffRole">choose a Role</label>
+                    <br>
+                        <select name="staffRole" id="staffrole">
+<option>--Choose a role--</option>
+  <option value="admin">admin</option>
+  <option value="labour">labour</option>
+  <option value="couching sports">couching sports</option>
+ 
+</select>
                     </div>
-                </div>
+                
                  <div>
-                    <label for="coachingSports">Coaching Sports</label>
-                    <div>
-                        <form:input path="coachingSports" />
-                    </div>
+                    <label for="coachingSports">choose a couchingsports</label>
+                    <br>
+                      
+                         <select name="coachingSports" id="coachingSports">
+<option>--Choose a couchingsports--</option>
+  <option value="cricket">cricket</option>
+  <option value="Tennis">Tennis</option>
+  <option value="volleyball">volleyball</option>
+    <option value="Football">Football</option>
+      <option value="Nothing">Nothing</option>
+ 
+</select>
+                    
                 </div>
                 
                  <div>

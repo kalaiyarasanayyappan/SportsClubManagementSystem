@@ -1,13 +1,16 @@
 package com.chainsys.sportsclub.model;
 
-import java.util.Date;
+import java.sql.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
@@ -15,6 +18,8 @@ import javax.persistence.Table;
 
 public class SponseringDetails {
 	@Id
+	@SequenceGenerator(name="sponsering_details_id", sequenceName="sponsering_details_id", allocationSize=1)
+    @GeneratedValue(strategy=GenerationType.AUTO, generator="sponsering_details_id")
 	@Column(name = "SPONSERING_DETAILS_ID")
 	private int sponseringDetailsId;
 	@ManyToOne(fetch = FetchType.LAZY)

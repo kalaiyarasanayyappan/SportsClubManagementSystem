@@ -13,7 +13,7 @@
     font-size: 0.9em;
 }
 .c2{
-background-color:blue;
+background-color:#A1E2E8;
 border:1px green;
 border-radius: 15px;
 list-style:square
