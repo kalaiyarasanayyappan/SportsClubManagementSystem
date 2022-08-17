@@ -1,9 +1,6 @@
 package com.chainsys.sportsclub.model;
-
-
 import java.sql.Date;
 import java.util.List;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -15,12 +12,6 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
-import javax.validation.constraints.Digits;
-import javax.validation.constraints.Min;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.Pattern;
-import javax.validation.constraints.Size;
 
 @Entity
 @Table(name = "Players")
@@ -29,11 +20,6 @@ public class Players {
 	@SequenceGenerator(name="players_id", sequenceName="players_id", allocationSize=1)
     @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="players_id")
 	@Column(name = "PLAYER_ID")
-	/*
-	 * @NotEmpty(message = "*Please enter value")
-	 * 
-	 * @Min(value = 0,message="*value should be greater than 0")
-	 */
 	private int playerId;
 	@OneToMany(mappedBy = "player", fetch = FetchType.LAZY)
 	private List<PlayersFeesDetails> FeesDetails; // fk class
@@ -59,13 +45,7 @@ public class Players {
 	}
 
 	@Column(name = "PLAYER_NAME")
-	/*
-	 * @Size(max = 20, min = 3, message = "*Name length should be 3 to 20")
-	 * 
-	 * @NotBlank(message = "*Name can't be Empty")
-	 * 
-	 * @Pattern(regexp = "^[A-Za-z]\\w{3,20}$", message = "*Enter valid name ")
-	 */
+
 	private String playerName;
 
 	public List<PlayersFeesDetails> getFeesDetails() {
@@ -77,22 +57,12 @@ public class Players {
 	}
 
 	@Column(name = "SPORTS_ID")
-	/*
-	 * @NotEmpty(message = "*Please enter value")
-	 * 
-	 * @Min(value = 0,message="*value should be greater than 0")
-	 */
 	private int sportsId;
 	@Column(name = "GENDER") 
-	/*
-	 * @Pattern(regexp = "^M(ale)?$|^F(emale)?$", message = "*Enter valid gender ")
-	 */
 	private String gender;
 	@Column(name = "ADDRESS")
-	/* @NotEmpty(message = "*Please enter Address") */
 	private String address;
 	@Column(name = "CONTACT")
-	/* @Digits(message = "*Invalid number.", integer = 10, fraction = 0) */
 	private long contact;
 	@Column(name = "PLAYER_STATUS")
 	private String playerStatus;
@@ -103,7 +73,6 @@ public class Players {
 	@Column(name = "SUBSCRIPTION_DUE")
 	private int subscriptionDue;
 	@Column(name = "SUBSCRIPTION_PAID")
-	/* @Min(value = 0, message="*Value should be in positive numbers") */
 	private int subscriptionPaid;
 
 	public int getPlayerId() {

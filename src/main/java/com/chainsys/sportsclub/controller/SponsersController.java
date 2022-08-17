@@ -1,8 +1,6 @@
 package com.chainsys.sportsclub.controller;
 import java.util.List;
-
 import javax.validation.Valid;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -12,8 +10,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-
-import com.chainsys.sportsclub.dto.PlayersAndPlayersPrizeDetailsDTO;
 import com.chainsys.sportsclub.dto.SponsersAndSponseringDetailsDTO;
 import com.chainsys.sportsclub.model.Sponsers;
 import com.chainsys.sportsclub.service.SponseringdetailsService;
@@ -83,24 +79,7 @@ public class SponsersController {
         model.addAttribute("sponserdetails",dts.getSponserdetail());
         return "list-Sponsers-sponseringdetails";
     }
-    @RequestMapping("/updatesponsersform")
-    public String UpdateSponserForm() {
-        return "update-sponsers";
-    }
-
-    @RequestMapping("/getsponsersform")
-    public String getsponsersForm() {
-        return "get-sponsers";
-    }
-    @RequestMapping("/deletesponserform")
-    public String deletesponsersForm() {
-        return "delete-sponsers";
-    }
-    @RequestMapping("/getsponserssponseringdetails")
-    public String getsponserssponseringForm() {
-        return "get-sponserssponseringdetails";
-    }
-    
+   
 }
 
 

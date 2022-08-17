@@ -1,0 +1,96 @@
+@charset "ISO-8859-1";
+
+.center {
+ text-align: center;
+}
+
+body {
+	background-image:
+		url("https://st.depositphotos.com/1063346/1362/i/950/depositphotos_13625743-stock-photo-assorted-sports-equipment-on-black.jpg");
+	 height: 768px;
+	width: 1366px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+	text-align: "center";
+}
+
+.my_text {
+	font-family: Times;
+	font-size: 25px;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.menu-bar {
+	text-align: center;
+}
+
+.menu-bar ul {
+	display: inline-flex;
+	list-style: none;
+	color: #EE2111;
+}
+
+.menu-bar ul li {
+	width: 150px;
+	margin: 15px;
+	padding: 15px;
+}
+
+.menu-bar ul li a {
+	text-decoration: none;
+	color: #fff;
+}
+
+.active, .menu-bar ul li:hover {
+	background: #ff6600;
+	border-radius: 3px;
+}
+
+.menu-bar .fa {
+	margin-right: 8px;
+}
+
+.sub-menu-1 {
+	display: none;
+}
+
+.menu-bar ul li:hover .sub-menu-1 {
+	display: block;
+	position: absolute;
+	background: rgb(0, 153, 204); /*rgb(255, 0, 0)*/
+	margin-top: 15px;
+	margin-left: -15px;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul {
+	display: block;
+	margin: 10px;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul li {
+	width: 150px;
+	padding: 10px;
+	border-bottom: 1px dotted #fff;
+	background: transparent;
+	border-radius: 0;
+	text-align: left;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul li:last-child {
+	border-bottom: none;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul li a:hover {
+	color: #b2ff00;
+}
+
+h1 {
+	color: #b2ff00;
+	text-align: center;
+}

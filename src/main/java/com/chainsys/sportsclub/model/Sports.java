@@ -1,9 +1,5 @@
 package com.chainsys.sportsclub.model;
-
-
-import java.nio.file.attribute.FileTime;
 import java.util.List;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -13,10 +9,6 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Pattern;
-import javax.validation.constraints.Size;
-
 @Entity
 @Table(name = "Sports")
 public class Sports {
@@ -26,13 +18,6 @@ public class Sports {
 	@Column(name = "SPORTS_ID")
 	private int sportsId;
 	@Column(name = "SPORTS_NAME")
-	/*
-	 * @Size(max = 20, min = 3, message = "*Name length should be 3 to 20")
-	 * 
-	 * @NotBlank(message = "*Name can't be Empty")
-	 * 
-	 * @Pattern(regexp = "^[A-Za-z]\\w{3,20}$", message = "*Enter valid name ")
-	 */
 	private String sportsName;
 	@Column(name = "FEES")
 	private int fees;
@@ -64,7 +49,6 @@ public class Sports {
 		this.sponserdetails = sponserdetails;
 	}
 
-	
 	public int getSportsId() {
 		return sportsId;
 	}
@@ -112,6 +96,4 @@ public class Sports {
 	public void setDurations(int durations) {
 		this.durations = durations;
 	}
-
-
 }

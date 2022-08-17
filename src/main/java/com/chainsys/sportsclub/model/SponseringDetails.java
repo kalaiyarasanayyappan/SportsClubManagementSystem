@@ -1,7 +1,5 @@
 package com.chainsys.sportsclub.model;
-
 import java.sql.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -43,6 +41,8 @@ public class SponseringDetails {
 	private Date dateOfSponsering;
 	@Column(name = "MODE_OF_PAYMENT")
 	private String modeOfPayment;
+	@SequenceGenerator(name="RECIEPT_NUMBER", sequenceName="RECIEPT_NUMBER", allocationSize=1000)
+    @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="RECIEPT_NUMBER")
 	@Column(name = "RECIEPT_NUMBER")
 	private int recieptNumber;
 	@Column(name = "SPONSER_ID")
@@ -113,5 +113,4 @@ public class SponseringDetails {
 	public void setSponseringDetailsId(int sponseringDetailsId) {
 		this.sponseringDetailsId = sponseringDetailsId;
 	}
-
 }

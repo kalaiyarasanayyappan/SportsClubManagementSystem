@@ -2,54 +2,52 @@
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="ISO-8859-1">
 <title>Sponseringdetails List</title>
 <style type="text/css">
-/* .f5{
-background-color:#C18A7E;
-text-transform:uppercase;
-word-spacing:1em;
-} */
-body{
-background-image:
- url("https://www.socialtables.com/wp-content/uploads/2016/09/iStock_84793351_LARGE-copy-1.jpg");
- height: 768px;
-width: 1366px;
- /* background-position: center; */
- background-size: cover;
- background-repeat: no-repeat;
- color: blue;
-
-}
+<%@include file="/WEB-INF/css/listsponseringdetails.css"%>
 </style>
 </head>
 <body>
-	   
-	<div id="table root">
-	<div ><a href="/Sponsering_Details/addform">Add</a></div>
-<div ><a href="/Sponsering_Details/updatesponseringform">Update</a></div>
-<div ><a href="/Sponsering_Details/getsponseringdetailsform">Find</a></div>
-<div ><a href="/home/index">Home</a></div>
-<!-- <div ><a href="/Sponsering_Details/deletesponseringdetailsform">Delete</a></div> -->
+	<br>
+	<br>    
+	<div class="center" id="table root">
+		<div>
+			<a href="/Sponsering_Details/addform"><h2>Add</h2></a>
+		</div>
+		<div>
+			<a href="/home/index"><h2>Home</h2></a>
+		</div>
 
+		<form action="updatesponseringdetails">
+			<div class="center">
+				<input type="text" name="sponseringDetailsId" /> <input
+					type="submit" value="update" />
+			</div>
+		</form>
+		<br>
+		<form action="getsponseringdetails">
+			<div class="center">
+				<input type="text" name="sponseringDetailsId" /> <input
+					type="submit" value="Find" />
+			</div>
+		</form>
 		   
-		<table align= "center" border=1>
+		<table class="table-center" border=1>
 			       
 			<thead>
 				           
 				<tr>
-					 <th>SponseringDetailsId</th>          
+					 
+					<th>SponseringDetailsId</th>          
 					<th>SponserId</th>            
 					<th>SportsId</th>            
 					<th>Amount</th>            
-					<th>Date of Sponsering</th>   
-						<th>Mode of Payment</th> 
-							<th>RecieptNumber</th> 
-								         
-					            
-	            
+					<th>Date of Sponsering</th>  
+					<th>Mode of Payment</th>
+					<th>RecieptNumber</th>                                  
 				</tr>
 				       
 			</thead>
@@ -64,9 +62,10 @@ width: 1366px;
 						<td>${Sponseringdetails.amount}</td>            
 						<td>${Sponseringdetails.dateOfSponsering}</td>  
 						<td>${Sponseringdetails.modeOfPayment}</td>  
-						<td>${Sponseringdetails.recieptNumber}</td>            
-						  <td><a  href="/Sponsering_Details/deletesponseringdetailsform?id=${Sponseringdetails.sponseringDetailsId}">Delete</a></td>       
-						            
+						<td>${Sponseringdetails.recieptNumber}</td>              
+						<td><a
+							href="/Sponsering_Details/deletesponseringdetailsform?id=${Sponseringdetails.sponseringDetailsId}">Delete</a></td> 
+						                 
 					</tr>
             </c:forEach>
 				       

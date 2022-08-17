@@ -3,18 +3,17 @@
      <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
      <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="ISO-8859-1">
 <title>Players Details</title>
 <style type="text/css">
-.b8{
-background-color:#C18A7E;
-}
+<%@include file="/WEB-INF/css/listplayersprize.css"%>
 </style>
 </head>
 <body>
-<div class="b8" id="root">
+<br><br>
+<div class="center" id="root">
 		<div id="getplayersbyprizedetails">
 			<form:form action="" method="post" modelAttribute="getplay">
 				 <div>
@@ -87,8 +86,9 @@ background-color:#C18A7E;
 			 </form:form>
 		</div>
 	</div>
-	<div id="getallplayersprizedetails">
-		<table border=1>
+	<br>
+	<div  id="getallplayersprizedetails">
+		<table class="table-center" border=1>
 		<thead>
 				<tr>
 					 <th>prize Id</th>         

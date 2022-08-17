@@ -1,6 +1,5 @@
 package com.chainsys.sportsclub.controller;
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -9,11 +8,9 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-
 import com.chainsys.sportsclub.model.SponseringDetails;
-import com.chainsys.sportsclub.model.Staff;
 import com.chainsys.sportsclub.service.SponseringdetailsService;
-import com.chainsys.sportsclub.service.StaffService;
+
 
 @Controller
 @RequestMapping("/Sponsering_Details")
@@ -28,13 +25,6 @@ public class SponseringdetailsController {
         model.addAttribute("getsponseringdetails",sd);
         return "find-sponseringdetails-id-form";
     }
-
-	/*
-	 * @GetMapping("/deletesponseringdetails") public String
-	 * deleteSponseringdetails(@RequestParam("sponseringDetailsId")int id) {
-	 * sdService.deleteById(id); return
-	 * "redirect:/Sponsering_Details/getallsponseringdetails"; }
-	 */
     @GetMapping("/addform")
     public String showAddForm(Model model) {
         SponseringDetails sd = new SponseringDetails();
@@ -65,22 +55,6 @@ public class SponseringdetailsController {
         List<SponseringDetails> sdList= sdService.findAllSponseringdetails();
         model.addAttribute("allsponseringdetails",sdList);
         return "list-sponseringdetails";
-    }
-    @RequestMapping("/getsponseringdetailsform")
-    public String getsponseringForm() {
-        return "get-sponseringdetails";
-    }
-    @RequestMapping("/updatesponseringform")
-    public String updatesponseringdetailsForm() {
-        return "update-sponseringdetails";
-    }
-    @RequestMapping("/deletesponseringform")
-    public String deletesponseringdetailsForm() {
-        return "delete-sponseringdetails";
-    }
-    @RequestMapping("/deletesponseringdetailsform")
-    public String deleteSponseringdetailsForm() {
-        return "delete-sponseringdetails";
     }
 
     @RequestMapping("/deletesponseringdetails")

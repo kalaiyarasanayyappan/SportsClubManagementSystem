@@ -1,0 +1,23 @@
+@charset "ISO-8859-1";
+
+body {
+	background-image:
+		url("https://www.pixelstalk.net/wp-content/uploads/2016/06/Cool-Sports-Picture.jpg");
+	 height: 768px;
+	width: 1366px;
+	 background-repeat: no-repeat;
+	color: white;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+.center {
+ text-align: center;
+}
+.table-center {
+  margin-left: auto;
+  margin-right: auto;
+}

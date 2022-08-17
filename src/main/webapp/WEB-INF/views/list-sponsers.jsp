@@ -2,35 +2,42 @@
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="ISO-8859-1">
 <title>Sponser List</title>
 <style type="text/css">
-
-body{
-background-image:
- url("https://nielsensports.com/wp-content/uploads/2021/02/GettyImages-1283204356z-1.jpg");
- height: 768px;
-width: 1366px;
-/*  background-position: center; */
- background-size: cover;
-background-repeat: no-repeat;
- color: yellow;
-}
+<%@include file="/WEB-INF/css/listsponsers.css"%>
 </style>
 </head>
 <body>
-	   
+	<br>
+	<br>
+	<div class="center" id="table root">
+		<a href="/Sponsers/addform"><h2>Add</h2></a>
+	</div>
+
+	<div class="center">
+		<a href="/home/index"><h2>Home</h2></a>
+	</div>
+	<form action="updatesponsers">
+		<div class="center">
+			<input type="text" name="sponserId" /> <input type="submit"
+				value="update" />
+		</div>
+	</form>
+	<br>
+	<form action="getsponsers">
+		<div class="center">
+			<input type="text" name="sponserId" /> <input type="submit"
+				value="Find" />
+		</div>
+	</form>
+	<br>
+	<br>   
 	<div id="table root">
-	<div ><a href="/Sponsers/addform">Add</a></div>
-<div ><a href="/Sponsers/updatesponsersform">Update</a></div>
-<div ><a href="/Sponsers/getsponsersform">Find</a></div>
-<div ><a href="/home/index">Home</a></div>
-<!-- <div > <a href="/Sponsers/deletesponsersform">Delete</a></div> -->
-<!-- <div ><a href="/Sponsers/getsponserssponseringdetails">Sponsering Details</a></div>  -->
 		   
-		<table align= "center" border=1>
+		<table class="table-center" border=1>
 			       
 			<thead>
 				           
@@ -39,9 +46,7 @@ background-repeat: no-repeat;
 					<th>Sponser Id</th>            
 					<th>Sponser Name</th>            
 					<th>Contact</th>            
-					<th>Email</th>            
-					            
-	            
+					<th>Email</th>                                    
 				</tr>
 				       
 			</thead>
@@ -55,10 +60,14 @@ background-repeat: no-repeat;
 						<td>${Sponsers.sponserName}</td>            
 						<td>${Sponsers.contact}</td>            
 						<td>${Sponsers.email}</td>            
-						<td><a  href="/Sponsers/deletesponsersform?id=${Sponsers.sponserId}">Delete</a></td>
-						<%-- <td><a  href="/Sponsers/getsponserssponseringdetails?id=${Sponsers.sponserId}">SponseringDetails</a></td>  --%>
-						<td><a  href="/Sponsers/getsponserssponseringdetails?id=${Sponsers.sponserId}">SponseringDetails</a></td>            
-						            
+
+						<td><a
+							href="/Sponsers/deletesponsersform?id=${Sponsers.sponserId}">Delete</a></td>
+
+
+						<td><a
+							href="/Sponsers/getsponserssponseringdetails?id=${Sponsers.sponserId}">SponseringDetails</a></td> 
+						                      
 					</tr>
             </c:forEach>
 				       

@@ -1,61 +1,57 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="ISO-8859-1">
 <title>Add Sponsers</title>
 <style type="text/css">
-/* .d2{
-background-color:#A1E2E8;
-border:1px green;
-border-radius: 15px;
-list-style:square
-} */
+<%@include file="/WEB-INF/css/addsponser.css"%>
 </style>
 </head>
 <body>
-  <div id="root">
-        <div id="form">
-            <form:form action="add" method="post"
-                modelAttribute="addsponsers">
-              <%--   <div>
-                    <label for="sponserId">Sponser Id</label>
-                    <div>
-                        <form:input path="sponserId" />
-                    </div> --%>
-                </div>
-                <div>
-                    <label for="sponserName">Sponser Name</label>
-                    <div>
-                       <form:input path="sponserName" title="Name can't be empty or must contain only alphabets"
-pattern="^[a-zA-Z]+$" required="true" />
-                    </div>
-                </div>
-                <div>
-                    <label for="contact">Contact</label>
-                    <div>
-                         <form:input path="contact" 
-                        pattern="[1-9]{1}[0-9]{9}"
-title="Phone number should have atleast 10 digits"
-required="true"  />
-                    </div>
-                </div>
-                <div>
-                    <label for="email">Email</label>
-                    <div>
-                       <form:input path="email" pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}$"
-title="Invalid email ex: sports@gmail.com" required="true"  />
-                    </div>
-                </div>
-                
-        <div>
-            <form:button>Add Sponser</form:button>
-        </div>
-        </form:form>
-    </div>
-    </div>
+	<br>
+	<br>
+	<div class="center"id="table root">
+		<div id="form">
+			<form:form action="add" method="post" modelAttribute="addsponsers">
+		</div>
+		<div>
+			<label for="sponserName">Sponser Name</label>
+			<div>
+				<form:input path="sponserName"
+					title="Name can't be empty or must contain only alphabets"
+					pattern="^[a-zA-Z]+$" required="true" />
+			</div>
+		</div>
+		<form:errors path="sponserName" cssClass="text-danger" />
+			<br>
+		<div>
+			<label for="contact">Contact</label>
+			<div>
+				<form:input path="contact" pattern="[1-9]{1}[0-9]{9}"
+					title="Phone number should have atleast 10 digits" required="true" />
+			</div>
+		</div>
+		<form:errors path="contact" cssClass="text-danger" />
+			<br>
+		<div>
+			<label for="email">Email</label>
+			<div>
+				<form:input path="email"
+					pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}$"
+					title="Invalid email ex: sports@gmail.com" required="true" />
+			</div>
+		</div>
+		<form:errors path="email" cssClass="text-danger" />
+			<br>
+		<div>
+			<form:button>Add</form:button>
+		</div>
+		</form:form>
+	</div>
+	</div>
 </body>
 </html>

@@ -1,18 +1,12 @@
 package com.chainsys.sportsclub.service;
-
 import java.util.Iterator;
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import com.chainsys.sportsclub.dto.SponsersAndSponseringDetailsDTO;
 import com.chainsys.sportsclub.dto.SportsAndPlayersDTO;
 import com.chainsys.sportsclub.dto.SportsAndSponseringDetailsDTO;
 import com.chainsys.sportsclub.model.Players;
-import com.chainsys.sportsclub.model.Prizes;
 import com.chainsys.sportsclub.model.SponseringDetails;
-import com.chainsys.sportsclub.model.Sponsers;
 import com.chainsys.sportsclub.model.Sports;
 import com.chainsys.sportsclub.repository.PlayersRepository;
 import com.chainsys.sportsclub.repository.SponseringdetailsRepository;

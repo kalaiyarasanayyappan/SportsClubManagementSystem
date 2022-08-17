@@ -1,0 +1,22 @@
+@charset "ISO-8859-1";
+.center
+{
+ text-align: center;
+}
+body {
+	background-image:
+		url("https://nielsensports.com/wp-content/uploads/2021/02/GettyImages-1283204356z-1.jpg");
+	 height: 768px;
+	width: 1366px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	color: yellow;
+}
+
+a {
+	color: white;
+}
+.table-center {
+  margin-left: auto;
+  margin-right: auto;
+}

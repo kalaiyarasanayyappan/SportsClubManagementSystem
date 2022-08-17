@@ -3,22 +3,14 @@ import java.util.Iterator;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
-
 import com.chainsys.sportsclub.dto.PlayersAndPlayersFeesDetailsDTO;
 import com.chainsys.sportsclub.dto.PlayersAndPlayersPrizeDetailsDTO;
 import com.chainsys.sportsclub.model.Players;
 import com.chainsys.sportsclub.model.PlayersFeesDetails;
 import com.chainsys.sportsclub.model.Prizes;
-import com.chainsys.sportsclub.model.Staff;
 import com.chainsys.sportsclub.repository.PlayersRepository;
 import com.chainsys.sportsclub.repository.PlayersfeesdetailsRepository;
 import com.chainsys.sportsclub.repository.PrizesRepository;
-import com.chainsys.sportsclub.repository.StaffRepository;
-
-
-
-
 @Service
 public class PlayersService {
     

@@ -1,9 +1,6 @@
 package com.chainsys.sportsclub.controller;
-
 import java.util.List;
-
 import javax.validation.Valid;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,12 +10,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-
-import com.chainsys.sportsclub.dto.PlayersAndPlayersPrizeDetailsDTO;
 import com.chainsys.sportsclub.dto.SportsAndPlayersDTO;
 import com.chainsys.sportsclub.dto.SportsAndSponseringDetailsDTO;
-import com.chainsys.sportsclub.model.Players;
-import com.chainsys.sportsclub.model.SponseringDetails;
 import com.chainsys.sportsclub.model.Sports;
 import com.chainsys.sportsclub.service.PlayersService;
 import com.chainsys.sportsclub.service.SponseringdetailsService;
@@ -42,11 +35,6 @@ public class SportsController {
 		return "find-sports-id-form";
 	}
 
-	/*
-	 * @GetMapping("/deletesports") public String
-	 * deleteSports(@RequestParam("id")int id) { spService.deleteById(id); return
-	 * "redirect:/Sports/getallsports"; }
-	 */
 	@GetMapping("/addform")
 	public String showAddForm(Model model) {
 		Sports sp = new Sports();
@@ -86,9 +74,6 @@ public class SportsController {
 		model.addAttribute("allsports", spList);
 		return "list-sports";
 	}
-
-
-	
 	@GetMapping("/getsportsbysponserdetails")
 	public String getSportssponserdetails(@RequestParam("id") int id, Model model) {
 		SportsAndSponseringDetailsDTO dts = spService.getSportsSponsersDetails(id);
@@ -105,39 +90,14 @@ public class SportsController {
 		return "list-sports-sportsplayerdetails";
 	}
 
-	/*
-	 * @RequestMapping("/deletesportsform") public String deleteSportsForm() {
-	 * return "redirect:/Sports/getallsports"; }
-	 */
-
 	@RequestMapping("/deletesportsform")
 	public String deleteSportsid(@RequestParam("id") int id) {
 		spService.deleteById(id);
 		return "redirect:/Sports/getallsports";
 	}
-
-	/*
-	 * @RequestMapping("/getsportsform") public String getSportsForm() { return
-	 * "get-sports"; }
-	 */
-	/*
-	 * @RequestMapping("/getsports") public String
-	 * getSportsid(@RequestParam("sportsId") int id) { spService.findById(id);
-	 * return "redirect:/Sports/getallsports"; }
-	 */
-	@RequestMapping("/updatesportsform")
-	public String updateSportsForm() {
-		return "update-sports";
-	}
-
 	@RequestMapping("/updatesports")
 	public String updateSportsid(@RequestParam("sportsId") int id) {
 		spService.findById(id);
 		return "redirect:/Sports/getallsports";
-	}
-	/*
-	 * @RequestMapping("/getsportsbysponserdetails") public String
-	 * getSportssponseringForm() { return "get-sports-sponserdetails"; }
-	 */
-
+	}	
 }

@@ -1,0 +1,16 @@
+@charset "ISO-8859-1";
+.center
+{
+ text-align: center;
+}
+body {
+	background-image: url("https://wallpaperaccess.com/full/191757.jpg");
+	 height: 768px;
+	width: 1366px;
+background-repeat: no-repeat;
+	color: #F27229;
+}
+.table-center {
+  margin-left: auto;
+  margin-right: auto;
+}

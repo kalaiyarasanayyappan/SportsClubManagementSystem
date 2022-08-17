@@ -8,10 +8,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-
-
 import com.chainsys.sportsclub.model.Prizes;
-
 import com.chainsys.sportsclub.service.PrizesService;
 
 @Controller
@@ -54,7 +51,7 @@ public class PrizesController {
     public String modifyPrizes(@ModelAttribute("updateprizes") Prizes pr)
     {
         prService.save(pr);
-     return "redirect:/Prizes/getallPrizes";
+     return "redirect:/Prizes/getallprizes";
      
     }
     @GetMapping("/getallprizes")
@@ -63,18 +60,7 @@ public class PrizesController {
         model.addAttribute("allprizes",prList);
         return "list-prizes";
     }
-    @RequestMapping("/updateprizesform")
-    public String updateStaffForm() {
-        return "update-prizes";
-    }
-    @RequestMapping("/getprizesform")
-    public String getPrizesForm() {
-        return "get-prizes";
-    }
-    @RequestMapping("/deleteprizesform")
-    public String deletePrizesForm() {
-        return "delete-prizes";
-    }
+    
 }
 
 

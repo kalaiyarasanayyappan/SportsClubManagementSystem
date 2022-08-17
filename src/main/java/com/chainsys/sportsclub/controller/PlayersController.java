@@ -1,8 +1,6 @@
 package com.chainsys.sportsclub.controller;
 import java.util.List;
-
 import javax.validation.Valid;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -12,7 +10,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-
 import com.chainsys.sportsclub.dto.PlayersAndPlayersFeesDetailsDTO;
 import com.chainsys.sportsclub.dto.PlayersAndPlayersPrizeDetailsDTO;
 import com.chainsys.sportsclub.model.Players;
@@ -34,31 +31,26 @@ public class PlayersController {
     @Autowired
     SportsService sp;
 	
-	 @GetMapping("/getplayers") public String
-	  getPlayers(@RequestParam("playerId")int id,Model model) { Players pl
+	 @GetMapping("/getplayers") 
+	 public String getPlayers(@RequestParam("playerId")int id,Model model) { Players pl
 	  =plService.findById(id); model.addAttribute("getplayers",pl); return
 	  "find-players-id-form"; }
 	 
-
-	/*
-	 * @GetMapping("/deleteplayers") public String
-	 * deletePlayers(@RequestParam("id")int id) { plService.deleteById(id); return
-	 * "redirect:/Players/getallplayers"; }
-	 */
     @GetMapping("/addform")
     public String showAddForm(Model model) {
         Players pl = new Players();
         model.addAttribute("addplayers",pl);
+        pl.setSubscriptionPaid(pl.getSubscriptionDue() + pl.getSubscriptionPaid());
         return "add-players-form";
     }
     @PostMapping("/add")
-    public String addPlayers(@Valid @ModelAttribute("addplayers")Players pl,Errors errors)
+    public String addPlayers(@Valid @ModelAttribute("addplayers")Players player,Errors errors)
     {
     	if(errors.hasErrors()) {
 			return "add-players-form";
 		}
  
-     plService.save(pl);
+     plService.save(player);
      return "redirect:/Players/getallplayers";
     }
     @GetMapping("/updateplayers")
@@ -98,45 +90,27 @@ public class PlayersController {
         model.addAttribute("prizedetails",dtp.getPrizedetails());
         return "list-players-playersprizedetails";
     }
-    @RequestMapping("/deleteplayersform")
-    public String deletePlayersForm() {
-        return "delete-players";
-    }
+   
 
     @RequestMapping("/deleteplayers")
     public String deletePlayers(@RequestParam("playerId") int id) {
         plService.deleteById(id);
         return "redirect:/Players/getallplayers";
     }
-    @RequestMapping("/updateplayersform")
-    public String updatePlayersForm() {
-        return "update-players";
-    }
+   
 
     @RequestMapping("/updateplayers")
     public String updatePlayers(@RequestParam("playerId") int id) {
         plService.findById(id);
         return "redirect:/Players/getallplayers";
     }
-    @RequestMapping("/getplayersform")
-    public String getPlayersForm() {
-        return "get-players";
-    }
-
+   
     @RequestMapping("/getplayers")
     public String getPlayers(@RequestParam("playerId") int id) {
         plService.findById(id);
         return "redirect:/Players/getallplayers";
     }
-	/*
-	 * @RequestMapping("/getplayersfeesdetail") public String getFeesByPlayers() {
-	 * return "get-feesbyplayers"; }
-	 * 
-	 * @RequestMapping("/getplayersprizedetail") public String getPrizeByPlayers() {
-	 * return "get-prizebyplayers"; }
-	 */
-    
-    
+	   
 }
 
 

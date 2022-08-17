@@ -1,8 +1,6 @@
 package com.chainsys.sportsclub.dto;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import com.chainsys.sportsclub.model.SponseringDetails;
 import com.chainsys.sportsclub.model.Sports;
 
@@ -24,7 +22,6 @@ public class SportsAndSponseringDetailsDTO {
 	public void addSponseringDetails(SponseringDetails sd)
 	{
 		sponserdetail.add(sd);
-	}
-	
+	}	
 }
 

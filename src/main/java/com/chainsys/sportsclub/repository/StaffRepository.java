@@ -1,9 +1,6 @@
 package com.chainsys.sportsclub.repository;
-
 import java.util.List;
-
 import org.springframework.data.repository.CrudRepository;
-
 import com.chainsys.sportsclub.model.Staff;
 
 public interface StaffRepository extends CrudRepository<Staff,Integer>{

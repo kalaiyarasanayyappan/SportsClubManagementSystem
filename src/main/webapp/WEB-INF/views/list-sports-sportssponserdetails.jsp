@@ -3,18 +3,18 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="ISO-8859-1">
 <title>sports</title>
 <style type="text/css">
-.c6{
-background-color:#C18A7E;
-}
+<%@include file="/WEB-INF/css/listsportssponsers.css"%>
 </style>
 </head>
 <body>
-	<div class="c6"id="root">
+	<br>
+	<br>
+	<div class="center"  id="root">
 		<div id="getsportsbysponserdetails">
 			<form:form action="" method="post" modelAttribute="getsport">
 				<div>
@@ -56,8 +56,10 @@ background-color:#C18A7E;
 			</form:form>
 		</div>
 	</div>
+	<br>
+	<br>
 	<div id="getsportsbysponserdetails">
-		<table border=1>
+		<table class="table-center" border=1>
 			<thead>
 				<tr>
 					<th>Sponsering_Details_Id</th>

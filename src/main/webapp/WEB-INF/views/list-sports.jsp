@@ -2,81 +2,44 @@
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="ISO-8859-1">
 <title>Sports List</title>
 <style type="text/css">
-/* .c5{
-color: yellow;
-text-transform:uppercase;
-word-spacing:1em;
-} */
-body{
-background-image:
- url("https://cdn.wallpapersafari.com/11/50/EU4RxW.jpg");
- height: 768px;
-width: 1366px;
-/*  background-position: center; */
- background-size: cover;
- background-repeat: no-repeat;
- color: yellow;
-}
-
-
+<%@include file="/WEB-INF/css/listsports.css"%>
 </style>
 
 </head>
 <body>
-	   
-	<div  align="center" id="table root">
-	<div ><a href="/Sports/addform"><h2>Add</h2></a></div>
-<!-- <div ><a href="/Sports/updatesports">Update</a></div> -->
-<!--  <div ><a href="/Sports/getsports?sportsId=">Find</a></div>  -->
-<div  align="center"><a href="/home/index"><h2>Home</h2></a></div>
-<!-- <div ><a href="/Sports/deletesportsform">Delete</a></div> -->
-<!-- <div ><a href="/Sports/getallsports">Get All sports</a></div> -->
- <!-- <div ><a href="/Sports/getsportsbysponserdetails">sponsers</a></div>
-<div ><a href="/Sports/getsportsbyplayerdetails">players</a></div>  -->
- <form action="getsports" >
-   
-                <div align="center">
-                  
-                    Id : <input type="text" name="sportsId" />
-                    <div>
-                    
-                    </div>
-                  
-                </div>
-              
-                <input type="submit" value="get" />
-               
-            </form>
-             
-            <form action="updatesports" >
-                <div align="center">
-                   update: <input type="text" name="sportsId" />
-                </div>
-               
-                <input type="submit" value="update" />
-            </form>
-              <form action="getsportsbysponserdetails" >
-                <div align="center">
-                    sponsers : <input type="text" name="id" />
-                </div>
-               
-                <input type="submit" value="get" />
-            </form>
-              <form action="getsportsbyplayerdetails" >
-                <div align="center">
-                    players : <input type="text" name="id" />
-                </div>
-               
-                <input type="submit" value="get" />
-            </form>
-            
+	   <br><br><br><br>
+	<div class="center" id="table root">
+		<div>
+			<a href="/Sports/addform"><h2>Add</h2></a>
+		</div>
+		<div class="center">
+			<a href="/home/index"><h2>Home</h2></a>
+		</div>
+
+		<form action="getsports">
+
+			<div class="center">
+
+				<input type="text" name="sportsId" /> <input type="submit"
+					value="Find" />
+			</div>
+
+		</form>
+<br>
+		<form action="updatesports">
+			<div class="center">
+				<input type="text" name="sportsId" /> <input type="submit"
+					value="update" />
+			</div>
+		</form>
+
 		   
-		<table  align= "center" border=1>
+		<table class="table-center" border=1>
 			       
 			<thead>
 				           
@@ -87,8 +50,7 @@ width: 1366px;
 					<th>Fees</th>            
 					<th>In_time</th>            
 					<th>Out_time</th>            
-					<th>Durations</th>            
-	            
+					<th>Durations</th>                        
 				</tr>
 				       
 			</thead>
@@ -104,16 +66,18 @@ width: 1366px;
 						<td>${Sports.inTime}</td>            
 						<td>${Sports.outTime}</td>            
 						<td>${Sports.durations}</td>            
-						 <%-- <td><a  href="/Sports/getsportsbysponserdetails?id=${Sports.sportsId}">SponseringDetails</a></td> 
-						<td><a  href="/Sports/getsportsbyplayerdetails?id=${Sports.sportsId}">PlayerDetails</a></td> --%>
-						<td><a  href="/Sports/deletesportsform?id=${Sports.sportsId}">Delete</a></td> 
-						<%-- <td><a  href="/Sports/getsports?sportsId=${Sports.sportsId}">Find</a></td>        --%>
+						<td><a
+							href="/Sports/getsportsbysponserdetails?id=${Sports.sportsId}">SponseringDetails</a></td>
+						<td><a
+							href="/Sports/getsportsbyplayerdetails?id=${Sports.sportsId}">PlayerDetails</a></td>
+						<td><a href="/Sports/deletesportsform?id=${Sports.sportsId}">Delete</a></td>
+
 					</tr>
             </c:forEach>
 				       
-</tbody>
+			</tbody>
 
-</table>
+		</table>
 		       
 	</div>
 </body>

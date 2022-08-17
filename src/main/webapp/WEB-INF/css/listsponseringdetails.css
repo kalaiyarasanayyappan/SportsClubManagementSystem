@@ -1,0 +1,22 @@
+@charset "ISO-8859-1";
+.center
+{
+ text-align: center;
+}
+body {
+	background-image:
+		url("https://www.socialtables.com/wp-content/uploads/2016/09/iStock_84793351_LARGE-copy-1.jpg");
+	 height: 768px;
+	width: 1366px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	color: blue;
+}
+
+a {
+	color: white;
+}
+.table-center {
+  margin-left: auto;
+  margin-right: auto;
+}

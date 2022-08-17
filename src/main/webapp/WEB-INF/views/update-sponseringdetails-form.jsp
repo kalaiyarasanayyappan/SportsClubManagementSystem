@@ -1,66 +1,81 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-    <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+	pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="ISO-8859-1">
 <title>Update Sponseringdetails</title>
 <style type="text/css">
-.f2{
-background-color:#A1E2E8;
-border:1px green;
-border-radius: 15px;
-list-style:square
-}
+<%@include file="/WEB-INF/css/updatesponserdetails.css"%>
 </style>
 </head>
 <body>
-    <div class="f2"id="root">
-        <div id="form">
-            <form:form action="update" method="post" modelAttribute="updatesponseringdetails">
-             <%-- <div>
-                    <label for="sponseringDetailsId">sponsering Details Id</label>
-                    <div>
-                        <form:input path="sponseringDetailsId" />
-                    </div> --%>
-                </div>
-                 <div>
-                    <label for="sponserId">Sponser Id</label>
-                    <div>
-                        <form:input path="sponserId" />
-                    </div>
-                </div>
-                <div>
-                    <label for="sportsId">Sports Id</label>
-                    <div>
-                        <form:input path="sportsId" />
-                    </div>
-                </div>
-                <div>
-                    <label for="amount">Amount</label>
-                    <div>
-                        <form:input path="amount" />
-                    </div>
-                </div>
-                <div>
-                    <label for="dateOfSponsering">Date of Sponsering</label>
-                    <div>
-                        <form:input path="dateOfSponsering" type="date"/>
-                    </div>
-                </div>
-                <div>
-                    <label for="modeOfPayment">Mode Of Payment</label>
-                    <div>
-                        <form:input path="modeOfPayment" />
-                    </div>
-                </div>
-        <div>
-            <form:button>Update Sponseringdetails</form:button>
-        </div>
-        </form:form>
-    </div>
-    </div>
+	<br>
+	<br>
+	<div class="center"id="table root">
+		<div id="form">
+			<form:form action="update" method="post"
+				modelAttribute="updatesponseringdetails">
+				<div>
+					<label for="sponserId">Sponser Id</label>
+					<div>
+						<form:input path="sponserId" title="Enter sponser Id"
+							required="true" />
+					</div>
+				</div>
+				<form:errors path="sponserId" cssClass="text-danger" />
+					<br>
+				<div>
+					<label for="sportsId">choose a sports</label> <br> <select
+						name="sportsId" id="sportsId">
+						<option>--Choose a sports--</option>
+						<option value="1000">cricket</option>
+						<option value="1001">Football</option>
+						<option value="1002">Tennis</option>
+						<option value="1006">volleyball</option>
+						<option value="1007">basketball</option>
+						<option value="1008">Handball</option>
+					</select>
+
+				</div>
+					<br>
+				<div>
+					<label for="amount">Amount</label>
+					<div>
+						<div>
+							<form:input path="amount" title="enter valid amount"
+								pattern="^\d{1,6}(?:\.\d{0,2})?$" required="true" />
+
+						</div>
+					</div>
+					<form:errors path="amount" cssClass="text-danger" />
+				</div>
+					<br>
+				<div>
+					<label for="dateOfSponsering">Date of Sponsering</label>
+					<div>
+						<form:input path="dateOfSponsering" type="date" title="enter date"
+							required="true" />
+					</div>
+				</div>
+				<form:errors path="dateOfSponsering" cssClass="text-danger" />
+					<br>
+				<div>
+					<label for="modeOfPayment">choose a payment</label> <br> <select
+						name="modeOfPayment" id="modeOfPayment">
+						<option>--Choose a payment--</option>
+						<option value="cash">Cash</option>
+						<option value="check">check</option>
+						<option value="debitcard">DebitCard</option>
+
+					</select>
+					<div>
+						<form:button>Update</form:button>
+					</div>
+			</form:form>
+		</div>
+	</div>
 </body>
 </html>

@@ -8,14 +8,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-
-
 import com.chainsys.sportsclub.model.PlayersFeesDetails;
-
-
 import com.chainsys.sportsclub.service.PlayersfeesdetailsService;
-
-
 @Controller
 @RequestMapping("/Players_Fees_Details")
 public class PlayersfeesdetailsController {
@@ -30,12 +24,7 @@ public class PlayersfeesdetailsController {
         return "find-playersfeesdetails-id-form";
     }
 
-	/*
-	 * @GetMapping("/deleteplayersfeesdetails") public String
-	 * deletePlayersfeesdetails(@RequestParam("id")int id) {
-	 * prService.deleteById(id); return
-	 * "redirect:/Players_Fees_Details/getallplayersfeesdetails"; }
-	 */
+	
     @GetMapping("/addform")
     public String showAddForm(Model model) {
         PlayersFeesDetails pr = new PlayersFeesDetails();
@@ -58,7 +47,7 @@ public class PlayersfeesdetailsController {
     public String modifyPlayersfeesdetails(@ModelAttribute("updateplayersfeesdetails") PlayersFeesDetails pr)
     {
         prService.save(pr);
-     return "redirect:/Players_Fees_Details/getallPlayersfeesdetails";
+     return "redirect:/Players_Fees_Details/getallplayersfeesdetails";
      
     }
     @GetMapping("/getallplayersfeesdetails")
@@ -67,23 +56,13 @@ public class PlayersfeesdetailsController {
         model.addAttribute("allplayersfeesdetails",prList);
         return "list-playersfeesdetails";
     }
-    @RequestMapping("/getplayersfeesdetailsform")
-    public String getPlayersForm() {
-        return "get-playersfees";
-    }
-    @RequestMapping("/updateplayersfeesform")
-    public String updatePlayersfeesForm() {
-        return "update-playersfees";
-    }
+    
     @RequestMapping("/deleteplayersfees")
     public String deletePlayersFees(@RequestParam("recieptNumber") int id) {
         prService.deleteById(id);
         return "redirect:/Players_Fees_Details/getallPlayersfeesdetails";
     }
-    @RequestMapping("/deleteplayersfeesdetailsform")
-    public String deletePlayersFeesForm() {
-        return "delete-playersfees";
-    }
+  
 }
 
 

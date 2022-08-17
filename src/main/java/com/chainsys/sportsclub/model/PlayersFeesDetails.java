@@ -1,6 +1,5 @@
 package com.chainsys.sportsclub.model;
 import java.sql.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -20,7 +19,7 @@ public class PlayersFeesDetails {
     private int amount;
 	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="player_id",nullable =false,insertable =false,updatable =false)
-	private Players player; // pk class
+	private Players player;
 	@Column(name = "remarks")
 	private String remarks;
 	public Players getPlayer() {
@@ -63,6 +62,4 @@ public class PlayersFeesDetails {
 	public void setRecieptNumber(int recieptNumber) {
 		this.recieptNumber = recieptNumber;
 	}
-	
-
 }

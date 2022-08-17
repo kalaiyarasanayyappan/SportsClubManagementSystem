@@ -1,0 +1,17 @@
+@charset "ISO-8859-1";
+.center
+{
+ text-align: center;
+}
+body {
+	background-image:
+		url("https://frontofficesports.com/wp-content/uploads/2021/09/FOS-PM-9.24-UK-Betting-Sponsorship.jpg");
+	 height: 768px;
+	width: 1366px;
+	background-repeat: no-repeat;
+	color: #F27229;
+}
+.table-center {
+  margin-left: auto;
+  margin-right: auto;
+}

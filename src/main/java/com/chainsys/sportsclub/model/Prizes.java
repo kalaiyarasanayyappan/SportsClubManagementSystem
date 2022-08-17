@@ -1,6 +1,5 @@
 package com.chainsys.sportsclub.model;
 import java.sql.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -11,8 +10,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
-import javax.validation.constraints.Max;
-import javax.validation.constraints.Min;
 @Entity
 @Table(name = "Prizes")
 
@@ -46,11 +43,6 @@ private Date dateOfPrize;
 		@Column(name = "competetion_name")
 	private String competetionName;
 		@Column(name = "prize_amount")
-		/*
-		 * @Min(value = 0 , message="*Price is not valid")
-		 * 
-		 * @Max(value = 5000000, message="*Price is not valid")
-		 */
 	private int prizeAmount;
 
 	public Date getDateOfPrize() {

@@ -3,21 +3,19 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="ISO-8859-1">
 <title>sports</title>
 <style type="text/css">
-.c7{
-background-color:#C18A7E;
-text-transform:uppercase;
-word-spacing:1em;
-}
+<%@include file="/WEB-INF/css/listsportsplayers.css"%>
 </style>
 
 </head>
 <body>
-	<div class="c7"id="root">
+	<br>
+	<br>
+	<div class="center" id="root">
 		<div id="getsportsbyplayerdetails">
 			<form:form action="" method="post" modelAttribute="getsport">
 				<div>
@@ -59,8 +57,10 @@ word-spacing:1em;
 			</form:form>
 		</div>
 	</div>
+	<br>
+	<br>
 	<div id="getsportsbyplayerdetails">
-		<table border=1>
+		<table class="table-center" border=1>
 			<thead>
 				<tr>
 					<th>Player Id</th>            
@@ -69,12 +69,11 @@ word-spacing:1em;
 					<th>Gender</th>            
 					<th>Address</th>            
 					<th>Contact</th>
-					<th>Player Status</th> 
-					<th>Date of Birth</th> 
-					<th>Joining Date</th> 
-					<th>Subscription Due</th> 
-					<th>Subscription Paid</th>             
-	            
+					<th>Player Status</th>
+					<th>Date of Birth</th>
+					<th>Joining Date</th>
+					<th>Subscription Due</th>
+					<th>Subscription Paid</th>                        
 				</tr>
 			</thead>
 			<tbody>
@@ -85,13 +84,12 @@ word-spacing:1em;
 						<td>${playersdetails.sportsId}</td>            
 						<td>${playersdetails.gender}</td>            
 						<td>${playersdetails.address}</td>            
-						<td>${playersdetails.contact}</td> 
+						<td>${playersdetails.contact}</td>
 						<td>${playersdetails.playerStatus}</td>
 						<td>${playersdetails.dateOfBirth}</td>
 						<td>${playersdetails.joiningDate}</td>
 						<td>${playersdetails.subscriptionDue}</td>
-						<td>${playersdetails.subscriptionPaid}</td>           
-						            
+						<td>${playersdetails.subscriptionPaid}</td>                       
 					</tr>
 				</c:forEach>
 			</tbody>

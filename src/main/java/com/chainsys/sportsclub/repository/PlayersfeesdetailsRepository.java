@@ -1,11 +1,6 @@
 package com.chainsys.sportsclub.repository;
-
-
 import java.util.List;
-
 import org.springframework.data.repository.CrudRepository;
-
-import com.chainsys.sportsclub.model.Players;
 import com.chainsys.sportsclub.model.PlayersFeesDetails;
 
 public interface PlayersfeesdetailsRepository extends CrudRepository<PlayersFeesDetails,Integer>{
