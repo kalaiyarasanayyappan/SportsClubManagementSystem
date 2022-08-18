@@ -13,7 +13,17 @@ body {
 	color: yellow;
 }
 
+th{
+	background-color: blue;
+	color: white;
+}
+tr{
+	background-color: #008080;
+	
+}
+
 a {
+	text-decoration: none;
 	color: white;
 }
 .table-center {

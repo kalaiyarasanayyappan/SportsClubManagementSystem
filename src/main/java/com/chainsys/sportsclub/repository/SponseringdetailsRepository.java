@@ -6,7 +6,7 @@ public interface SponseringdetailsRepository extends CrudRepository<SponseringDe
 	SponseringDetails findById(int sponserdetails);
 	SponseringDetails save(SponseringDetails sd);
 	// Used for both adding new sponseringdetails and Modifying new sponseringdetails
-	void deleteById(int sd_id);
+	void deleteById(int sdid);
 	List <SponseringDetails> findAll();
 	List<SponseringDetails> findBySponserId(int id);
 	List<SponseringDetails> findBySportsId(int id);

@@ -14,6 +14,9 @@
 <body>
 	<br>
 	<br>
+	<div >
+			<a href="/Prizes/getallprizes"><h2>Back</h2></a>
+		</div>
 	<div class="center" id="root">
 		<div id="form">
 			<form:form action="" method="post" modelAttribute="getprizes">

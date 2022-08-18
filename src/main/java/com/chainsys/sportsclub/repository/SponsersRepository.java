@@ -7,7 +7,7 @@ public interface SponsersRepository extends CrudRepository<Sponsers,Integer>{
 	Sponsers findById(int id);
 	Sponsers save(Sponsers sp);
 	// Used for both adding new sponsers and Modifying new sponsers
-	void deleteById(int sp_id);
+	void deleteById(int spid);
 	List <Sponsers> findAll();
 }
 

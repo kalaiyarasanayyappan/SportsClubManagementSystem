@@ -11,8 +11,7 @@ public class PrizesService {
     private PrizesRepository repo;
    
     public List<Prizes> findAllPrizes(){
-        List<Prizes> prList= repo.findAll();
-        return prList;
+        return repo.findAll();
     }
    
     public Prizes save(Prizes pr) {

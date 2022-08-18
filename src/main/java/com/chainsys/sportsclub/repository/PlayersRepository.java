@@ -6,7 +6,7 @@ public interface PlayersRepository extends CrudRepository<Players,Integer>{
 	Players findById(int player);
 	Players save(Players pl);
 	// Used for both adding new players and Modifying new players
-	void deleteById(int pl_id);
+	void deleteById(int plid);
 	List <Players> findAll();
 	List<Players> findBySportsId(int id);
 }

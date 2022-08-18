@@ -12,7 +12,14 @@ body {
 	background-repeat: no-repeat;
 	color: yellow;
 }
-
+th{
+	background-color: blue;
+	color: white;
+	
+}
+td{
+	background-color: #008080;
+}
 a {
 	color: white;
 }

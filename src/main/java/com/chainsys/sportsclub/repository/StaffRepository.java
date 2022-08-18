@@ -7,6 +7,6 @@ public interface StaffRepository extends CrudRepository<Staff,Integer>{
 	Staff findById(int id);
 	Staff save(Staff st);
 	// Used for both adding new Staff and Modifying new Staff
-	void deleteById(int st_id);
+	void deleteById(int stid);
 	List <Staff> findAll();
 }

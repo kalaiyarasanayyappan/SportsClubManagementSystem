@@ -15,6 +15,9 @@
 <body>
 	<br>
 	<br>
+	<div >
+			<a href="/SponseringDetails/getallsponseringdetails"><h2>Back</h2></a>
+		</div>
 	<div class="center" id="root">
 		<div id="form">
 			<form:form action="add" method="post"

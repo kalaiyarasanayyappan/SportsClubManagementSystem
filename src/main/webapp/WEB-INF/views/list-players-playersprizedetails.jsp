@@ -13,6 +13,9 @@
 </head>
 <body>
 <br><br>
+<div >
+			<a href="/Players/getallplayers"><h2>Back</h2></a>
+		</div>
 <div class="center" id="root">
 		<div id="getplayersbyprizedetails">
 			<form:form action="" method="post" modelAttribute="getplay">

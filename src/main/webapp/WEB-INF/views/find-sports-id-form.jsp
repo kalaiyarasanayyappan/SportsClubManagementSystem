@@ -12,6 +12,10 @@
 </style>
 </head>
 <body>
+<br>
+<div >
+			<a href="/Sports/getallsports"><h2>Back</h2></a>
+		</div>
 	<div id="root">
 		<div class="center"id="form">
 			<form:form action="" method="post" modelAttribute="getsports">

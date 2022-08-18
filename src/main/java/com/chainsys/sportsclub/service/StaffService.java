@@ -10,8 +10,7 @@ public class StaffService {
     private StaffRepository repo;
    
     public List<Staff> findAllStaff(){
-        List<Staff> stList= repo.findAll();
-        return stList;
+        return repo.findAll();
     }
     public Staff save(Staff st) {
         return repo.save(st);

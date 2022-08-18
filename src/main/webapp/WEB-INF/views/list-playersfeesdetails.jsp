@@ -63,7 +63,7 @@
 						<td>${Playersfeesdetails.remarks}</td>            
 						<td>${Playersfeesdetails.recieptNumber}</td>            
 						<td><a
-							href="/Players_Fees_Details/deleteplayersfeesdetailsform?id=${Players.playerId}">Delete</a></td>
+							href="/Players_Fees_Details/deleteplayersfees?recieptNumber=${Playersfeesdetails.recieptNumber}">Delete</a></td>
 						           
 					</tr>
             </c:forEach>

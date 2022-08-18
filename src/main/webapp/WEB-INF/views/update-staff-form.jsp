@@ -14,6 +14,9 @@
 <body>
 	<br>
 	<br>
+	<div >
+			<a href="/Staff/getallstaff"><h2>Back</h2></a>
+		</div>
 	<div class="center" id="root">
 		<div id="form">
 			<form:form action="update" method="post" modelAttribute="updatestaff">

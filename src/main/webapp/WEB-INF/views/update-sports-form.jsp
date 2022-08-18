@@ -10,10 +10,21 @@
 <style type="text/css">
 <%@include file="/WEB-INF/css/updatesports.css"%>
 </style>
+<script type="text/javascript">
+function durationCalculation(){
+var inTime = document.getElementById("inTime").value;
+var outTime = document.getElementById("outTime").value;
 
+var duration = parseInt(outTime)-parseInt(inTime);
+document.getElementById("durations").value = duration;
+}
+</script>
 </head>
 <body>
-
+<br>
+<div >
+			<a href="/Sports/getallsports"><h2>Back</h2></a>
+		</div>
 	<div class="center" id="table root">
 		<div id="form">
 			<form:form action="update" method="post"
@@ -46,27 +57,28 @@
 				<div>
 					<label for="inTime"><h2>In Time</h2></label>
 					<div>
-						<form:input path="inTime" type="time"/>
+						<form:input path="inTime" id="inTime" onchange="durationCalculation();" type="time"/>
 					</div>
 				</div>
 				<br>
 				<div>
 					<label for="outTime"><h2>Out Time</h2></label>
 					<div>
-						<form:input path="outTime" type="time"/>
+						<form:input path="outTime" id = "outTime" onchange="durationCalculation();" type="time"/>
 					</div>
 				</div>
 				<br>
 				<div>
 					<label for="durations"><h2>Durations</h2></label>
 					<div>
-						<form:input path="durations" />
+						<form:input path="durations" id="durations" onchange="durationCalculation(this.form);" />
 					</div>
 				</div>
 
 				<div>
 					<form:button>Update </form:button>
 				</div>
+				
 			</form:form>
 		</div>
 	</div>

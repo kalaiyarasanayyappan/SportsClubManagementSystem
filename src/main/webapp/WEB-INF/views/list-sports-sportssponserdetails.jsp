@@ -14,6 +14,9 @@
 <body>
 	<br>
 	<br>
+	<div >
+			<a href="/Sports/getallsports"><h2>Back</h2></a>
+		</div>
 	<div class="center"  id="root">
 		<div id="getsportsbysponserdetails">
 			<form:form action="" method="post" modelAttribute="getsport">

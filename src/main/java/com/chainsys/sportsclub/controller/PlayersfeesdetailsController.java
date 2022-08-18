@@ -60,7 +60,7 @@ public class PlayersfeesdetailsController {
     @RequestMapping("/deleteplayersfees")
     public String deletePlayersFees(@RequestParam("recieptNumber") int id) {
         prService.deleteById(id);
-        return "redirect:/Players_Fees_Details/getallPlayersfeesdetails";
+        return "redirect:/Players_Fees_Details/getallplayersfeesdetails";
     }
   
 }

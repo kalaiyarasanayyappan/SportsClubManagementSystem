@@ -22,8 +22,7 @@ public class PlayersService {
     private PrizesRepository pri;
    
     public List<Players> findAllPlayers(){
-        List<Players> plList= repo.findAll();
-        return plList;
+        return repo.findAll();
     }
    
     public Players save(Players pl) {

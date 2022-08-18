@@ -10,8 +10,21 @@
 <style type="text/css">
 <%@include file="/WEB-INF/css/addsports.css"%>
 </style>
+<script type="text/javascript">
+function durationCalculation(){
+var inTime = document.getElementById("inTime").value;
+var outTime = document.getElementById("outTime").value;
+
+var duration = parseInt(outTime)-parseInt(inTime);
+document.getElementById("durations").value = duration;
+}
+</script>
 </head>
 <body>
+<br>
+<div >
+			<a href="/Sports/getallsports"><h2>Back</h2></a>
+		</div>
 	<div class="center">
 		<a href="/home/index"><h2>Home</h2></a>
 	</div>
@@ -42,7 +55,7 @@
 				<div>
 					<label for="inTime"><h2>InTime</h2></label>
 					<div>
-						<form:input path="inTime"  type="time"/>
+						<form:input path="inTime" id="inTime" onchange="durationCalculation();" type="time"/>
 					</div>
 				</div>
 				
@@ -50,7 +63,7 @@
 				<div>
 					<label for="outTime"><h2>OutTime</h2></label>
 					<div>
-						<form:input path="outTime" type="time"/>
+						<form:input path="outTime" id = "outTime" onchange="durationCalculation();" type="time"/>
 					</div>
 				</div>
 				
@@ -58,7 +71,7 @@
 				<div>
 					<label for="durations"><h2>Duration</h2></label>
 					<div>
-						<form:input path="durations" />
+						<form:input path="durations" id="durations" onchange="durationCalculation(this.form);"/>
 					</div>
 				</div>
 				<br>
@@ -68,8 +81,8 @@
 			</form:form>
 		</div>
 	</div>
-	<script type="text/javascript">
+	<!-- <script type="text/javascript">
 		document.getElementById('in').value = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-	</script>
+	</script> -->
 </body>
 </html>

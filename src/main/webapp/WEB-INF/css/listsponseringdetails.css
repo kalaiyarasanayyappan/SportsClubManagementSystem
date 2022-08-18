@@ -10,12 +10,23 @@ body {
 	width: 1366px;
 	background-size: cover;
 	background-repeat: no-repeat;
-	color: blue;
+	color: yellow;
+}
+th{
+	background-color: blue;
+	color: white;
+}
+tr{
+	background-color: #008080;
+	
 }
 
 a {
+	text-decoration: none;
 	color: white;
 }
+
+
 .table-center {
   margin-left: auto;
   margin-right: auto;

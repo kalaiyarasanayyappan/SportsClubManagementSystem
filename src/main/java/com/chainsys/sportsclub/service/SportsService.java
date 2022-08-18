@@ -24,8 +24,7 @@ public class SportsService {
    
    
     public List<Sports> findAllSports(){
-        List<Sports> spList= spo.findAll();
-        return spList;
+        return spo.findAll();
     }
    
     public Sports save(Sports sp) {

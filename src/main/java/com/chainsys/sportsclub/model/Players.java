@@ -22,7 +22,7 @@ public class Players {
 	@Column(name = "PLAYER_ID")
 	private int playerId;
 	@OneToMany(mappedBy = "player", fetch = FetchType.LAZY)
-	private List<PlayersFeesDetails> FeesDetails; // fk class
+	private List<PlayersFeesDetails> feesDetails; // fk class
 	@OneToMany(mappedBy = "play", fetch = FetchType.LAZY)
 	private List<Prizes> prizedetails; // fk class
 	@ManyToOne(fetch=FetchType.LAZY)
@@ -49,11 +49,11 @@ public class Players {
 	private String playerName;
 
 	public List<PlayersFeesDetails> getFeesDetails() {
-		return FeesDetails;
+		return feesDetails;
 	}
 
 	public void setFeesDetails(List<PlayersFeesDetails> feesDetails) {
-		FeesDetails = feesDetails;
+		feesDetails = feesDetails;
 	}
 
 	@Column(name = "SPORTS_ID")

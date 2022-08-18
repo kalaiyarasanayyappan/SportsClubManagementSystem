@@ -11,3 +11,12 @@
   margin-left: auto;
   margin-right: auto;
 }
+body {
+	background-image:
+		url("https://www.luxottica.com/sites/luxottica.com/files/oakley_prizm-s3-environment-gif-cricket_0.gif");
+	 height: 768px;
+	width: 1366px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	color: yellow;
+}

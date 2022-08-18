@@ -7,7 +7,7 @@ public interface PrizesRepository extends CrudRepository<Prizes,Integer>{
 	Prizes findById(int prize);
 	Prizes save(Prizes pr);
 	// Used for both adding new prizes and Modifying new prizes
-	void deleteById(int pr_id);
+	void deleteById(int prid);
 	List <Prizes> findAll();
 	List<Prizes> findByPlayerId(int id);
 }

@@ -14,8 +14,7 @@ public class PlayersfeesdetailsService {
     @Autowired
     private PlayersService playersService;
     public List<PlayersFeesDetails> findAllPlayersfeesdetails(){
-        List<PlayersFeesDetails> plList= repo.findAll();
-        return plList;
+        return repo.findAll();
     }
    
     public PlayersFeesDetails save(PlayersFeesDetails pl) {

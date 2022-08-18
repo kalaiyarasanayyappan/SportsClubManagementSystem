@@ -16,8 +16,7 @@ public class SponsersService {
     private SponseringdetailsRepository sp;
    
     public List<Sponsers> findAllSponsers(){
-        List<Sponsers> spList= repo.findAll();
-        return spList;
+        return repo.findAll();
     }
    
     public Sponsers save(Sponsers st) {

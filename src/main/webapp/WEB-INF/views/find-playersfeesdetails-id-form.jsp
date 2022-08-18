@@ -14,6 +14,9 @@
 <body>
 	<br>
 	<br>
+	<div >
+			<a href="/Players_Fees_Details/getallplayersfeesdetails"><h2>Back</h2></a>
+		</div>
 	<div class="center"id="table root">
 		<div id="form">
 			<form:form action="" method="post"

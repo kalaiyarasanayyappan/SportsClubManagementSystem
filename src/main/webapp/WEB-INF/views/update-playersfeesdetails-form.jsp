@@ -14,6 +14,9 @@
 <body>
 	<br>
 	<br>
+	<div >
+			<a href="/Players_Fees_Details/getallplayersfeesdetails"><h2>Back</h2></a>
+		</div>
 	<div class="center"id="table root">
 		<div id="form">
 			<form:form action="update" method="post"
@@ -50,15 +53,7 @@
 					</div>
 				</div>
 					<br>
-				<div>
-					<label for="recieptNumber">recieptNumber</label>
-					<div>
-						<form:input path="recieptNumber" pattern="[1-3]{1}[0-3]{3}"
-							title="recieptNumber should have atleast 4 digits"
-							required="true" />
-					</div>
-				</div>
-				<form:errors path="recieptNumber" cssClass="text-danger" />
+				
 	<br>
 				<div>
 					<form:button>Update</form:button>

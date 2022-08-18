@@ -7,6 +7,6 @@ public interface SportsRepository extends CrudRepository<Sports,Integer>{
 	Sports findById(int id);
 	Sports save(Sports sp);
 	// Used for both adding new Sports and Modifying new Sports
-	void deleteById(int sp_id);
+	void deleteById(int spid);
 	List <Sports> findAll();
 }
