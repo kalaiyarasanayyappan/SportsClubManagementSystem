@@ -45,7 +45,7 @@ public class PlayersfeesdetailsController {
         return "update-playersfeesdetails-form";
     }
     @PostMapping("/update")
-    public String modifyPlayersfeesdetails(@ModelAttribute("updateplayersfeesdetails") PlayersFeesDetails pr)
+    public String updatefees(@ModelAttribute("updateplayersfeesdetails") PlayersFeesDetails pr)
     {
         prService.save(pr);
      return LISTPLAYERSFEES;

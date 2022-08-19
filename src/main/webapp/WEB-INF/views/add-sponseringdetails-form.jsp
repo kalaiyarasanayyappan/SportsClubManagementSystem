@@ -64,7 +64,7 @@
 				</div>
 				<form:errors path="dateOfSponsering" cssClass="text-danger" />
 					<br>
-				<div>
+				
 					<label for="modeOfPayment">choose a payment</label> <br> <select
 						name="modeOfPayment" id="modeOfPayment">
 						<option>--Choose a payment--</option>
