@@ -7,3 +7,11 @@
   margin-left: auto;
   margin-right: auto;
 }
+body {
+	background-image:
+		url("https://wallpapers-hub.art/wallpaper-images/780477.jpg");
+	background-repeat : no-repeat;
+/* 	background-position: center; */
+	background-size: cover;
+	color: black;
+}

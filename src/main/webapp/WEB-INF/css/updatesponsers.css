@@ -11,3 +11,11 @@
   margin-left: auto;
   margin-right: auto;
 }
+body {
+	background-image:
+		url("https://wallpaper.dog/large/10779723.jpg");
+	
+	
+	background-size: cover;
+	color: #938B8B;
+}

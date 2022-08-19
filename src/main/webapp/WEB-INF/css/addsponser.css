@@ -11,3 +11,11 @@
   margin-left: auto;
   margin-right: auto;
 }
+body {
+	background-image:
+		url("https://www.wallpaperuse.com/wallp/27-274399_m.jpg");
+	background-repeat : no-repeat;
+/* 	background-position: center; */
+	background-size: cover;
+	color: black;
+}

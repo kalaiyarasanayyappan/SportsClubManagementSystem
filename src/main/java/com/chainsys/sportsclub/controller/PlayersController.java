@@ -110,7 +110,7 @@ public class PlayersController {
         plService.findById(id);
         return "redirect:/Players/getallplayers";
     }
-	   
+    
 }
 
 

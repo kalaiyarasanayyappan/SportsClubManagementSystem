@@ -81,8 +81,6 @@ document.getElementById("durations").value = duration;
 			</form:form>
 		</div>
 	</div>
-	<!-- <script type="text/javascript">
-		document.getElementById('in').value = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-	</script> -->
+	
 </body>
 </html>

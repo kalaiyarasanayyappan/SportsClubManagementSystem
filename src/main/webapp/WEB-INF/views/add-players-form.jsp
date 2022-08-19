@@ -87,7 +87,10 @@
 				<div>
 					<label for="dateOfBirth">Date of Birth</label>
 					<div>
-						<form:input path="dateOfBirth" type="date" />
+						<form:input path="dateOfBirth"  type="date" pattern="^(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/(20[0-1][0-2]|19[9][0-9])$"
+
+							title="Enter date of birth between 1990 to 2010"
+							required="true" />
 					</div>
 				</div>
 				<br>
