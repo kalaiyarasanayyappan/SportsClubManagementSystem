@@ -7,3 +7,11 @@
   margin-left: auto;
   margin-right: auto;
 }
+body {
+	background-image:
+		url("https://www.teahub.io/photos/full/9-96769_4k-ultra-hd-football-wallpapers-hd-desktop-backgrounds.jpg");
+	background-repeat : no-repeat;
+
+	background-size: cover;
+	color: white;
+}

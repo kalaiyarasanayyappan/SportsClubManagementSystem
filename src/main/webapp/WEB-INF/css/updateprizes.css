@@ -7,3 +7,11 @@
   margin-left: auto;
   margin-right: auto;
 }
+body {
+	background-image:
+		url("https://www.pledgesports.org/wp-content/uploads/2017/08/495134262.jpg");
+	
+	background-size: cover;
+	background-repeat: no-repeat;
+	color: yellow;
+}

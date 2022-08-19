@@ -14,6 +14,7 @@ import com.chainsys.sportsclub.service.PrizesService;
 @Controller
 @RequestMapping("/Prizes")
 public class PrizesController {
+	public static final String LISTPRIZES = "redirect:/Prizes/getallprizes";
     
     @Autowired
     PrizesService prService;
@@ -27,7 +28,7 @@ public class PrizesController {
     @GetMapping("/deleteprizes")
     public String deletePrizes(@RequestParam("prizeId")int id) {
         prService.deleteById(id);
-         return "redirect:/Prizes/getallprizes";
+         return LISTPRIZES;
     }
     @GetMapping("/addform")
     public String showAddForm(Model model) {
@@ -39,7 +40,7 @@ public class PrizesController {
     public String addPrizes(@ModelAttribute("addprizes")Prizes pr)
     {
      prService.save(pr);
-     return "redirect:/Prizes/getallprizes";
+     return LISTPRIZES;
     }
     @GetMapping("/updateprizes")
     public String showUpdateForm(@RequestParam("prizeId")int id,Model model) {
@@ -51,7 +52,7 @@ public class PrizesController {
     public String modifyPrizes(@ModelAttribute("updateprizes") Prizes pr)
     {
         prService.save(pr);
-     return "redirect:/Prizes/getallprizes";
+     return LISTPRIZES;
      
     }
     @GetMapping("/getallprizes")

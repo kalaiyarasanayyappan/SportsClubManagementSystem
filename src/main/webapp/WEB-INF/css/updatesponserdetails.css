@@ -7,3 +7,11 @@
   margin-left: auto;
   margin-right: auto;
 }
+body {
+	background-image:
+		url("https://i.pinimg.com/originals/e2/93/ac/e293acebe1119a6e90e9eb872195d53d.jpg");
+	background-repeat : no-repeat;
+
+	background-size: cover;
+	color: blue;
+}

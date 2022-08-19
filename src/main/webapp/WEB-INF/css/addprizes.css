@@ -11,3 +11,11 @@
   margin-left: auto;
   margin-right: auto;
 }
+body {
+	background-image:
+		url("https://img.freepik.com/premium-photo/hand-holding-gold-medal-sky_51195-3640.jpg?w=2000");
+	background-repeat : no-repeat;
+
+	background-size: cover;
+	color: black;
+}

@@ -11,3 +11,11 @@
   margin-left: auto;
   margin-right: auto;
 }
+body {
+	background-image:
+		url("https://wallpaperset.com/w/full/f/c/d/239844.jpg");
+	background-repeat : no-repeat;
+
+	background-size: cover;
+	color: white;
+}

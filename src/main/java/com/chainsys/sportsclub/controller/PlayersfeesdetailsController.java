@@ -13,6 +13,7 @@ import com.chainsys.sportsclub.service.PlayersfeesdetailsService;
 @Controller
 @RequestMapping("/Players_Fees_Details")
 public class PlayersfeesdetailsController {
+	public static final String LISTPLAYERSFEES = "redirect:/Players_Fees_Details/getallplayersfeesdetails";
     
     @Autowired
     PlayersfeesdetailsService prService;
@@ -35,7 +36,7 @@ public class PlayersfeesdetailsController {
     public String addPlayersfeesdetails(@ModelAttribute("addplayersfeesdetails")PlayersFeesDetails pr)
     {
      prService.save(pr);
-     return "redirect:/Players_Fees_Details/getallplayersfeesdetails";
+     return LISTPLAYERSFEES;
     }
     @GetMapping("/updateplayersfeesdetails")
     public String showUpdateForm(@RequestParam("recieptNumber")int id,Model model) {
@@ -47,7 +48,7 @@ public class PlayersfeesdetailsController {
     public String modifyPlayersfeesdetails(@ModelAttribute("updateplayersfeesdetails") PlayersFeesDetails pr)
     {
         prService.save(pr);
-     return "redirect:/Players_Fees_Details/getallplayersfeesdetails";
+     return LISTPLAYERSFEES;
      
     }
     @GetMapping("/getallplayersfeesdetails")
@@ -60,7 +61,7 @@ public class PlayersfeesdetailsController {
     @RequestMapping("/deleteplayersfees")
     public String deletePlayersFees(@RequestParam("recieptNumber") int id) {
         prService.deleteById(id);
-        return "redirect:/Players_Fees_Details/getallplayersfeesdetails";
+        return LISTPLAYERSFEES;
     }
   
 }

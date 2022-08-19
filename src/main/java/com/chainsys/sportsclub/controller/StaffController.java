@@ -15,7 +15,7 @@ import com.chainsys.sportsclub.service.StaffService;
 @Controller
 @RequestMapping("/Staff")
 public class StaffController {
-    
+	public static final String LISTSTAFF = "redirect:/Staff/getallstaff";
     @Autowired
     StaffService stService; 
     @GetMapping("/getstaff")
@@ -43,7 +43,7 @@ public class StaffController {
 			return "add-staff-form";
 		}
      stService.save(st);
-     return "redirect:/Staff/getallstaff";
+     return LISTSTAFF;
     }
    
     @PostMapping("/update")
@@ -53,7 +53,7 @@ public class StaffController {
 			return "update-staff-form";
 		}
         stService.save(st);
-     return "redirect:/Staff/getallstaff";
+     return LISTSTAFF;
      
     }
     @GetMapping("/getallstaff")
@@ -66,7 +66,7 @@ public class StaffController {
     @RequestMapping("/deletestaff")
     public String deleteStaffid(@RequestParam("staffId") int id) {
         stService.deleteById(id);
-        return "redirect:/Staff/getallstaff";
+        return LISTSTAFF;
     }
    
 }

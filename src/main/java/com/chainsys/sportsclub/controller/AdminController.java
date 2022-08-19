@@ -13,6 +13,7 @@ import com.chainsys.sportsclub.service.AdminService;
 @Controller
 @RequestMapping("/admin")
 public class AdminController {
+	
 	@Autowired
 	private AdminService adminService;
 	

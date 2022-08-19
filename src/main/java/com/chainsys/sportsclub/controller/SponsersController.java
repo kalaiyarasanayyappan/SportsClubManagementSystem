@@ -18,7 +18,7 @@ import com.chainsys.sportsclub.service.SponsersService;
 @Controller
 @RequestMapping("/Sponsers")
 public class SponsersController {
-    
+	public static final String LISTSPONSERS = "redirect:/Sponsers/getallsponsers";
     @Autowired
     SponsersService spService;
     @Autowired
@@ -33,7 +33,7 @@ public class SponsersController {
     @GetMapping("/deletesponsers")
     public String deletesponsers(@RequestParam("sponserId")int id) {
         spService.deleteById(id);
-         return "redirect:/Sponsers/getallsponsers";
+         return LISTSPONSERS;
     }
     @GetMapping("/addform")
     public String showAddForm(Model model) {
@@ -48,7 +48,7 @@ public class SponsersController {
 			return "add-sponsers-form";
 		}
      spService.save(sp);
-     return "redirect:/Sponsers/getallsponsers";
+     return LISTSPONSERS;
     }
     @GetMapping("/updatesponsers")
     public String showUpdateForm(@RequestParam("sponserId")int id,Model model) {
@@ -63,7 +63,7 @@ public class SponsersController {
 		return "update-sponsers-form";
 	}
         spService.save(sp);
-     return "redirect:/Sponsers/getallsponsers";
+     return LISTSPONSERS;
      
     }
     @GetMapping("/getallsponsers")

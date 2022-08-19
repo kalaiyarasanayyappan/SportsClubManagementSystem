@@ -20,7 +20,7 @@ import com.chainsys.sportsclub.service.SportsService;
 @Controller
 @RequestMapping("/Sports")
 public class SportsController {
-
+	public static final String LISTSPORTS = "redirect:/Sports/getallsports";
 	@Autowired
 	SportsService spService;
 	@Autowired
@@ -48,7 +48,7 @@ public class SportsController {
 			return "add-sports-form";
 		}
 		spService.save(sp);
-		return "redirect:/Sports/getallsports";
+		return LISTSPORTS;
 	}
 
 	@GetMapping("/updatesports")
@@ -64,7 +64,7 @@ public class SportsController {
 			return "update-sports-form";
 		}
 		spService.save(sp);
-		return "redirect:/Sports/getallsports";
+		return LISTSPORTS;
 
 	}
 
@@ -93,11 +93,11 @@ public class SportsController {
 	@RequestMapping("/deletesportsform")
 	public String deleteSportsid(@RequestParam("id") int id) {
 		spService.deleteById(id);
-		return "redirect:/Sports/getallsports";
+		return LISTSPORTS;
 	}
 	@RequestMapping("/updatesports")
 	public String updateSportsid(@RequestParam("id") int id) {
 		spService.findById(id);
-		return "redirect:/Sports/getallsports";
+		return LISTSPORTS;
 	}	
 }

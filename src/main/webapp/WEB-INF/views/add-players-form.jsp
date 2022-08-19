@@ -2,6 +2,7 @@
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page import="com.chainsys.sportsclub.businesslogic.Logic"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -87,10 +88,8 @@
 				<div>
 					<label for="dateOfBirth">Date of Birth</label>
 					<div>
-						<form:input path="dateOfBirth"  type="date" pattern="^(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/(20[0-1][0-2]|19[9][0-9])$"
-
-							title="Enter date of birth between 1990 to 2010"
-							required="true" />
+						<form:input path="dateOfBirth"  type="date" min="<%=Logic.getMaxAge()%>" 
+						max="<%=Logic.getMinAge()%>" title="Enter date of birth between 1990 to 2010" required="true" />
 					</div>
 				</div>
 				<br>

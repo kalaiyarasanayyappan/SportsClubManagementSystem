@@ -15,6 +15,7 @@ import com.chainsys.sportsclub.service.SponseringdetailsService;
 @Controller
 @RequestMapping("/Sponsering_Details")
 public class SponseringdetailsController {
+	public static final String LISTSPONSERINGDETAILS = "redirect:/Sponsering_Details/getallsponseringdetails";
     
     @Autowired
     SponseringdetailsService sdService;
@@ -35,7 +36,7 @@ public class SponseringdetailsController {
     public String addSponseringdetails(@ModelAttribute("addsponseringdetails")SponseringDetails sd)
     {
      sdService.save(sd);
-     return "redirect:/Sponsering_Details/getallsponseringdetails";
+     return LISTSPONSERINGDETAILS;
     }
     @GetMapping("/updatesponseringdetails")
     public String showUpdateForm(@RequestParam("sponseringDetailsId")int id,Model model) {
@@ -47,7 +48,7 @@ public class SponseringdetailsController {
     public String modifySponseringdetails(@ModelAttribute("updatesponseringdetails") SponseringDetails sd)
     {
         sdService.save(sd);
-     return "redirect:/Sponsering_Details/getallsponseringdetails";
+     return LISTSPONSERINGDETAILS;
      
     }
     @GetMapping("/getallsponseringdetails")
@@ -60,7 +61,7 @@ public class SponseringdetailsController {
     @RequestMapping("/deletesponseringdetails")
     public String deleteSponseringdetailsid(@RequestParam("sponseringDetailsId") int id) {
         sdService.deleteById(id);
-        return "redirect:/Sponsering_Details/getallsponseringdetails";
+        return LISTSPONSERINGDETAILS;
     }
 }
 

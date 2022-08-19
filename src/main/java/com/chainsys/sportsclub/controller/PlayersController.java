@@ -21,6 +21,7 @@ import com.chainsys.sportsclub.service.SportsService;
 @Controller
 @RequestMapping("/Players")
 public class PlayersController {
+	public static final String LISTPLAYERS = "redirect:/Players/getallplayers";
     
     @Autowired
     PlayersService plService;
@@ -51,7 +52,7 @@ public class PlayersController {
 		}
  
      plService.save(player);
-     return "redirect:/Players/getallplayers";
+     return LISTPLAYERS;
     }
     @GetMapping("/updateplayers")
     public String showUpdateForm(@RequestParam("playerId")int id,Model model) {
@@ -67,7 +68,7 @@ public class PlayersController {
 		}
  
         plService.save(pl);
-     return "redirect:/Players/getallplayers";
+     return LISTPLAYERS;
      
     }
     @GetMapping("/getallplayers")
@@ -95,20 +96,20 @@ public class PlayersController {
     @RequestMapping("/deleteplayers")
     public String deletePlayers(@RequestParam("playerId") int id) {
         plService.deleteById(id);
-        return "redirect:/Players/getallplayers";
+        return LISTPLAYERS;
     }
    
 
     @RequestMapping("/updateplayers")
     public String updatePlayers(@RequestParam("playerId") int id) {
         plService.findById(id);
-        return "redirect:/Players/getallplayers";
+        return LISTPLAYERS;
     }
    
     @RequestMapping("/getplayers")
     public String getPlayers(@RequestParam("playerId") int id) {
         plService.findById(id);
-        return "redirect:/Players/getallplayers";
+        return LISTPLAYERS;
     }
     
 }

@@ -2,6 +2,7 @@
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page import="com.chainsys.sportsclub.businesslogic.Logic"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,7 +51,7 @@
 				<div>
 					<label for="dateOfBirth">Date of Birth</label>
 					<div>
-						<form:input path="dateOfBirth" type="date" title="Enter date of birth" required="true" />
+						<form:input path="dateOfBirth" type="date" max="<%=Logic.getMinimumAge()%>" title="Enter date of birth" required="true" />
 					</div>
 				</div>
 					<br>
