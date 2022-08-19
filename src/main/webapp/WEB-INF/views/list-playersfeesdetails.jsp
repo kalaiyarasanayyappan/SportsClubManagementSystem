@@ -11,30 +11,30 @@
 </style>
 </head>
 <body>
-	 
-	<br>
+	 <div >
+       
+        <div id="root">
+            <nav class="navbar">
+                <div class="navbar__container">
+                    <a href="#" id="navbar__logo">Sports Club</a>
+
+                    <ul class="navbar__menu">
+                    <li class="navbar__item"><a href="/home/index"
+                        class="navbar__links">Home</a></li>   
+                        
+                    </ul>
+                </div>
+            </nav>
+        </div>
+	
 	<br>  
 	<div class="center" id="table root">
-		<div>
-			<a href="/Players_Fees_Details/addform"><h2>Add</h2></a>
-		</div>
-		<div>
-			<a href="/home/index"><h2>Home</h2></a>
-		</div>
+		
+		
 		   
-		<form action="updateplayersfeesdetails">
-			<div class="center">
-				<input type="text" name="recieptNumber" /> <input type="submit"
-					value="update" />
-			</div>
-		</form>
-		<br>
-		<form action="getplayersfeesdetails">
-			<div class="center">
-				<input type="text" name="recieptNumber" /> <input type="submit"
-					value="Find" />
-			</div>
-		</form>
+		
+	
+		
 		<table class="table-center"  border=1>
 			       
 			<thead>
@@ -45,7 +45,9 @@
 					<th>Player Id</th>            
 					<th>Amount</th>            
 					<th>Remarks</th>            
-					<th>Reciept Number</th>            
+					<th>Reciept Number</th> 
+					<th>update</th>
+					<th>delete</th>           
 
 
 				</tr>
@@ -61,10 +63,12 @@
 						<td>${Playersfeesdetails.playerId}</td>            
 						<td>${Playersfeesdetails.amount}</td>            
 						<td>${Playersfeesdetails.remarks}</td>            
-						<td>${Playersfeesdetails.recieptNumber}</td>            
+						<td>${Playersfeesdetails.recieptNumber}</td>
+						 <td><a
+							href="/Players_Fees_Details/updateplayersfeesdetails?recieptNumber=${Playersfeesdetails.recieptNumber}">update</a></td>               
 						<td><a
 							href="/Players_Fees_Details/deleteplayersfees?recieptNumber=${Playersfeesdetails.recieptNumber}">Delete</a></td>
-						           
+						       
 					</tr>
             </c:forEach>
 				       
@@ -73,6 +77,15 @@
 		</table>
 		       
 	</div>
+	<div>
+			<a href="/Players_Fees_Details/addform"><h2>Add</h2></a>
+		</div>
+		<form action="getplayersfeesdetails">
+			<div class="center">
+				<input type="text" name="recieptNumber" /> <input type="submit"
+					value="Find" />
+			</div>
+		</form>
 </body>
 </html>
 

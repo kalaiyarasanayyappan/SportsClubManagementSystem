@@ -11,29 +11,28 @@
 </style>
 </head>
 <body>
-	<br>
-	<br>    
-	<div class="center" id="table root">
-		<div>
-			<a href="/Sponsering_Details/addform"><h2>Add</h2></a>
-		</div>
-		<div>
-			<a href="/home/index"><h2>Home</h2></a>
-		</div>
+<div >
+       
+        <div id="root">
+            <nav class="navbar">
+                <div class="navbar__container">
+                    <a href="#" id="navbar__logo">Sports Club</a>
 
-		<form action="updatesponseringdetails">
-			<div class="center">
-				<input type="text" name="sponseringDetailsId" /> <input
-					type="submit" value="update" />
-			</div>
-		</form>
+                    <ul class="navbar__menu">
+                    <li class="navbar__item"><a href="/home/index"
+                        class="navbar__links">Home</a></li>   
+                        
+                    </ul>
+                </div>
+            </nav>
+        </div>
+	<br>
+	   
+	
+		
+		
 		<br>
-		<form action="getsponseringdetails">
-			<div class="center">
-				<input type="text" name="sponseringDetailsId" /> <input
-					type="submit" value="Find" />
-			</div>
-		</form>
+		
 		   
 		<table class="table-center" border=1>
 			       
@@ -47,7 +46,9 @@
 					<th>Amount</th>            
 					<th>Date of Sponsering</th>  
 					<th>Mode of Payment</th>
-					<th>RecieptNumber</th>                                  
+					<th>RecieptNumber</th>
+					<th>Update</th>
+					<th>delete</th>                                  
 				</tr>
 				       
 			</thead>
@@ -62,9 +63,11 @@
 						<td>${Sponseringdetails.amount}</td>            
 						<td>${Sponseringdetails.dateOfSponsering}</td>  
 						<td>${Sponseringdetails.modeOfPayment}</td>  
-						<td>${Sponseringdetails.recieptNumber}</td>              
+						<td>${Sponseringdetails.recieptNumber}</td> 
 						<td><a
-							href="/Sponsering_Details/deletesponseringdetailsform?id=${Sponseringdetails.sponseringDetailsId}">Delete</a></td> 
+							href="/Sponsering_Details/updatesponseringdetails?sponseringDetailsId=${Sponseringdetails.sponseringDetailsId}">Update</a></td>             
+						<td><a
+							href="/Sponsering_Details/deletesponseringdetailsform?sponseringDetailsId=${Sponseringdetails.sponseringDetailsId}">Delete</a></td> 
 						                 
 					</tr>
             </c:forEach>
@@ -74,6 +77,16 @@
 		</table>
 		       
 	</div>
+	<div class="center" id="table root">
+		<div>
+			<a href="/Sponsering_Details/addform"><h2>Add</h2></a>
+		</div>
+		<form action="getsponseringdetails">
+			<div class="center">
+				<input type="text" name="sponseringDetailsId" /> <input
+					type="submit" value="Find" />
+			</div>
+		</form>
 </body>
 </html>
 

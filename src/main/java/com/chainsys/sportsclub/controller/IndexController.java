@@ -13,4 +13,4 @@ public class IndexController {
         public String getIndex(Model model) {
             return "sportsclub-index";
         }  
-    }
+}

@@ -15,7 +15,7 @@
 	<br>
 	<br>
 	<div >
-			<a href="/SponseringDetails/getallsponseringdetails"><h2>Back</h2></a>
+			<a href="/Sponsering_Details/getallsponseringdetails"><h2>Back</h2></a>
 		</div>
 	<div class="center"id="table root">
 		<div id="form">

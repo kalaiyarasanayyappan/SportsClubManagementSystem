@@ -6,44 +6,7 @@
 <meta charset="ISO-8859-1">
 <title>Admin Login Page Design</title>
 <style>
-table {
-	background-color: black;
-	border: 8px solid white;
-	border-radius: 25px;
-	background: rgba(0, 0, 0, 0.5);
-}
-
-#type {
-	width: 300px;
-	height: 32px;
-	border: 0;
-	outline: 0;
-	background: transparent;
-	border-bottom: 3px solid white;
-	color: white;
-	font-size: 25px;
-}
-
-input::-webkit-input-placeholder {
-	font-size: 20px;
-	line-height: 3;
-	color: white;
-}
-
-#btn {
-	width: 250px;
-	background-color: orange;
-	height: 35px;
-	font-size: 20px;
-}
-
-body {
-	background-image: url("https://wallpaperaccess.com/full/1900851.png");
-	 height: 768px;
-	width: 1366px;
-	background-position: center;
-	background-size: cover;
-}
+<%@include file="/WEB-INF/css/login.css"%>
 </style>
 </head>
 
@@ -53,25 +16,39 @@ body {
 	<br>
 	<br>
 	<br>
-	<table width="25%" border="0" cellspacing="40" align="center">
+	<form action="adminlogin" method="post" modelAttribute="adminlogin">
+		<table width="25%" border="0" cellspacing="40" align="center">
+			<!-- <thead>
 		<tr>
-		<tr>
-			<td><input type="text" placeholder="Email" id="type"></td>
+		<th>Email</th>
+		<th>Password</th>
 		</tr>
-		<tr>
-			<td><input type="password" placeholder="*********" id="type"></td>
-		</tr>
-		<tr>
-			<td class="center"><input type="submit" value="login" id="btn"></td>
-		</tr>
-
-	</table>
+		</thead> -->
+			<tr>
+				<td>Email</td>
+			</tr>
+			<tr>
+				<td><input type="text" placeholder="Email" id="adminEmail"
+					name="adminEmail"></td>
+			</tr>
+			<tr>
+				<td>Password</td>
+			</tr>
+			<tr>
+				<td><input type="password" placeholder="*********"
+					id="adminPassword" name="adminPassword"></td>
+			</tr>
+			<tr>
+				<td class="center"><input type="submit" value="login" id="btn"></td>
+			</tr>
+		</table>
+	</form>
 	<h1 class="center">SPORTS CLUB MANAGEMENT</h1>
-	<div class="menu-bar">
+	<!-- <div class="menu-bar">
 		<ul>
 			<li class="active"><a href="/home/index">Index</a></li>
 
 		</ul>
-	</div>
+	</div> -->
 </body>
 </html>

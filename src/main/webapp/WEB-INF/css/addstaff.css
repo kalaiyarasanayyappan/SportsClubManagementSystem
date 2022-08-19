@@ -3,6 +3,15 @@
 	color: #e80c4d;
 	font-size: 0.9em;
 }
+body {
+	background-image:
+		url("https://wallpaper.dog/large/10716283.jpg");
+	 height: 768px;
+	width: 1366px;
+	background-position: center;
+	background-size: cover;
+	color: black;
+}
 .center
 {
  text-align: center;

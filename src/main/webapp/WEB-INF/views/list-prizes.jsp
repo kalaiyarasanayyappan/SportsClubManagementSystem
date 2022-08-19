@@ -11,28 +11,29 @@
 </style>
 </head>
 <body>
+<div >
+       
+        <div id="root">
+            <nav class="navbar">
+                <div class="navbar__container">
+                    <a href="#" id="navbar__logo">Sports Club</a>
+
+                    <ul class="navbar__menu">
+                    <li class="navbar__item"><a href="/home/index"
+                        class="navbar__links">Home</a></li>   
+                        
+                    </ul>
+                </div>
+            </nav>
+        </div>
 	<br>
-	<br>    
+    
 	<div id="table root">
-		<div class="center">
-			<a href="/Prizes/addform"><h2>Add</h2></a>
-		</div>
-		<div class="center">
-			<a href="/home/index"><h2>Home</h2></a>
-		</div>
-		<form action="updateprizes">
-			<div class="center">
-				<input type="text" name="prizeId" /> <input type="submit"
-					value="update" />
-			</div>
-		</form>
-		<br>
-		<form action="getprizes">
-			<div class="center">
-				<input type="text" name="prizeId" /> <input type="submit"
-					value="Find" />
-			</div>
-		</form>	   
+		
+		
+		
+	
+		
 		<table class="table-center" border=1>
 			       
 			<thead>
@@ -48,6 +49,8 @@
 					<th>Team/Individual</th>
 					<th>CompetetionName</th>
 					<th>PrizeAmount</th>
+					<th>update</th>
+					<th>delete</th>
 
 				</tr>
 				       
@@ -67,7 +70,8 @@
 						<td>${Prizes.teamOrIndividual}</td>
 						<td>${Prizes.competetionName}</td>
 						<td>${Prizes.prizeAmount}</td>
-						<td><a href="/Prizes/deleteprizesform?id=${Prizes.prizeId}">Delete</a></td>
+						<td><a href="/Prizes/updateprizes?prizeId=${Prizes.prizeId}">Update</a></td>
+						<td><a href="/Prizes/deleteprizes?prizeId=${Prizes.prizeId}">Delete</a></td>
 						           
 					</tr>
             </c:forEach>
@@ -77,6 +81,15 @@
 		</table>
 		       
 	</div>
+	<div class="center">
+			<a href="/Prizes/addform"><h2>Add</h2></a>
+		</div>
+		<form action="getprizes">
+			<div class="center">
+				<input type="text" name="prizeId" /> <input type="submit"
+					value="Find" />
+			</div>
+		</form>	   
 </body>
 </html>
 

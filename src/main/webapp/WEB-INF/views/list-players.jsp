@@ -11,28 +11,28 @@
 </style>
 </head>
 <body>
+<div >
+       
+        <div id="root">
+            <nav class="navbar">
+                <div class="navbar__container">
+                    <a href="#" id="navbar__logo">Sports Club</a>
+
+                    <ul class="navbar__menu">
+                    <li class="navbar__item"><a href="/home/index"
+                        class="navbar__links">Home</a></li>   
+                        
+                    </ul>
+                </div>
+            </nav>
+        </div>
 	   
 	<div id="table root">
-		<div class="center">
-			<a href="/Players/addform"><h2>Add</h2></a>
-		</div>
+		
 
-		<div class="center">
-			<a href="/home/index"><h2>Home</h2></a>
-		</div>
-		<form action="updateplayers">
-			<div class="center">
-				<input type="text" name="playerId" /> <input type="submit"
-					value="update" />
-			</div>
-		</form>
+		
+		
 		<br>
-		<form action="getplayers">
-			<div class="center">
-				<input type="text" name="playerId" /> <input type="submit"
-					value="Find" />
-			</div>
-		</form>
 		
 
 		<table class="table-center" border=1>
@@ -51,7 +51,11 @@
 					<th>Date of Birth</th>
 					<th>Joining Date</th>
 					<th>Subscription Due</th>
-					<th>Subscription Paid</th>                        
+					<th>Subscription Paid</th>
+					<th>update</th>
+					<th>delete</th>
+					<th>playersFeesDetails</th>
+					<th>playerspriceDetails</th>                        
 				</tr>
 				       
 			</thead>
@@ -71,12 +75,15 @@
 						<td>${Players.dateOfBirth}</td>
 						<td>${Players.joiningDate}</td>
 						<td>${Players.subscriptionDue}</td>
-						<td>${Players.subscriptionPaid}</td>           
+						<td>${Players.subscriptionPaid}</td>
+						<td><a
+							href="/Players/updateplayers?playerId=${Players.playerId}">update</a></td>
+													<td><a href="/Players/deleteplayers?playerId=${Players.playerId}">Delete</a></td>           
 						<td><a
 							href="/Players/getplayersbyfeesdetails?id=${Players.playerId}">FeesDetails</a></td>
 						<td><a
 							href="/Players/getplayersbyprizedetails?id=${Players.playerId}">PrizeDetails</a></td>
-						<td><a href="/Players/deleteplayers?id=${Players.playerId}">Delete</a></td>
+
 						           
 					</tr>
             </c:forEach>
@@ -86,6 +93,16 @@
 		</table>
 		       
 	</div>
+	<div class="center">
+			<a href="/Players/addform"><h2>Add</h2></a>
+		</div>
+		<form action="getplayers">
+			<div class="center">
+				<input type="text" name="playerId" /> <input type="submit"
+					value="Find" />
+			</div>
+		</form>
+		
 </body>
 </html>
 

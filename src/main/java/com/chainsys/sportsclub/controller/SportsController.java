@@ -52,7 +52,7 @@ public class SportsController {
 	}
 
 	@GetMapping("/updatesports")
-	public String showUpdateForm(@RequestParam("sportsId") int id, Model model) {
+	public String showUpdateForm(@RequestParam("id") int id, Model model) {
 		Sports sp = spService.findById(id);
 		model.addAttribute("updatesports", sp);
 		return "update-sports-form";
@@ -96,7 +96,7 @@ public class SportsController {
 		return "redirect:/Sports/getallsports";
 	}
 	@RequestMapping("/updatesports")
-	public String updateSportsid(@RequestParam("sportsId") int id) {
+	public String updateSportsid(@RequestParam("id") int id) {
 		spService.findById(id);
 		return "redirect:/Sports/getallsports";
 	}	

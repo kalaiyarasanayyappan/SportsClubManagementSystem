@@ -11,3 +11,12 @@
   margin-left: auto;
   margin-right: auto;
 }
+body {
+	background-image:
+		url("https://i.pinimg.com/originals/cc/0c/b3/cc0cb389b89c825c85c273d12a8a6fcd.jpg");
+	 height: 768px;
+	width: 1366px;
+	background-position: center;
+	background-size: cover;
+	color: black;
+}

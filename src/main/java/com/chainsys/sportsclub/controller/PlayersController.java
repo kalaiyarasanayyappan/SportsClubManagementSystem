@@ -63,7 +63,7 @@ public class PlayersController {
     public String modifyPlayers(@Valid @ModelAttribute("updateplayers") Players pl,Errors errors)
     {
     	if(errors.hasErrors()) {
-			return "update-staff-form";
+			return "update-players-form";
 		}
  
         plService.save(pl);

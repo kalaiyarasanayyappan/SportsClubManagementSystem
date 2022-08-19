@@ -11,30 +11,31 @@
 </style>
 </head>
 <body>
+<div >
+       
+        <div id="root">
+            <nav class="navbar">
+                <div class="navbar__container">
+                    <a href="#" id="navbar__logo">Sports Club</a>
+
+                    <ul class="navbar__menu">
+                    <li class="navbar__item"><a href="/home/index"
+                        class="navbar__links">Home</a></li>   
+                        
+                    </ul>
+                </div>
+            </nav>
+        </div>
 	<br>
-	<br>
+	
 	<div class="center" id="table root">
-		<a href="/Sponsers/addform"><h2>Add</h2></a>
+		
 	</div>
 
-	<div class="center">
-		<a href="/home/index"><h2>Home</h2></a>
-	</div>
-	<form action="updatesponsers">
-		<div class="center">
-			<input type="text" name="sponserId" /> <input type="submit"
-				value="update" />
-		</div>
-	</form>
-	<br>
-	<form action="getsponsers">
-		<div class="center">
-			<input type="text" name="sponserId" /> <input type="submit"
-				value="Find" />
-		</div>
-	</form>
-	<br>
-	<br>   
+	
+
+	
+  
 	<div id="table root">
 		   
 		<table class="table-center" border=1>
@@ -46,7 +47,10 @@
 					<th>Sponser Id</th>            
 					<th>Sponser Name</th>            
 					<th>Contact</th>            
-					<th>Email</th>                                    
+					<th>Email</th>
+					<th>update</th>
+					<th>delete</th>
+					<th>sponseringDetails</th>                                    
 				</tr>
 				       
 			</thead>
@@ -60,9 +64,10 @@
 						<td>${Sponsers.sponserName}</td>            
 						<td>${Sponsers.contact}</td>            
 						<td>${Sponsers.email}</td>            
-
+                        <td><a
+							href="/Sponsers/updatesponsers?sponserId=${Sponsers.sponserId}">update</a></td>
 						<td><a
-							href="/Sponsers/deletesponsersform?id=${Sponsers.sponserId}">Delete</a></td>
+							href="/Sponsers/deletesponsers?sponserId=${Sponsers.sponserId}">Delete</a></td>
 
 
 						<td><a
@@ -76,6 +81,14 @@
 		</table>
 		       
 	</div>
+	<a href="/Sponsers/addform"><h2>Add</h2></a>
+	<form action="getsponsers">
+		<div class="center">
+			<input type="text" name="sponserId" /> <input type="submit"
+				value="Find" />
+		</div>
+	</form>
+	
 </body>
 </html>
 

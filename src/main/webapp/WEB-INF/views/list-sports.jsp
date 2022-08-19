@@ -12,33 +12,22 @@
 
 </head>
 <body>
-	   <br><br><br><br>
-	<div class="center" id="table root">
-		<div>
-			<a href="/Sports/addform"><h2>Add</h2></a>
-		</div>
-		<div class="center">
-			<a href="/home/index"><h2>Home</h2></a>
-		</div>
+<div >
+       
+        <div id="root">
+            <nav class="navbar">
+                <div class="navbar__container">
+                    <a href="#" id="navbar__logo">Sports Club</a>
 
-		<form action="getsports">
-
-			<div class="center">
-
-				<input type="text" name="sportsId" /> <input type="submit"
-					value="Find" />
-			</div>
-
-		</form>
-<br>
-		<form action="updatesports">
-			<div class="center">
-				<input type="text" name="sportsId" /> <input type="submit"
-					value="update" />
-			</div>
-		</form>
-
-		   
+                    <ul class="navbar__menu">
+                    <li class="navbar__item"><a href="/home/index"
+                        class="navbar__links">Home</a></li>   
+                        
+                    </ul>
+                </div>
+            </nav>
+        </div>
+	   <br>   
 		<table class="table-center" border=1>
 			       
 			<thead>
@@ -50,7 +39,11 @@
 					<th>Fees</th>            
 					<th>In_time</th>            
 					<th>Out_time</th>            
-					<th>Durations</th>                        
+					<th>Durations</th>
+					<th>Update</th> 
+					<th>Delete</th> 
+					<th>SponseringDetail</th>  
+					<th>PlayerDetail</th>                      
 				</tr>
 				       
 			</thead>
@@ -65,12 +58,15 @@
 						<td>${Sports.fees}</td>            
 						<td>${Sports.inTime}</td>            
 						<td>${Sports.outTime}</td>            
-						<td>${Sports.durations}</td>            
+						<td>${Sports.durations}</td> 
+						<td><a href="/Sports/updatesports?id=${Sports.sportsId}">update</a></td> 
+						<td><a href="/Sports/deletesportsform?id=${Sports.sportsId}">Delete</a></td>
+							          
 						<td><a
 							href="/Sports/getsportsbysponserdetails?id=${Sports.sportsId}">SponseringDetails</a></td>
 						<td><a
 							href="/Sports/getsportsbyplayerdetails?id=${Sports.sportsId}">PlayerDetails</a></td>
-						<td><a href="/Sports/deletesportsform?id=${Sports.sportsId}">Delete</a></td>
+						
 
 					</tr>
             </c:forEach>
@@ -78,6 +74,20 @@
 			</tbody>
 
 		</table>
+		<div class="center" id="table root">
+		
+			<a href="/Sports/addform"><h2>Add</h2></a>
+			<form action="getsports">
+
+			<div class="center">
+
+				<input type="text" name="sportsId" /> <input type="submit"
+					value="Find" />
+			</div>
+
+		</form>
+		
+</div>
 		       
 	</div>
 </body>
