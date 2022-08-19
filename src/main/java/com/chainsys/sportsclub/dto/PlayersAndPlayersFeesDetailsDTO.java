@@ -9,7 +9,7 @@ public class PlayersAndPlayersFeesDetailsDTO {
 	
 		@Autowired
 		private Players player;
-		private List<PlayersFeesDetails> feesdetails = new ArrayList<PlayersFeesDetails>();
+		private List<PlayersFeesDetails> feesdetails = new ArrayList<>();
 		
 		public Players getPlayer() {
 			return player;

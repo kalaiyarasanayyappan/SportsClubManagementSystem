@@ -18,7 +18,7 @@ public class SportsAndPlayerServiceDTO {
 		return sponserdetail;
 	}
 	
-	private List<SponseringDetails> sponserdetail = new ArrayList<SponseringDetails>();
+	private List<SponseringDetails> sponserdetail = new ArrayList<>();
 	public void addSponseringDetails(SponseringDetails sd)
 	{
 		sponserdetail.add(sd);

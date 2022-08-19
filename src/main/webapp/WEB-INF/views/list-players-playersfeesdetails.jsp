@@ -8,15 +8,20 @@
 <meta charset="ISO-8859-1">
 <title>Players Details</title>
 <style type="text/css">
-<%@include file="/WEB-INF/css/listplayersplayersfees.css"%>
+<%@
+include
+
+ 
+
+file="/WEB-INF/css/listplayersplayersfees.css"%>
 </style>
 </head>
 <body>
 	<br>
 	<br>
-	<div >
-			<a href="/Players/getallplayers"><h2>Back</h2></a>
-		</div>
+	<div>
+		<a href="/Players/getallplayers"><h2>Back</h2></a>
+	</div>
 	<div class="center" id="root">
 		<div id="getplayersbyfeesdetails">
 			<form:form action="" method="post" modelAttribute="getplayers">

@@ -45,7 +45,7 @@ public class PlayersService {
 		Iterator<PlayersFeesDetails> itr = feesdetails.iterator();
 		while(itr.hasNext())
 		{
-			dto.addPlayersandPlayersfeesdetails((PlayersFeesDetails)itr.next());
+			dto.addPlayersandPlayersfeesdetails(itr.next());
 			
 		}
 		return dto;	
@@ -59,7 +59,7 @@ public class PlayersService {
    		Iterator<Prizes> itr = prizedetails.iterator();
    		while(itr.hasNext())
    		{
-   			dtp.addPlayersandPrizedetails((Prizes)itr.next());
+   			dtp.addPlayersandPrizedetails(itr.next());
    			
    		}
    		return dtp;	

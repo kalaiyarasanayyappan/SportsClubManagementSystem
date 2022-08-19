@@ -7,7 +7,10 @@
 <meta charset="ISO-8859-1">
 <title>Staff List</title>
 <style type="text/css">
-<%@ include file="/WEB-INF/css/liststaff.css"%>
+<%@
+include
+ 
+file="/WEB-INF/css/liststaff.css"%>
 </style>
 </head>
 <body>
@@ -47,7 +50,7 @@
 						<th>Staff Role</th>
 						<th>Coaching Sports</th>
 
-						<th>Email</th> 
+						<th>Email</th>
 						<th>update</th>
 						<th>delete</th>                       
 					</tr>

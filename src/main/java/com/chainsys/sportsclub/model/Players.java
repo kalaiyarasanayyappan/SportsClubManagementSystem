@@ -53,7 +53,7 @@ public class Players {
 	}
 
 	public void setFeesDetails(List<PlayersFeesDetails> feesDetails) {
-		feesDetails = feesDetails;
+		this.feesDetails = feesDetails;
 	}
 
 	@Column(name = "SPORTS_ID")

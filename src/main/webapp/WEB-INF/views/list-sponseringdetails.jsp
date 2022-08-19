@@ -7,33 +7,29 @@
 <meta charset="ISO-8859-1">
 <title>Sponseringdetails List</title>
 <style type="text/css">
-<%@include file="/WEB-INF/css/listsponseringdetails.css"%>
+<%@
+include
+ 
+file="/WEB-INF/css/listsponseringdetails.css"%>
 </style>
 </head>
 <body>
-<div >
-       
-        <div id="root">
-            <nav class="navbar">
-                <div class="navbar__container">
-                    <a href="#" id="navbar__logo">Sports Club</a>
+	<div>
 
-                    <ul class="navbar__menu">
-                    <li class="navbar__item"><a href="/home/index"
-                        class="navbar__links">Home</a></li>   
-                        
-                    </ul>
-                </div>
-            </nav>
-        </div>
-	<br>
-	   
-	
-		
-		
-		<br>
-		
-		   
+		<div id="root">
+			<nav class="navbar">
+				<div class="navbar__container">
+					<a href="#" id="navbar__logo">Sports Club</a>
+
+					<ul class="navbar__menu">
+						<li class="navbar__item"><a href="/home/index"
+							class="navbar__links">Home</a></li>
+
+					</ul>
+				</div>
+			</nav>
+		</div>
+		<br>   <br>    
 		<table class="table-center" border=1>
 			       
 			<thead>
@@ -63,9 +59,10 @@
 						<td>${Sponseringdetails.amount}</td>            
 						<td>${Sponseringdetails.dateOfSponsering}</td>  
 						<td>${Sponseringdetails.modeOfPayment}</td>  
-						<td>${Sponseringdetails.recieptNumber}</td> 
+						<td>${Sponseringdetails.recieptNumber}</td>
 						<td><a
-							href="/Sponsering_Details/updatesponseringdetails?sponseringDetailsId=${Sponseringdetails.sponseringDetailsId}">Update</a></td>             
+							href="/Sponsering_Details/updatesponseringdetails?sponseringDetailsId=${Sponseringdetails.sponseringDetailsId}">Update</a></td> 
+						           
 						<td><a
 							href="/Sponsering_Details/deletesponseringdetailsform?sponseringDetailsId=${Sponseringdetails.sponseringDetailsId}">Delete</a></td> 
 						                 

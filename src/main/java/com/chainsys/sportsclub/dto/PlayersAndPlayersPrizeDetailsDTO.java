@@ -8,7 +8,7 @@ import com.chainsys.sportsclub.model.Prizes;
 public class PlayersAndPlayersPrizeDetailsDTO {
 	@Autowired
 	private Players play;
-	private List<Prizes> prizedetails = new ArrayList<Prizes>();
+	private List<Prizes> prizedetails = new ArrayList<>();
 	
 	public Players getPlay() {
 		return play;

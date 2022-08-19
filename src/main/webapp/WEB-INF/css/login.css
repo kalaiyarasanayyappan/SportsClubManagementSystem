@@ -32,8 +32,7 @@ input::-webkit-input-placeholder {
 
 body {
 	background-image: url("https://wallpaperaccess.com/full/1900851.png");
-	 height: 768px;
-	width: 1366px;
+	
 	background-position: center;
 	background-size: cover;
 }

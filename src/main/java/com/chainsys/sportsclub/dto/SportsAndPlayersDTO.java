@@ -15,7 +15,7 @@ public class SportsAndPlayersDTO {
 	public void setSport(Sports sport) {
 		this.sport = sport;
 	}
-	private List<Players> playerdetail = new ArrayList<Players>();
+	private List<Players> playerdetail = new ArrayList<>();
 	
 	
 	public List<Players> getPlayerdetail() {

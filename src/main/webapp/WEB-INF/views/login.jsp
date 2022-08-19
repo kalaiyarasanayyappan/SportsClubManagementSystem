@@ -6,7 +6,10 @@
 <meta charset="ISO-8859-1">
 <title>Admin Login Page Design</title>
 <style>
-<%@include file="/WEB-INF/css/login.css"%>
+<%@
+include
+ 
+file="/WEB-INF/css/login.css"%>
 </style>
 </head>
 

@@ -8,16 +8,19 @@
 <meta charset="ISO-8859-1">
 <title>sports</title>
 <style type="text/css">
-<%@include file="/WEB-INF/css/listsportssponsers.css"%>
+<%@
+include
+ 
+file="/WEB-INF/css/listsportssponsers.css"%>
 </style>
 </head>
 <body>
 	<br>
 	<br>
-	<div >
-			<a href="/Sports/getallsports"><h2>Back</h2></a>
-		</div>
-	<div class="center"  id="root">
+	<div>
+		<a href="/Sports/getallsports"><h2>Back</h2></a>
+	</div>
+	<div class="center" id="root">
 		<div id="getsportsbysponserdetails">
 			<form:form action="" method="post" modelAttribute="getsport">
 				<div>

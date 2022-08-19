@@ -7,27 +7,30 @@
 <meta charset="ISO-8859-1">
 <title>Sports List</title>
 <style type="text/css">
-<%@include file="/WEB-INF/css/listsports.css"%>
+<%@
+include
+ 
+file="/WEB-INF/css/listsports.css"%>
 </style>
 
 </head>
 <body>
-<div >
-       
-        <div id="root">
-            <nav class="navbar">
-                <div class="navbar__container">
-                    <a href="#" id="navbar__logo">Sports Club</a>
+	<div>
 
-                    <ul class="navbar__menu">
-                    <li class="navbar__item"><a href="/home/index"
-                        class="navbar__links">Home</a></li>   
-                        
-                    </ul>
-                </div>
-            </nav>
-        </div>
-	   <br>   
+		<div id="root">
+			<nav class="navbar">
+				<div class="navbar__container">
+					<a href="#" id="navbar__logo">Sports Club</a>
+
+					<ul class="navbar__menu">
+						<li class="navbar__item"><a href="/home/index"
+							class="navbar__links">Home</a></li>
+
+					</ul>
+				</div>
+			</nav>
+		</div>
+		   <br>   
 		<table class="table-center" border=1>
 			       
 			<thead>
@@ -40,9 +43,9 @@
 					<th>In_time</th>            
 					<th>Out_time</th>            
 					<th>Durations</th>
-					<th>Update</th> 
-					<th>Delete</th> 
-					<th>SponseringDetail</th>  
+					<th>Update</th>
+					<th>Delete</th>
+					<th>SponseringDetail</th> 
 					<th>PlayerDetail</th>                      
 				</tr>
 				       
@@ -58,15 +61,15 @@
 						<td>${Sports.fees}</td>            
 						<td>${Sports.inTime}</td>            
 						<td>${Sports.outTime}</td>            
-						<td>${Sports.durations}</td> 
+						<td>${Sports.durations}</td>
 						<td><a href="/Sports/updatesports?id=${Sports.sportsId}">update</a></td> 
 						<td><a href="/Sports/deletesportsform?id=${Sports.sportsId}">Delete</a></td>
-							          
+						         
 						<td><a
 							href="/Sports/getsportsbysponserdetails?id=${Sports.sportsId}">SponseringDetails</a></td>
 						<td><a
 							href="/Sports/getsportsbyplayerdetails?id=${Sports.sportsId}">PlayerDetails</a></td>
-						
+
 
 					</tr>
             </c:forEach>
@@ -75,19 +78,19 @@
 
 		</table>
 		<div class="center" id="table root">
-		
+
 			<a href="/Sports/addform"><h2>Add</h2></a>
 			<form action="getsports">
 
-			<div class="center">
+				<div class="center">
 
-				<input type="text" name="sportsId" /> <input type="submit"
-					value="Find" />
-			</div>
+					<input type="text" name="sportsId" /> <input type="submit"
+						value="Find" />
+				</div>
 
-		</form>
-		
-</div>
+			</form>
+
+		</div>
 		       
 	</div>
 </body>

@@ -39,7 +39,7 @@ public class SponsersService {
    		Iterator<SponseringDetails> itr = sponserdetails.iterator();
    		while(itr.hasNext())
    		{
-   			dts.addSponsersandSponseringdetails((SponseringDetails)itr.next());
+   			dts.addSponsersandSponseringdetails(itr.next());
    		}
    		return dts;	
    	}

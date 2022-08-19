@@ -13,7 +13,7 @@ public class SportsAndSponseringDetailsDTO {
 		this.sport = sport;
 	}
 
-	private List<SponseringDetails> sponserdetail = new ArrayList<SponseringDetails>();
+	private List<SponseringDetails> sponserdetail = new ArrayList<>();
 	
 	public List<SponseringDetails> getSponserdetail() {
 		return sponserdetail;

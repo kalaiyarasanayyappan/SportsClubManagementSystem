@@ -3,9 +3,10 @@
 body {
 	background-image:
 		url("https://wallpaperaccess.com/full/1088620.jpg");
-	 height: 768px;
+	
 	width: 1366px;
-	 background-repeat: no-repeat;
+	background-size: cover;
+	
 	color: yellow;
 }
 

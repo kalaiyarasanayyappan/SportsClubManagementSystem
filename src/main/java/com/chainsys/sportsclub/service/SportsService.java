@@ -47,7 +47,7 @@ public class SportsService {
    		Iterator<SponseringDetails> itr = sponserdetails.iterator();
    		while(itr.hasNext())
    		{
-   			dts.addSponseringDetails((SponseringDetails)itr.next());
+   			dts.addSponseringDetails(itr.next());
    			
    		}
    		return dts;	
@@ -61,7 +61,7 @@ public class SportsService {
    		Iterator<Players> itr = playerdetails.iterator();
    		while(itr.hasNext())
    		{
-   			dtp.addPlayersDetails((Players)itr.next());
+   			dtp.addPlayersDetails(itr.next());
    			
    		}
    		return dtp;	

@@ -7,16 +7,19 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Sponsers</title>
-<style type="text/css">
-<%@include file="/WEB-INF/css/listsponserssponseringdetails.css"%>
+<style>
+<%@
+include
+ 
+file="/WEB-INF/css/listsponserssponseringdetails.css"%>
 </style>
 </head>
 <body>
 	<br>
 	<br>
-	<div >
-			<a href="/Sponsers/getallsponsers"><h2>Back</h2></a>
-		</div>
+	<div>
+		<a href="/Sponsers/getallsponsers"><h2>Back</h2></a>
+	</div>
 	<div class="center" id="table root">
 		<div id="getsponserssponseringdetails">
 			<form:form action="" method="post" modelAttribute="spons">
@@ -49,7 +52,7 @@
 		</div>
 	</div>
 	<br>
-	<div  id="getsponsersponseringdetails">
+	<div id="getsponsersponseringdetails">
 		<table class="table-center" border=1>
 			<thead>
 				<tr>

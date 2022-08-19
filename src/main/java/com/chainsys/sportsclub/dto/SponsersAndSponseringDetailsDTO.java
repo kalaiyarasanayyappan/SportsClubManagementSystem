@@ -6,7 +6,7 @@ import com.chainsys.sportsclub.model.Sponsers;
 
 public class SponsersAndSponseringDetailsDTO {
 	private Sponsers spons;
-	private List<SponseringDetails> sponserdetail = new ArrayList<SponseringDetails>();
+	private List<SponseringDetails> sponserdetail = new ArrayList<>();
 	public Sponsers getSpons() {
 		return spons;
 	}
