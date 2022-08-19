@@ -39,6 +39,7 @@ file="/WEB-INF/css/listplayers.css"%>
 
 
 			<table class="table-center" border=1>
+				<caption></caption>
 
 				<thead>
 

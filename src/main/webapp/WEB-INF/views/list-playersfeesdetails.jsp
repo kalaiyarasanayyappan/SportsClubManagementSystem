@@ -40,6 +40,7 @@ file="/WEB-INF/css/listplayersfees.css"%>
 
 
 			<table class="table-center" border=1>
+				<caption></caption>
 				       
 				<thead>
 					           

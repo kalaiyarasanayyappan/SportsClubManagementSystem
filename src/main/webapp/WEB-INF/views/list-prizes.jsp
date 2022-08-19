@@ -37,6 +37,7 @@ file="/WEB-INF/css/listprizes.css"%>
 
 
 			<table class="table-center" border=1>
+				<caption></caption>
 				       
 				<thead>
 					           

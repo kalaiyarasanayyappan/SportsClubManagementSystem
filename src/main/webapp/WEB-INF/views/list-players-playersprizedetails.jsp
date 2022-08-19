@@ -96,6 +96,7 @@ file="/WEB-INF/css/listplayersprize.css"%>
 	<br>
 	<div id="getallplayersprizedetails">
 		<table class="table-center" border=1>
+			<caption></caption>
 			<thead>
 				<tr>
 					<th>prize Id</th>         

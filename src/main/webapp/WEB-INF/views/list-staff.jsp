@@ -35,7 +35,7 @@ file="/WEB-INF/css/liststaff.css"%>
 
 			<br>    
 			<table class="table-center" border=1>
-				       
+				       	<caption></caption>
 				<thead>
 					           
 					<tr>

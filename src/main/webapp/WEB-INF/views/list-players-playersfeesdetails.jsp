@@ -97,6 +97,7 @@ file="/WEB-INF/css/listplayersplayersfees.css"%>
 		<br>
 		<div id="getallplayersfeesdetails">
 			<table class="table-center" border=1>
+				<caption></caption>
 				<thead>
 					<tr>
 						<th>paid Date</th>            

@@ -21,12 +21,8 @@ file="/WEB-INF/css/login.css"%>
 	<br>
 	<form action="adminlogin" method="post" modelAttribute="adminlogin">
 		<table width="25%" border="0" cellspacing="40" align="center">
-			<!-- <thead>
-		<tr>
-		<th>Email</th>
-		<th>Password</th>
-		</tr>
-		</thead> -->
+			<caption></caption>
+			
 			<tr>
 				<td>Email</td>
 			</tr>
@@ -47,11 +43,6 @@ file="/WEB-INF/css/login.css"%>
 		</table>
 	</form>
 	<h1 class="center">SPORTS CLUB MANAGEMENT</h1>
-	<!-- <div class="menu-bar">
-		<ul>
-			<li class="active"><a href="/home/index">Index</a></li>
-
-		</ul>
-	</div> -->
+	
 </body>
 </html>

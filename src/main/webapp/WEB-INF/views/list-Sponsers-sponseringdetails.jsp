@@ -54,6 +54,7 @@ file="/WEB-INF/css/listsponserssponseringdetails.css"%>
 	<br>
 	<div id="getsponsersponseringdetails">
 		<table class="table-center" border=1>
+			<caption></caption>
 			<thead>
 				<tr>
 					<th>SponseringDetails Id</th>

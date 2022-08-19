@@ -31,6 +31,7 @@ file="/WEB-INF/css/listsponseringdetails.css"%>
 		</div>
 		<br>   <br>    
 		<table class="table-center" border=1>
+			<caption></caption>
 			       
 			<thead>
 				           

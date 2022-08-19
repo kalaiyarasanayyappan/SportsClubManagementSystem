@@ -67,6 +67,7 @@ file="/WEB-INF/css/listsportsplayers.css"%>
 	<br>
 	<div id="getsportsbyplayerdetails">
 		<table class="table-center" border=1>
+			<caption></caption>
 			<thead>
 				<tr>
 					<th>Player Id</th>            

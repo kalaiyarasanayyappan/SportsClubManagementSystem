@@ -32,6 +32,7 @@ file="/WEB-INF/css/listsports.css"%>
 		</div>
 		   <br>   
 		<table class="table-center" border=1>
+			<caption></caption>
 			       
 			<thead>
 				           

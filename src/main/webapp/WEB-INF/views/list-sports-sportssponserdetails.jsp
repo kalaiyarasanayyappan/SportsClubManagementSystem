@@ -66,6 +66,7 @@ file="/WEB-INF/css/listsportssponsers.css"%>
 	<br>
 	<div id="getsportsbysponserdetails">
 		<table class="table-center" border=1>
+			<caption></caption>
 			<thead>
 				<tr>
 					<th>Sponsering_Details_Id</th>
