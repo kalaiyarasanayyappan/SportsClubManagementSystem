@@ -12,7 +12,7 @@ public class Logic {
         LocalDate date = LocalDate.now();
         return date.minusYears(45);
     }
-    public static LocalDate getMinimumAge() {
+    public static LocalDate getLeastAge() {
         LocalDate date = LocalDate.now();
         return date.minusYears(16);
     }
