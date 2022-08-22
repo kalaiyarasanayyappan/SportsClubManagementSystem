@@ -112,9 +112,4 @@ public class PlayersController {
 	}
 
 	
-	/*
-	 * @RequestMapping("/getplayers") public String
-	 * findplayers(@RequestParam("playerId") int id) { plService.findById(id);
-	 * return LISTPLAYERS; }
-	 */
 }

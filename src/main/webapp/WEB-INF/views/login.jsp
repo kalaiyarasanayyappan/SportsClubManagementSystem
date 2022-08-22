@@ -15,6 +15,7 @@
 	<form action="adminlogin" method="post" modelAttribute="adminlogin">
 		<table class="center">
 			<caption></caption>
+			
 			<tr>
 				<td>Email</td>
 			</tr>
