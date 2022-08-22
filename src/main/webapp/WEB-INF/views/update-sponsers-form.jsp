@@ -23,7 +23,7 @@
 				modelAttribute="updatesponsers">
 
 				<div>
-					<label for="sponserName">Sponser Name</label>
+					<label for="sponserName">SponserName</label>
 					<div>
 						<form:input path="sponserName"
 							title="Name can't be empty or must contain only alphabets"

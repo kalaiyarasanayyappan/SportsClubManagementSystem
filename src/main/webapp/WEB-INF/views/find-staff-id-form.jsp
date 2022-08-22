@@ -21,63 +21,63 @@
 		<div id="form">
 			<form:form action="" method="post" modelAttribute="getstaff">
 				<div>
-					<label for="staffId">Staff Id</label>
+					<label for="staffId">STAFFID</label>
 					<div>
 						<form:input path="staffId" />
 					</div>
 				</div>
 					<br>
 				<div>
-					<label for="staffName">Staff Name</label>
+					<label for="staffName">STAFFNAME</label>
 					<div>
 						<form:input path="staffName" />
 					</div>
 				</div>
 					<br>
 				<div>
-					<label for="salary">Salary</label>
+					<label for="salary">SALARY</label>
 					<div>
 						<form:input path="salary" />
 					</div>
 				</div>
 					<br>
 				<div>
-					<label for="joiningDate">Joining Date</label>
+					<label for="joiningDate">JOINING DATE</label>
 					<div>
 						<form:input path="joiningDate" />
 					</div>
 				</div>
 					<br>
 				<div>
-					<label for="dateOfBirth">Date of Birth</label>
+					<label for="dateOfBirth">DATE OF BIRTH</label>
 					<div>
 						<form:input path="dateOfBirth" />
 					</div>
 				</div>
 					<br>
 				<div>
-					<label for="contact">Contact</label>
+					<label for="contact">CONTACT</label>
 					<div>
 						<form:input path="contact" />
 					</div>
 				</div>
 					<br>
 				<div>
-					<label for="address">Address</label>
+					<label for="address">ADDRESS</label>
 					<div>
 						<form:input path="address" />
 					</div>
 				</div>
 					<br>
 				<div>
-					<label for="staffRole">Staff Role</label>
+					<label for="staffRole">STAFF ROLE</label>
 					<div>
 						<form:input path="staffRole" />
 					</div>
 				</div>
 					<br>
 				<div>
-					<label for="coachingSports">Coaching Sports</label>
+					<label for="coachingSports">COUCHING SPORTS</label>
 					<div>
 						<form:input path="coachingSports" />
 					</div>
@@ -85,7 +85,7 @@
 					<br>
 
 				<div>
-					<label for="email">Email</label>
+					<label for="email">EMAIL</label>
 					<div>
 						<form:input path="email" />
 					</div>

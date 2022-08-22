@@ -14,7 +14,7 @@
 </head>
 <body>
 	<br>
-	<br>
+	
 	<div >
 			<a href="/Staff/getallstaff"><h2>Back</h2></a>
 		</div>
@@ -23,7 +23,7 @@
 			<form:form action="update" method="post" modelAttribute="updatestaff">
 
 				<div>
-					<label for="staffName">Staff Name</label>
+					<label for="staffName">StaffName</label>
 					<div>
 						<form:input path="staffName"
 							title="Name can't be empty or must contain only alphabets"
@@ -33,7 +33,7 @@
 				<form:errors path="staffName" cssClass="text-danger" />
 					<br>
 				<div>
-					<label for="salary">Salary</label>
+					<label for="salary">Salary(RS)</label>
 					<div>
 						<form:input path="salary" title="enter valid number"
 							pattern="^\d{1,6}(?:\.\d{0,2})?$" required="true" />
@@ -53,11 +53,11 @@
 				<div>
 					<label for="dateOfBirth">Date of Birth</label>
 					<div>
-						<form:input path="dateOfBirth" type="date" max="<%=Logic.getMinimumAge()%>"
+						<form:input path="dateOfBirth" type="date" max="<%=Logic.getMinAge()%>"
 							title="Enter date of birth" required="true" />
 					</div>
 				</div>
-					<br>
+				<br>	
 				<div>
 					<label for="contact">Contact</label>
 					<div>

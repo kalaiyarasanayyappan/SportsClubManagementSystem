@@ -51,10 +51,10 @@
 				<div>
 					<label for="dateOfBirth">DATE OF BIRTH</label>
 					<div>
-						<form:input path="dateOfBirth" type="date" max="<%=Logic.getMinimumAge()%>" title="Enter date of birth" required="true" />
+						<form:input path="dateOfBirth" type="date" max="<%=Logic.getMinAge()%>" title="Enter date of birth" required="true" />
 					</div>
 				</div>
-					<br>
+				<br>	
 				<div>
 					<label for="contact">CONTACT</label>
 					<div>
@@ -64,7 +64,7 @@
 					</div>
 				</div>
 				<form:errors path="contact" cssClass="text-danger" />
-					<br>
+				<br>	
 				<div>
 					<label for="address">ADDRESS</label>
 					<div>
@@ -74,7 +74,7 @@
 					</div>
 				</div>
 				<form:errors path="address" cssClass="text-danger" />
-					<br>
+				<br>	
 				<div>
 					<label for="staffRole">choose a Role</label> <br> <select
 						name="staffRole" id="staffrole">

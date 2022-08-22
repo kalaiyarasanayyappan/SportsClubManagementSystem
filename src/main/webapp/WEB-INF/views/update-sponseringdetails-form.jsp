@@ -22,7 +22,7 @@
 			<form:form action="update" method="post"
 				modelAttribute="updatesponseringdetails">
 				<div>
-					<label for="sponserId">Sponser Id</label>
+					<label for="sponserId">SponserId</label>
 					<div>
 						<form:input path="sponserId" title="Enter sponser Id"
 							required="true" />

@@ -13,7 +13,7 @@
 </head>
 <body>
 	<br>
-	<br>
+	
 	<div >
 			<a href="/Players/getallplayers"><h2>Back</h2></a>
 		</div>

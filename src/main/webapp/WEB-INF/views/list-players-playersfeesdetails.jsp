@@ -32,13 +32,13 @@ file="/WEB-INF/css/listplayersplayersfees.css"%>
 					</div>
 				</div>
 				<div>
-					<label for="playerName">Player Name</label>
+					<label for="playerName">PlayerName</label>
 					<div>
 						<form:input path="playerName" />
 					</div>
 				</div>
 				<div>
-					<label for="sportsId">Sports Id</label>
+					<label for="sportsId">SportsId</label>
 					<div>
 						<form:input path="sportsId" />
 					</div>
@@ -62,7 +62,7 @@ file="/WEB-INF/css/listplayersplayersfees.css"%>
 					</div>
 				</div>
 				<div>
-					<label for="playerStatus">Player Status</label>
+					<label for="playerStatus">PlayerStatus</label>
 					<div>
 						<form:input path="playerStatus" />
 					</div>

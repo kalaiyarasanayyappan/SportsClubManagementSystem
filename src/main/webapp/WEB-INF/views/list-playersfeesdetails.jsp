@@ -46,13 +46,13 @@ file="/WEB-INF/css/listplayersfees.css"%>
 					           
 					<tr>
 						           
-						<th>paid Date</th>            
+						<th>Paid Date</th>            
 						<th>Player Id</th>            
 						<th>Amount</th>            
 						<th>Remarks</th>            
 						<th>Reciept Number</th>
-						<th>update</th>
-						<th>delete</th>           
+						<th>Update</th>
+						<th>Delete</th>           
 
 
 					</tr>

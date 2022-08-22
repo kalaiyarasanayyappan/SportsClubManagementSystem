@@ -75,7 +75,7 @@
 				</div>
 	<br>
 				<div>
-					<label for="teamOrIndividual">team/Individual</label> <br> <select
+					<label for="teamOrIndividual">Team/Individual</label> <br> <select
 						name="teamOrIndividual" id="teamOrIndividual">
 						<option>--Choose--</option>
 						<option value="Team">Team</option>
@@ -86,7 +86,7 @@
 				</div>
 					<br>
 				<div>
-					<label for="competetionName">competetionName</label> <br> <select
+					<label for="competetionName">CompetetionName</label> <br> <select
 						name="competetionName" id="competetionName">
 						<option>--Choose competetion--</option>
 						<option value="champion Trophy">champion Trophy</option>

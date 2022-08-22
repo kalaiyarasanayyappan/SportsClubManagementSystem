@@ -25,7 +25,7 @@
 
 
 				<div>
-					<label for="playerName">Player Name</label>
+					<label for="playerName">PlayerName</label>
 					<div>
 						<form:input path="playerName"
 							title="Name can't be empty or must contain only alphabets"

@@ -30,14 +30,14 @@ document.getElementById("durations").value = duration;
 			<form:form action="update" method="post"
 				modelAttribute="updatesports">
 				<div>
-					<label for="sportsId"><h2>Sports Id</h2></label>
+					<label for="sportsId">SportsId</label>
 					<div>
 						<form:input path="sportsId" />
 					</div>
 				</div>
 				<br>
 				<div>
-					<label for="sportsName"><h2>Sports Name</h2></label>
+					<label for="sportsName">SportsName</label>
 					<div>
 						<form:input path="sportsName"
 							title="Name can't be empty or must contain only alphabets"
@@ -47,7 +47,7 @@ document.getElementById("durations").value = duration;
 				<br>
 				<form:errors path="sportsName" cssClass="text-danger" />
 				<div>
-					<label for="fees"><h2>Fees</h2></label>
+					<label for="fees">Fees</label>
 					<div>
 						<form:input path="fees" title="enter valid number"
 							pattern="^\d{1,6}(?:\.\d{0,2})?$" required="true" />
@@ -55,21 +55,21 @@ document.getElementById("durations").value = duration;
 				</div>
 				<br>
 				<div>
-					<label for="inTime"><h2>In Time</h2></label>
+					<label for="inTime">In Time</label>
 					<div>
 						<form:input path="inTime" id="inTime" onchange="durationCalculation();" type="time"/>
 					</div>
 				</div>
 				<br>
 				<div>
-					<label for="outTime"><h2>Out Time</h2></label>
+					<label for="outTime">Out Time</label>
 					<div>
 						<form:input path="outTime" id = "outTime" onchange="durationCalculation();" type="time"/>
 					</div>
 				</div>
 				<br>
 				<div>
-					<label for="durations"><h2>Durations</h2></label>
+					<label for="durations">Duration</label>
 					<div>
 						<form:input path="durations" id="durations" onchange="durationCalculation(this.form);" />
 					</div>

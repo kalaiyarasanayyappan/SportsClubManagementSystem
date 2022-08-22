@@ -30,7 +30,7 @@ file="/WEB-INF/css/listplayersprize.css"%>
 					</div>
 				</div>
 				<div>
-					<label for="playerName">Player Name</label>
+					<label for="playerName">PlayerName</label>
 					<div>
 						<form:input path="playerName" />
 					</div>
