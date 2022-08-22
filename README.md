@@ -28,7 +28,7 @@ Sports Club Management is a trending system where you can manage your data of th
              
   # HOW to use the project
   
-  1. Initially we have to login to Sports club management site by using your credentials such as username and password.
+  1. Initially we have to login to Sports club management site by using your credentials such as Email and password.
   
   2. Add Sports - you can add the sports like cricket , football , volleyball , Tennis.
   3. Add Staff -  Add Staff for couching the players.
