@@ -14,9 +14,6 @@ public class Logic {
         LocalDate date = LocalDate.now();
         return date.minusYears(45);
     }
-//    public static LocalDate () {
-//        LocalDate date = LocalDate.now();
-//        return date.minusYears(16);
-//    }
+
 
 }
