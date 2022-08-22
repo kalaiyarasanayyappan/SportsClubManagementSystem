@@ -3,7 +3,9 @@ package com.chainsys.sportsclub.businesslogic;
 import java.time.LocalDate;
 
 public class Logic {
-	
+	private Logic() {
+		
+	}
 	public static LocalDate getMinAge() {
         LocalDate date = LocalDate.now();
         return date.minusYears(16);
@@ -12,9 +14,9 @@ public class Logic {
         LocalDate date = LocalDate.now();
         return date.minusYears(45);
     }
-    public static LocalDate getLeastAge() {
-        LocalDate date = LocalDate.now();
-        return date.minusYears(16);
-    }
+//    public static LocalDate () {
+//        LocalDate date = LocalDate.now();
+//        return date.minusYears(16);
+//    }
 
 }
