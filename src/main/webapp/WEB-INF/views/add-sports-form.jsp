@@ -25,15 +25,13 @@ document.getElementById("durations").value = duration;
 <div >
 			<a href="/Sports/getallsports"><h2>Back</h2></a>
 		</div>
-	<div class="center">
-		<a href="/home/index"><h2>Home</h2></a>
-	</div>
+	
 	<div id="root">
 		<div class="center" id="form">
 			<form:form action="add" method="post" modelAttribute="addsports">
 				<br>
 				<div>
-					<label for="sportsName"><h2>SportsName</h2></label>
+					<label for="sportsName"><h2>SPORTS NAME</h2></label>
 					<div>
 						<form:input path="sportsName"
 							title="Name can't be empty or must contain only alphabets"
@@ -44,7 +42,7 @@ document.getElementById("durations").value = duration;
 				<br>
 				<form:errors path="sportsName" cssClass="text-danger" />
 				<div>
-					<label for="fees"><h2>Fees</h2></label>
+					<label for="fees"><h2>FEES</h2></label>
 					<div>
 						<form:input path="fees" title="enter valid number"
 							pattern="^\d{1,6}(?:\.\d{0,2})?$" required="true" />
@@ -53,7 +51,7 @@ document.getElementById("durations").value = duration;
 				
 				<br>
 				<div>
-					<label for="inTime"><h2>InTime</h2></label>
+					<label for="inTime"><h2>INTIME</h2></label>
 					<div>
 						<form:input path="inTime" id="inTime" onchange="durationCalculation();" type="time"/>
 					</div>
@@ -61,7 +59,7 @@ document.getElementById("durations").value = duration;
 				
 				<br>
 				<div>
-					<label for="outTime"><h2>OutTime</h2></label>
+					<label for="outTime"><h2>OUTTIME</h2></label>
 					<div>
 						<form:input path="outTime" id = "outTime" onchange="durationCalculation();" type="time"/>
 					</div>
@@ -69,14 +67,14 @@ document.getElementById("durations").value = duration;
 				
 				<br>
 				<div>
-					<label for="durations"><h2>Duration</h2></label>
+					<label for="durations"><h2>DURATION</h2></label>
 					<div>
 						<form:input path="durations" id="durations" onchange="durationCalculation(this.form);"/>
 					</div>
 				</div>
 				<br>
 				<div>
-					<form:button>Add</form:button>
+					<form:button>ADD</form:button>
 				</div>
 			</form:form>
 		</div>

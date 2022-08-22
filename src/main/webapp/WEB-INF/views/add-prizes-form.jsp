@@ -23,7 +23,7 @@
 			<form:form action="add" method="post" modelAttribute="addprizes">
 
 				<div>
-					<label for="dateOfPrize">Date of Price</label>
+					<label for="dateOfPrize">DATE OF PRIZE</label>
 					<div>
 						<form:input path="dateOfPrize" type="date" title="Enter Date"
 							required="true" />
@@ -42,7 +42,7 @@
 				</div>
 					<br>
 				<div>
-					<label for="playerId">PlayerId</label>
+					<label for="playerId">PLAYERID</label>
 					<div>
 						<form:input path="playerId" title="Enter player ID"
 							required="true" />
@@ -77,7 +77,7 @@
 					<br>
 
 				<div>
-					<label for="teamOrIndividual">team/Individual</label> <br> <select
+					<label for="teamOrIndividual">TEAM/INDIVIDUAL</label> <br> <select
 						name="teamOrIndividual" id="teamOrIndividual">
 						<option>--Choose--</option>
 						<option value="Team">Team</option>
@@ -88,7 +88,7 @@
 				</div>
 					<br>
 				<div>
-					<label for="competetionName">competetionName</label> <br> <select
+					<label for="competetionName">COMPETETION NAME</label> <br> <select
 						name="competetionName" id="competetionName">
 						<option>--Choose competetion--</option>
 						<option value="champion Trophy">champion Trophy</option>
@@ -99,14 +99,14 @@
 				</div>
 					<br>
 				<div>
-					<label for="prizeAmount">PriceAmount</label>
+					<label for="prizeAmount">PRIZE AMOUNT</label>
 					<div>
 						<form:input path="prizeAmount" title="Enter Amount"
 							required="true" />
 					</div>
 				</div>
 			<div>
-					<form:button>Add</form:button>
+					<form:button>ADD</form:button>
 				</div>
 			</form:form>
 		</div>

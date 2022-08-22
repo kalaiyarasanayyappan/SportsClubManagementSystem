@@ -22,35 +22,35 @@
 			<form:form action="" method="post"
 				modelAttribute="getplayersfeesdetails">
 				<div>
-					<label for="paidDate">Paid Date</label>
+					<label for="paidDate">PAID DATE</label>
 					<div>
 						<form:input path="paidDate" />
 					</div>
 				</div>
 					<br>
 				<div>
-					<label for="playerId">Player Id</label>
+					<label for="playerId">PLAYERID</label>
 					<div>
 						<form:input path="playerId" />
 					</div>
 				</div>
 					<br>
 				<div>
-					<label for="amount">Amount</label>
+					<label for="amount">AMOUNT</label>
 					<div>
 						<form:input path="amount" />
 					</div>
 				</div>
 					<br>
 				<div>
-					<label for="remarks">Remarks</label>
+					<label for="remarks">REMARKS</label>
 					<div>
 						<form:input path="remarks" />
 					</div>
 				</div>
 					<br>
 				<div>
-					<label for="recieptNumber">Reciept Number</label>
+					<label for="recieptNumber">RECIEPT NUMBER</label>
 					<div>
 						<form:input path="recieptNumber" />
 					</div>

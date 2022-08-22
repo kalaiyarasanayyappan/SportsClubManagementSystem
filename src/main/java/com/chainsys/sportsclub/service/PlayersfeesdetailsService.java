@@ -18,12 +18,12 @@ public class PlayersfeesdetailsService {
     }
    
     public PlayersFeesDetails save(PlayersFeesDetails pl) {
-    	PlayersFeesDetails PlayersFeesDetails=repo.save(pl);
+    	PlayersFeesDetails playersFeesDetails=repo.save(pl);
         Players player=playersService.findById(pl.getPlayerId());
         player.setSubscriptionDue(player.getSubscriptionDue()-pl.getAmount());
         player.setSubscriptionPaid(player.getSubscriptionPaid()+pl.getAmount());
         playersService.save(player);
-        return PlayersFeesDetails;
+        return playersFeesDetails;
     }
     public PlayersFeesDetails findById(int id) {
         return repo.findById(id);

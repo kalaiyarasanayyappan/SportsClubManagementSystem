@@ -21,63 +21,63 @@
 		<div id="form">
 			<form:form action="" method="post" modelAttribute="getprizes">
 				<div>
-					<label for="PrizeId">PrizeId</label>
+					<label for="PrizeId">PRIZE ID</label>
 					<div>
 						<form:input path="PrizeId" />
 					</div>
 				</div>
 					<br>
 				<div>
-					<label for="dateOfPrize">Date of Price</label>
+					<label for="dateOfPrize">DATE OF PRIZE</label>
 					<div>
 						<form:input path="dateOfPrize" />
 					</div>
 				</div>
 					<br>
 				<div>
-					<label for="title">Title</label>
+					<label for="title">TITLE</label>
 					<div>
 						<form:input path="title" />
 					</div>
 				</div>
 					<br>
 				<div>
-					<label for="playerId">Player Id</label>
+					<label for="playerId">PLAYERID</label>
 					<div>
 						<form:input path="playerId" />
 					</div>
 				</div>
 					<br>
 				<div>
-					<label for="sportsId">Sports Id</label>
+					<label for="sportsId">SPORTSID</label>
 					<div>
 						<form:input path="sportsId" />
 					</div>
 				</div>
 					<br>
 				<div>
-					<label for="positionNumber">Position Number</label>
+					<label for="positionNumber">POSITION NUMBER</label>
 					<div>
 						<form:input path="positionNumber" />
 					</div>
 				</div>
 					<br>
 				<div>
-					<label for="teamOrIndividual">Team Or Individual</label>
+					<label for="teamOrIndividual">TEAM/INDIVIDUAL</label>
 					<div>
 						<form:input path="teamOrIndividual" />
 					</div>
 				</div>
 					<br>
 				<div>
-					<label for="competetionName">Competetion Name</label>
+					<label for="competetionName">COMPETETION NAME</label>
 					<div>
 						<form:input path="competetionName" />
 					</div>
 				</div>
 					<br>
 				<div>
-					<label for="prizeAmount">Price Amount</label>
+					<label for="prizeAmount">PRIZE AMOUNT</label>
 					<div>
 						<form:input path="prizeAmount" />
 					</div>

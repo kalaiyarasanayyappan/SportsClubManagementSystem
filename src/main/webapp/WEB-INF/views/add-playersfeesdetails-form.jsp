@@ -22,14 +22,14 @@
 			<form:form action="add" method="post"
 				modelAttribute="addplayersfeesdetails">
 				<div>
-					<label for="paidDate">Paid Date</label>
+					<label for="paidDate">PAID DATE</label>
 					<div>
 						<form:input path="paidDate" type="date" required="true" />
 					</div>
 				</div>
 				<br>
 				<div>
-					<label for="playerId">Player Id</label>
+					<label for="playerId">PLAYERID</label>
 					<div>
 						<form:input path="playerId" title="Enter player Id"
 							required="true" />
@@ -37,7 +37,7 @@
 				</div>
 				<br>
 				<div>
-					<label for="amount">Amount</label>
+					<label for="amount">AMOUNT</label>
 					<div>
 						<form:input path="amount" title="enter amount"
 							pattern="^\d{1,6}(?:\.\d{0,2})?$" required="true" />
@@ -47,7 +47,7 @@
 				<br>
 				<form:errors path="amount" cssClass="text-danger" />
 				<div>
-					<label for="remarks">Remarks</label>
+					<label for="remarks">REMARKS</label>
 					<div>
 						<form:input path="remarks" title="Enter remarks" required="true" />
 					</div>
@@ -58,7 +58,7 @@
 				<form:errors path="recieptNumber" cssClass="text-danger" />
 
 				<div>
-					<form:button>Add</form:button>
+					<form:button>ADD</form:button>
 				</div>
 			</form:form>
 		</div>

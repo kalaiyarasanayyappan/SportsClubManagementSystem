@@ -21,77 +21,77 @@
 		<div id="form">
 			<form:form action="" method="post" modelAttribute="getplayers">
 				<div>
-					<label for="playerId">Player Id</label>
+					<label for="playerId">PLAYERID</label>
 					<div>
 						<form:input path="playerId" />
 					</div>
 				</div>
 					<br>
 				<div>
-					<label for="playerName">Player Name</label>
+					<label for="playerName">PLAYER NAME</label>
 					<div>
 						<form:input path="playerName" />
 					</div>
 				</div>
 					<br>
 				<div>
-					<label for="sportsId">Sports Id</label>
+					<label for="sportsId">SPORTS ID</label>
 					<div>
 						<form:input path="sportsId" />
 					</div>
 				</div>
 					<br>
 				<div>
-					<label for="gender">Gender</label>
+					<label for="gender">GENDER</label>
 					<div>
 						<form:input path="gender" />
 					</div>
 				</div>
 					<br>
 				<div>
-					<label for="address">Address</label>
+					<label for="address">ADDRESS</label>
 					<div>
 						<form:input path="address" />
 					</div>
 				</div>
 					<br>
 				<div>
-					<label for="contact">Contact</label>
+					<label for="contact">CONTACT</label>
 					<div>
 						<form:input path="contact" />
 					</div>
 				</div>
 					<br>
 				<div>
-					<label for="playerStatus">Player Status</label>
+					<label for="playerStatus">PLAYER STATUS</label>
 					<div>
 						<form:input path="playerStatus" />
 					</div>
 				</div>
 					<br>
 				<div>
-					<label for="dateOfBirth">Date of Birth</label>
+					<label for="dateOfBirth">DATE OF BIRTH</label>
 					<div>
 						<form:input path="dateOfBirth" />
 					</div>
 				</div>
 					<br>
 				<div>
-					<label for="joiningDate">Joining Date</label>
+					<label for="joiningDate">JOINING DATE</label>
 					<div>
 						<form:input path="joiningDate" />
 					</div>
 				</div>
 					<br>
 				<div>
-					<label for="subscriptionDue">Subscription Due</label>
+					<label for="subscriptionDue">SUBSCRIPTION DUE</label>
 					<div>
 						<form:input path="subscriptionDue" />
 					</div>
 				</div>
 					<br>
 				<div>
-					<label for="subscriptionPaid">Subscription Paid</label>
+					<label for="subscriptionPaid">SUBSCRIPTION PAID</label>
 					<div>
 						<form:input path="subscriptionPaid" />
 					</div>

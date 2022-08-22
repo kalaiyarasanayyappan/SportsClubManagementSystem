@@ -66,12 +66,12 @@ public class PlayersController {
 	}
 
 	@PostMapping("/update")
-	public String modifyPlayers(@Valid @ModelAttribute("updateplayers") Players pl, Errors errors) {
+	public String modifyPlayers(@Valid @ModelAttribute("updateplayers") Players player, Errors errors) {
 		if (errors.hasErrors()) {
 			return "update-players-form";
 		}
 
-		plService.save(pl);
+		plService.save(player);
 		return LISTPLAYERS;
 
 	}
@@ -112,7 +112,7 @@ public class PlayersController {
 	}
 
 	@RequestMapping("/getplayers")
-	public String findPlayers(@RequestParam("playerId") int id) {
+	public String findplayers(@RequestParam("playerId") int id) {
 		plService.findById(id);
 		return LISTPLAYERS;
 	}

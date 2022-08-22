@@ -23,7 +23,7 @@
 			<form:form action="add" method="post"
 				modelAttribute="addsponseringdetails">
 				<div>
-					<label for="sponserId">Sponser Id</label>
+					<label for="sponserId">SPONSERID</label>
 					<div>
 						<form:input path="sponserId" title="Enter sponser Id"
 							required="true" />
@@ -45,7 +45,7 @@
 				</div>
 					<br>
 				<div>
-					<label for="amount">Amount</label>
+					<label for="amount">AMOUNT</label>
 					<div>
 						<div>
 							<form:input path="amount" title="enter valid amount"
@@ -56,7 +56,7 @@
 				</div>
 					<br>
 				<div>
-					<label for="dateOfSponsering">Date of Sponsering</label>
+					<label for="dateOfSponsering">DATE OF SPONSERING</label>
 					<div>
 						<form:input path="dateOfSponsering" type="date" title="enter date"
 							required="true" />
@@ -65,7 +65,7 @@
 				<form:errors path="dateOfSponsering" cssClass="text-danger" />
 					<br>
 				
-					<label for="modeOfPayment">choose a payment</label> <br> <select
+					<label for="modeOfPayment">CHOOSE PAYMENT</label> <br> <select
 						name="modeOfPayment" id="modeOfPayment">
 						<option>--Choose a payment--</option>
 						<option value="cash">Cash</option>
@@ -73,7 +73,7 @@
 						<option value="debitcard">DebitCard</option>
 					</select>
 					<div>
-						<form:button>Add</form:button>
+						<form:button>ADD</form:button>
 					</div>
 			</form:form>
 		</div>

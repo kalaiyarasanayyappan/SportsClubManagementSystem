@@ -38,16 +38,16 @@ file="/WEB-INF/css/listsports.css"%>
 				           
 				<tr>
 					           
-					<th>SportsId</th>            
-					<th>SportsName</th>            
-					<th>Fees</th>            
-					<th>In_time</th>            
-					<th>Out_time</th>            
-					<th>Durations</th>
-					<th>Update</th>
-					<th>Delete</th>
-					<th>SponseringDetail</th> 
-					<th>PlayerDetail</th>                      
+					<th>SPORTSID</th>            
+					<th>SPORTSNAME</th>            
+					<th>FEES(Rs)</th>            
+					<th>INTIME</th>            
+					<th>OUTTIME</th>            
+					<th>DURATION</th>
+					<th>UPDATE</th>
+					<th>DELETE</th>
+					<th>SPONSERINGDETAILS</th> 
+					<th>PLAYERDETAILS</th>                      
 				</tr>
 				       
 			</thead>
@@ -63,13 +63,13 @@ file="/WEB-INF/css/listsports.css"%>
 						<td>${Sports.inTime}</td>            
 						<td>${Sports.outTime}</td>            
 						<td>${Sports.durations}</td>
-						<td><a href="/Sports/updatesports?id=${Sports.sportsId}">update</a></td> 
-						<td><a href="/Sports/deletesportsform?id=${Sports.sportsId}">Delete</a></td>
+						<td><a href="/Sports/updatesports?id=${Sports.sportsId}">UPDATE</a></td> 
+						<td><a href="/Sports/deletesportsform?id=${Sports.sportsId}">DELETE</a></td>
 						         
 						<td><a
-							href="/Sports/getsportsbysponserdetails?id=${Sports.sportsId}">SponseringDetails</a></td>
+							href="/Sports/getsportsbysponserdetails?id=${Sports.sportsId}">SPONSERINGDETAIL</a></td>
 						<td><a
-							href="/Sports/getsportsbyplayerdetails?id=${Sports.sportsId}">PlayerDetails</a></td>
+							href="/Sports/getsportsbyplayerdetails?id=${Sports.sportsId}">PLAYERDETAIL</a></td>
 
 
 					</tr>
@@ -80,13 +80,13 @@ file="/WEB-INF/css/listsports.css"%>
 		</table>
 		<div class="center" id="table root">
 
-			<a href="/Sports/addform"><h2>Add</h2></a>
+			<a href="/Sports/addform"><h2>ADD</h2></a>
 			<form action="getsports">
 
 				<div class="center">
 
 					<input type="text" name="sportsId" /> <input type="submit"
-						value="Find" />
+						value="FIND" />
 				</div>
 
 			</form>

@@ -20,7 +20,7 @@ file="/WEB-INF/css/login.css"%>
 	<br>
 	<br>
 	<form action="adminlogin" method="post" modelAttribute="adminlogin">
-		<table width="25%" border="0" cellspacing="40" align="center">
+	<table 	width="25%" border="0" cellspacing="40" align="center">
 			<caption></caption>
 			
 			<tr>

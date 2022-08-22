@@ -8,7 +8,7 @@
 <meta charset="ISO-8859-1">
 <title>Get Sports By Id</title>
 <style type="text/css">
-<%@include file="/WEB-INF/css/addsports.css"%>
+<%@include file="/WEB-INF/css/findsports.css"%>
 </style>
 </head>
 <body>

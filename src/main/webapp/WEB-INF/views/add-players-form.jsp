@@ -23,7 +23,7 @@
 		<div id="form">
 			<form:form action="add" method="post" modelAttribute="addplayers">
 				<div>
-					<label for="playerName">Player Name</label>
+					<label for="playerName">PLAYER NAME</label>
 					<div>
 						<form:input path="playerName"
 							title="Name can't be empty or must contain only alphabets"
@@ -46,7 +46,7 @@
 				</div>
 				<br>
 				<div>
-					<label for="gender">Gender</label>
+					<label for="gender">GENDER</label>
 					<div>
 						<form:input path="gender" title="Enter specific gender"
 							pattern="^M(ale)?$|^F(emale)?$" required="true" />
@@ -55,7 +55,7 @@
 <br>
 				<form:errors path="gender" cssClass="text-danger" />
 				<div>
-					<label for="address">Address</label>
+					<label for="address">ADDRESS</label>
 					<div>
 						<form:input path="address"
 							title="Address should atleast contain 10 characters"
@@ -65,7 +65,7 @@
 				<form:errors path="address" cssClass="text-danger" />
 				<br>
 				<div>
-					<label for="contact">Contact</label>
+					<label for="contact">CONTACT</label>
 					<div>
 						<form:input path="contact" pattern="[1-9]{1}[0-9]{9}"
 							title="Phone number should have atleast 10 digits"
@@ -86,7 +86,7 @@
 				</div>
 <br>
 				<div>
-					<label for="dateOfBirth">Date of Birth</label>
+					<label for="dateOfBirth">DATE OF BIRTH</label>
 					<div>
 						<form:input path="dateOfBirth"  type="date" min="<%=Logic.getMaxAge()%>" 
 						max="<%=Logic.getMinAge()%>" title="Enter date of birth between 1990 to 2010" required="true" />
@@ -94,21 +94,21 @@
 				</div>
 				<br>
 				<div>
-					<label for="joiningDate">Joining Date</label>
+					<label for="joiningDate">JOINING DATE</label>
 					<div>
 						<form:input path="joiningDate" type="date" />
 					</div>
 				</div>
 				<br>
 				<div>
-					<label for="subscriptionDue">Subscription Due</label>
+					<label for="subscriptionDue">SUBSCRIPTION DUE</label>
 					<div>
 						<form:input path="subscriptionDue" />
 					</div>
 				</div>
 				<br>
 				<div>
-					<label for="subscriptionPaid">Subscription Paid</label>
+					<label for="subscriptionPaid">SUBSCRIPTION PAID</label>
 					<div>
 						<form:input path="subscriptionPaid" />
 					</div>
@@ -116,7 +116,7 @@
 				<form:errors path="subscriptionPaid" cssClass="text-danger" />
 
 				<div>
-					<form:button>Add</form:button>
+					<form:button>ADD</form:button>
 				</div>
 			</form:form>
 		</div>

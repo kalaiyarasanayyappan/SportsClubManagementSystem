@@ -40,19 +40,18 @@ file="/WEB-INF/css/liststaff.css"%>
 					           
 					<tr>
 						           
-						<th>Staff Id</th>            
-						<th>Staff Name</th>            
-						<th>Salary</th>            
-						<th>Joining Date</th>            
-						<th>Date of Birth</th>            
-						<th>Contact</th>
-						<th>Address</th>
-						<th>Staff Role</th>
-						<th>Coaching Sports</th>
+						<th>STAFFID</th>            
+						<th>STAFFNAME</th>            
+						<th>SALARY(RS)</th>            
+						<th>JOININGDATE</th>            
+						<th>DATEOFBIRTH</th>            
+						<th>CONTACT</th>
+						<th>STAFFROLE</th>
+						<th>COUCHINGSPORTS</th>
 
-						<th>Email</th>
-						<th>update</th>
-						<th>delete</th>                       
+						<th>EMAIL</th>
+						<th>UPDATE</th>
+						<th>DELETE</th>                       
 					</tr>
 					       
 				</thead>
@@ -67,14 +66,14 @@ file="/WEB-INF/css/liststaff.css"%>
 							<td>${Staff.joiningDate}</td>            
 							<td>${Staff.dateOfBirth}</td>            
 							<td>${Staff.contact}</td>
-							<td>${Staff.address}</td>
+							
 							<td>${Staff.staffRole}</td>
 							<td>${Staff.coachingSports}</td>
 
 							<td>${Staff.email}</td>
-							<td><a href="/Staff/updatestaff?staffId=${Staff.staffId}">update</a></td>
+							<td><a href="/Staff/updatestaff?staffId=${Staff.staffId}">UPDATE</a></td>
 							 
-							<td><a href="/Staff/deletestaff?staffId=${Staff.staffId}">Delete</a></td>
+							<td><a href="/Staff/deletestaff?staffId=${Staff.staffId}">DELETE</a></td>
 							         
 						</tr>
             </c:forEach>
@@ -85,13 +84,13 @@ file="/WEB-INF/css/liststaff.css"%>
 			       
 		</div>
 		<div>
-			<a href="/Staff/addform"><h2>Add</h2></a>
+			<a href="/Staff/addform"><h2>ADD</h2></a>
 		</div>
 		<form action="getstaff">
 
 			<div class="center">
 				<input type="text" name="staffId" /> <input type="submit"
-					value="Find" />
+					value="FIND" />
 			</div>
 		</form>
 </body>

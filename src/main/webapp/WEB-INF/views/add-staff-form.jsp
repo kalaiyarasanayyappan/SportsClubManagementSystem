@@ -22,7 +22,7 @@
 		<div id="form">
 			<form:form action="add" method="post" modelAttribute="addstaff">
 				<div>
-					<label for="staffName">Staff Name</label>
+					<label for="staffName">STAFF NAME</label>
 					<div>
 						<form:input path="staffName"
 							title="Name can't be empty or must contain only alphabets"
@@ -32,7 +32,7 @@
 				<form:errors path="staffName" cssClass="text-danger" />
 					<br>
 				<div>
-					<label for="salary">Salary</label>
+					<label for="salary">SALARY</label>
 					<div>
 						<form:input path="salary" title="enter valid number"
 							pattern="^\d{1,6}(?:\.\d{0,2})?$" required="true" />
@@ -42,21 +42,21 @@
 				<form:errors path="salary" cssClass="text-danger" />
 					<br>
 				<div>
-					<label for="joiningDate">Joining Date</label>
+					<label for="joiningDate">JOINING DATE</label>
 					<div>
 						<form:input path="joiningDate" type="date" title="Enter date" required="true"/>
 					</div>
 				</div>
 					<br>
 				<div>
-					<label for="dateOfBirth">Date of Birth</label>
+					<label for="dateOfBirth">DATE OF BIRTH</label>
 					<div>
 						<form:input path="dateOfBirth" type="date" max="<%=Logic.getMinimumAge()%>" title="Enter date of birth" required="true" />
 					</div>
 				</div>
 					<br>
 				<div>
-					<label for="contact">Contact</label>
+					<label for="contact">CONTACT</label>
 					<div>
 						<form:input path="contact" pattern="[1-9]{1}[0-9]{9}"
 							title="Phone number should have atleast 10 digits"
@@ -66,7 +66,7 @@
 				<form:errors path="contact" cssClass="text-danger" />
 					<br>
 				<div>
-					<label for="address">Address</label>
+					<label for="address">ADDRESS</label>
 					<div>
 						<form:input path="address"
 							title="Address should atleast contain 10 characters"
@@ -102,7 +102,7 @@
 				</div>
 	<br>
 				<div>
-					<label for="email">Email</label>
+					<label for="email">EMAIL</label>
 					<div>
 						<form:input path="email"
 							pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}$"
@@ -112,7 +112,7 @@
 				<form:errors path="email" cssClass="text-danger" />
 	<br>
 				<div>
-					<form:button>Add</form:button>
+					<form:button>ADD</form:button>
 				</div>
 			</form:form>
 		</div>

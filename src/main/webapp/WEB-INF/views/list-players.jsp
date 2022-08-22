@@ -45,21 +45,20 @@ file="/WEB-INF/css/listplayers.css"%>
 
 					<tr>
 						           
-						<th>Player Id</th>            
-						<th>Player Name</th>            
-						<th>Sports Id</th>            
-						<th>Gender</th>            
-						<th>Address</th>            
+						<th>PlayerId</th>            
+						<th>PlayerName</th>            
+						<th>SportsId</th>            
+						<th>Gender</th>                     
 						<th>Contact</th>
-						<th>Player Status</th>
-						<th>Date of Birth</th>
-						<th>Joining Date</th>
-						<th>Subscription Due</th>
-						<th>Subscription Paid</th>
-						<th>update</th>
-						<th>delete</th>
-						<th>playersFeesDetails</th>
-						<th>playerspriceDetails</th>                        
+						<th>PlayerStatus</th>
+						<th>DateOfBirth</th>
+						<th>JoiningDate</th>
+						<th>SubscriptionDue</th>
+						<th>SubscriptionPaid</th>
+						<th>Update</th>
+						<th>Delete</th>
+						<th>Fees</th>
+						<th>Prize</th>                        
 					</tr>
 					       
 				</thead>
@@ -72,8 +71,7 @@ file="/WEB-INF/css/listplayers.css"%>
 							<td>${Players.playerId}</td>            
 							<td>${Players.playerName}</td>            
 							<td>${Players.sportsId}</td>            
-							<td>${Players.gender}</td>            
-							<td>${Players.address}</td>            
+							<td>${Players.gender}</td>                       
 							<td>${Players.contact}</td>
 							<td>${Players.playerStatus}</td>
 							<td>${Players.dateOfBirth}</td>
@@ -81,14 +79,14 @@ file="/WEB-INF/css/listplayers.css"%>
 							<td>${Players.subscriptionDue}</td>
 							<td>${Players.subscriptionPaid}</td>
 							<td><a
-								href="/Players/updateplayers?playerId=${Players.playerId}">update</a></td>
+								href="/Players/updateplayers?playerId=${Players.playerId}">Update</a></td>
 							<td><a
 								href="/Players/deleteplayers?playerId=${Players.playerId}">Delete</a></td> 
 							         
 							<td><a
-								href="/Players/getplayersbyfeesdetails?id=${Players.playerId}">FeesDetails</a></td>
+								href="/Players/getplayersbyfeesdetails?id=${Players.playerId}">Fees</a></td>
 							<td><a
-								href="/Players/getplayersbyprizedetails?id=${Players.playerId}">PrizeDetails</a></td>
+								href="/Players/getplayersbyprizedetails?id=${Players.playerId}">Prize</a></td>
 
 							           
 						</tr>
@@ -100,12 +98,12 @@ file="/WEB-INF/css/listplayers.css"%>
 			       
 		</div>
 		<div class="center">
-			<a href="/Players/addform"><h2>Add</h2></a>
+			<a href="/Players/addform"><h2>ADD</h2></a>
 		</div>
 		<form action="getplayers">
 			<div class="center">
 				<input type="text" name="playerId" /> <input type="submit"
-					value="Find" />
+					value="FIND" />
 			</div>
 		</form>
 </body>

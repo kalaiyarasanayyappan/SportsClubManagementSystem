@@ -22,7 +22,7 @@
 			<form:form action="add" method="post" modelAttribute="addsponsers">
 		</div>
 		<div>
-			<label for="sponserName">Sponser Name</label>
+			<label for="sponserName">SPONSER NAME</label>
 			<div>
 				<form:input path="sponserName"
 					title="Name can't be empty or must contain only alphabets"
@@ -32,7 +32,7 @@
 		<form:errors path="sponserName" cssClass="text-danger" />
 			<br>
 		<div>
-			<label for="contact">Contact</label>
+			<label for="contact">CONTACT</label>
 			<div>
 				<form:input path="contact" pattern="[1-9]{1}[0-9]{9}"
 					title="Phone number should have atleast 10 digits" required="true" />
@@ -41,7 +41,7 @@
 		<form:errors path="contact" cssClass="text-danger" />
 			<br>
 		<div>
-			<label for="email">Email</label>
+			<label for="email">EMAIL</label>
 			<div>
 				<form:input path="email"
 					pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}$"
@@ -51,7 +51,7 @@
 		<form:errors path="email" cssClass="text-danger" />
 			<br>
 		<div>
-			<form:button>Add</form:button>
+			<form:button>ADD</form:button>
 		</div>
 		</form:form>
 	</div>
