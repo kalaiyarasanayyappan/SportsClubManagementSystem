@@ -49,9 +49,9 @@ public class PrizesController {
         return "update-prizes-form";
     }
     @PostMapping("/update")
-    public String updateprize(@ModelAttribute("updateprizes") Prizes pr)
+    public String updatePrize(@ModelAttribute("updateprizes") Prizes prize)
     {
-        prService.save(pr);
+        prService.save(prize);
      return LISTPRIZES;
      
     }

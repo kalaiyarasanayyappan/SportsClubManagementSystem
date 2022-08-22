@@ -64,7 +64,7 @@ a {
   margin-left: auto;
   margin-right: auto;
 }
-th{
+/* th{
 	background-color: blue;
 	color: white;
 }
@@ -77,14 +77,14 @@ a {
 	text-decoration: none;
 	color: white;
 }
-
-.center {
+ */
+/* .center {
  text-align: center;
 }
 .table-center {
   margin-left: auto;
   margin-right: auto;
-}
+} */
 /*
 nav bar
 */
@@ -244,10 +244,10 @@ nav bar
         margin: 0;
     }
 
-    .navbar__toggle .bar {
+/*     .navbar__toggle .bar {
         display: block;
         cursor: pointer;
-    }
+    } */
 
     #mobile-menu {
         position: absolute;

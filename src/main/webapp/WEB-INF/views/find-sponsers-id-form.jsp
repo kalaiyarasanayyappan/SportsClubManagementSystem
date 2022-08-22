@@ -21,28 +21,28 @@
 		<div id="form">
 			<form:form action="" method="post" modelAttribute="getsponsers">
 				<div>
-					<label for="sponserId">Sponser Id</label>
+					<label for="sponserId">SPONSERID</label>
 					<div>
 						<form:input path="sponserId" />
 					</div>
 				</div>
 					<br>
 				<div>
-					<label for="sponserName">Sponser Name</label>
+					<label for="sponserName">SPONSERNAME</label>
 					<div>
 						<form:input path="sponserName" />
 					</div>
 				</div>
 					<br>
 				<div>
-					<label for="contact">Contact</label>
+					<label for="contact">CONTACT</label>
 					<div>
 						<form:input path="contact" />
 					</div>
 				</div>
 					<br>
 				<div>
-					<label for="email">Email</label>
+					<label for="email">EMAIL</label>
 					<div>
 						<form:input path="email" />
 					</div>

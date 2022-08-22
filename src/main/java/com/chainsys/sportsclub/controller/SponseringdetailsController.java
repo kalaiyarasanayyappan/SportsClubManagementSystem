@@ -48,8 +48,8 @@ public class SponseringdetailsController {
 	}
 
 	@PostMapping("/update")
-	public String modifySponseringdetails(@ModelAttribute("updatesponseringdetails") SponseringDetails sd) {
-		sdService.save(sd);
+	public String modifySponseringDetails(@ModelAttribute("updatesponseringdetails") SponseringDetails sponse) {
+		sdService.save(sponse);
 		return LISTSPONSERINGDETAILS;
 
 	}

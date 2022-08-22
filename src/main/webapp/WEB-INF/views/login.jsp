@@ -5,24 +5,16 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Admin Login Page Design</title>
-<style>
-<%@
-include
- 
-file="/WEB-INF/css/login.css"%>
-</style>
+<style><%@include file ="/WEB-INF/css/login.css"%></style>
 </head>
-
 <body>
-
 	<br>
 	<br>
 	<br>
 	<br>
 	<form action="adminlogin" method="post" modelAttribute="adminlogin">
-	<table 	width="25%" border="0" cellspacing="40" align="center">
+		<table class="center">
 			<caption></caption>
-			
 			<tr>
 				<td>Email</td>
 			</tr>
@@ -43,6 +35,6 @@ file="/WEB-INF/css/login.css"%>
 		</table>
 	</form>
 	<h1 class="center">SPORTS CLUB MANAGEMENT</h1>
-	
+
 </body>
 </html>

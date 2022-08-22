@@ -49,12 +49,12 @@ public class PlayersController {
 	}
 
 	@PostMapping("/add")
-	public String addPlayers(@Valid @ModelAttribute("addplayers") Players player, Errors errors) {
+	public String addPlayers(@Valid @ModelAttribute("addplayers") Players players, Errors errors) {
 		if (errors.hasErrors()) {
 			return "add-players-form";
 		}
 
-		plService.save(player);
+		plService.save(players);
 		return LISTPLAYERS;
 	}
 
@@ -111,10 +111,10 @@ public class PlayersController {
 		return LISTPLAYERS;
 	}
 
-	@RequestMapping("/getplayers")
-	public String findplayers(@RequestParam("playerId") int id) {
-		plService.findById(id);
-		return LISTPLAYERS;
-	}
-
+	
+	/*
+	 * @RequestMapping("/getplayers") public String
+	 * findplayers(@RequestParam("playerId") int id) { plService.findById(id);
+	 * return LISTPLAYERS; }
+	 */
 }

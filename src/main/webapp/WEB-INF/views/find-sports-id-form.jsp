@@ -20,42 +20,42 @@
 		<div class="center"id="form">
 			<form:form action="" method="post" modelAttribute="getsports">
 				<div>
-					<label for="sportsId"><h2>Sports Id</h2></label>
+					<label for="sportsId"><h2>SPORTSID</h2></label>
 					<div>
 						<form:input path="sportsId" />
 					</div>
 				</div>
 				<br>
 				<div>
-					<label for="sportsName"><h2>Sports Name</h2></label>
+					<label for="sportsName"><h2>SPORTSNAME</h2></label>
 					<div>
 						<form:input path="sportsName" />
 					</div>
 				</div>
 				<br>
 				<div>
-					<label for="fees"><h2>Fees</h2></label>
+					<label for="fees"><h2>FEES</h2></label>
 					<div>
 						<form:input path="fees" />
 					</div>
 				</div>
 				<br>
 				<div>
-					<label for="inTime"><h2>In Time</h2></label>
+					<label for="inTime"><h2>INTIME</h2></label>
 					<div>
 						<form:input path="inTime" />
 					</div>
 				</div>
 				<br>
 				<div>
-					<label for="outTime"><h2>Out Time</h2></label>
+					<label for="outTime"><h2>OUTTIME</h2></label>
 					<div>
 						<form:input path="outTime" />
 					</div>
 				</div>
 				,<br>
 				<div>
-					<label for="durations"><h2>Durations</h2></label>
+					<label for="durations"><h2>DURATION</h2></label>
 					<div>
 						<form:input path="durations" />
 					</div>

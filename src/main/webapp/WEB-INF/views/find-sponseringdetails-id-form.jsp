@@ -22,35 +22,35 @@
 			<form:form action="" method="post"
 				modelAttribute="getsponseringdetails">
 				<div>
-					<label for="sponseringDetailsId">sponsering Details Id</label>
+					<label for="sponseringDetailsId">SponseringDetailsId</label>
 					<div>
 						<form:input path="sponseringDetailsId" />
 					</div>
 				</div>
 					<br>
 				<div>
-					<label for="sponserId">Sponser Id</label>
+					<label for="sponserId">SPONSERID</label>
 					<div>
 						<form:input path="sponserId" />
 					</div>
 				</div>
 					<br>
 				<div>
-					<label for="sportsId">Sports Id</label>
+					<label for="sportsId">SPORTSID</label>
 					<div>
 						<form:input path="sportsId" />
 					</div>
 				</div>
 					<br>
 				<div>
-					<label for="amount">Amount</label>
+					<label for="amount">AMOUNT</label>
 					<div>
 						<form:input path="amount" />
 					</div>
 				</div>
 					<br>
 				<div>
-					<label for="dateOfSponsering">Date of Sponsering</label>
+					<label for="dateOfSponsering">DATEOFSPONSERING</label>
 					<div>
 						<form:input path="dateOfSponsering" />
 					</div>
@@ -64,7 +64,7 @@
 				</div>
 					<br>
 				<div>
-					<label for="recieptNumber">Reciept Number</label>
+					<label for="recieptNumber">RecieptNumber</label>
 					<div>
 						<form:input path="recieptNumber" />
 					</div>

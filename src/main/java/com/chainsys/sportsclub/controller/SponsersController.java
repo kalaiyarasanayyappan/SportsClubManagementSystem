@@ -26,8 +26,8 @@ public class SponsersController {
     
     @GetMapping("/getsponsers")
     public String getSponsers(@RequestParam("sponserId")int id,Model model) {
-       Sponsers sp =spService.findById(id);
-        model.addAttribute("getsponsers",sp);
+       Sponsers spons =spService.findById(id);
+        model.addAttribute("getsponsers",spons);
         return "find-sponsers-id-form";
     }
     @GetMapping("/deletesponsers")
@@ -37,8 +37,8 @@ public class SponsersController {
     }
     @GetMapping("/addform")
     public String showAddForm(Model model) {
-        Sponsers sp = new Sponsers();
-        model.addAttribute("addsponsers",sp);
+        Sponsers sponser = new Sponsers();
+        model.addAttribute("addsponsers",sponser);
         return "add-sponsers-form";
     }
     @PostMapping("/add")

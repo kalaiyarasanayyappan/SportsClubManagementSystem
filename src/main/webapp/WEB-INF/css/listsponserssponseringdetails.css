@@ -166,11 +166,11 @@ nav bar
         margin: 0;
     }
 
-    .navbar__toggle .bar {
+  /*   .navbar__toggle .bar {
         display: block;
         cursor: pointer;
     }
-
+ */
     #mobile-menu {
         position: absolute;
         top: 20%;
