@@ -42,7 +42,7 @@ Sports Club Management is a trending system where you can manage your data of th
 
 1.  Download or clone the repository to your local machine:
 
-    $ git clone https://github.com/Harivj18/warehouse_management.git
+    $ git clone https://github.com/kalaiyarasanayyappan/SportsClubManagementSystem.git
 
 2.  Run npm install inside the downloaded/cloned folder:
 
